@@ -1,0 +1,4 @@
+1) Remove power from controller for at least 5 seconds 
+2) Apply power to controller and within 5 seconds 
+3) Press "Power" button to turn RF Controller on 
+4) Hold down both "Speed-"and "Speed+" keys for 5 seconds

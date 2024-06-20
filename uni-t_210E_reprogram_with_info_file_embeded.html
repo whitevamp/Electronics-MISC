@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]> <html lang="en_US" class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7]> <html class="ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7 no-js" lang="en_US"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="en_US"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 lt-ie10 lt-ie9 no-js" lang="en_US"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 lt-ie10 no-js" lang="en_US"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en_US"><!--<![endif]-->
+
+<head>
+
+
+</head>
+<body>
+
+<br><br>Here is how I did it with Arduino UNO.&nbsp; I've attached the sketch I used based on Kerry's D source with additions.&nbsp; <br><br>I just wired it up as shown in the diagram. <br><br>I held a grounded jumper wire on the side of the capacitor shown in diagram. No need to solder to it.&nbsp; It only takes 3 seconds to dump/flash.<br><br>Switch UT210E to ~V mode then plug in Arduino into the USB.&nbsp; Open the attached i2cArduino210E.ino sketch in Arduino IDE.&nbsp; Open Serial Monitor window (CTRL+SHIFT+M).&nbsp; Now upload the sketch.&nbsp; You should see your eeprom dump in Serial Monitor window.&nbsp; You better Copy/Paste it for backup.&nbsp; <br><br>Now you must edit line 9 and 10 by using data from your dump.<br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">&nbsp; <br>&nbsp; //Dotless mode calibration data, copied from 0x50, 0x51<br>&nbsp; writeByte(I2C_ADDR, 0x56, (byte) 0x83);<br>&nbsp; writeByte(I2C_ADDR, 0x57, (byte) 0x75);</code></pre><br>If all good, you can edit MODeeprom() as you like, uncomment the //MODeeprom() inside setup() function and Re-Upload to Arduino.&nbsp; Arduino will reset and flash the eeprom.&nbsp; You will see ...Flashing EEPROM... between Before/After dumps in the Serial Monitor window.&nbsp; I hope others will find this useful.<br><br>Thank you everyone!<br><br>The changes I've done to my eeprom so far:<br><br><strong>ADDR&nbsp; &nbsp;|&nbsp; OLD&nbsp; | NEW</strong><br><strong>6200 Count</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">12:<span style="white-space: pre;">	</span>98<span style="white-space: pre;">	</span>38<br>13:<span style="white-space: pre;">	</span>08<span style="white-space: pre;">	</span>18</code></pre><br><strong>All Alarms disabled</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">16:<span style="white-space: pre;">	</span>3D<span style="white-space: pre;">	</span>FF<br>17:<span style="white-space: pre;">	</span>3D<span style="white-space: pre;">	</span>FF<br>18:<span style="white-space: pre;">	</span>3C<span style="white-space: pre;">	</span>FF<br>19:<span style="white-space: pre;">	</span>3C<span style="white-space: pre;">	</span>FF<br>1C:<span style="white-space: pre;">	</span>0A<span style="white-space: pre;">	</span>FF</code></pre><br><strong>2A Dotless mode calibration data device specific, copy yours from 0x50 to 0x56, 0x51 to 0x57.&nbsp; Required if you enable Dotless 2A mode. </strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">56:<span style="white-space: pre;">	</span>00<span style="white-space: pre;">	</span>??<br>57:<span style="white-space: pre;">	</span>80<span style="white-space: pre;">	</span>??<br></code></pre><strong><br>2A modes: 1. Dotless DCA, 2. Dotless ACA, 3. Dot DCA, 4. Dot ACA</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">87:<span style="white-space: pre;">	</span>17<span style="white-space: pre;">	</span>1C<br>97:<span style="white-space: pre;">	</span>16<span style="white-space: pre;">	</span>1D<br>A7:<span style="white-space: pre;">	</span>00<span style="white-space: pre;">	</span>16<br>&nbsp;B7:<span style="white-space: pre;">	</span>00<span style="white-space: pre;">	</span>17</code></pre><strong><br>20A modes: 1 Dot DCA, 2. Dot ACA</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">8B:<span style="white-space: pre;">	</span>19<span style="white-space: pre;">	</span>18<br>9B:<span style="white-space: pre;">	</span>18<span style="white-space: pre;">	</span>19</code></pre><strong><br>100A modes: 1 Dot DCA, 2. Dot ACA</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">8D:<span style="white-space: pre;">	</span>1B<span style="white-space: pre;">	</span>1A<br>9D:<span style="white-space: pre;">	</span>1A<span style="white-space: pre;">	</span>1B<br></code></pre><br><strong>V modes: 1. DCV, 2. ACV, 3. DCmV, 4. ACmV</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">8E:<span style="white-space: pre;">	</span>04<span style="white-space: pre;">	</span>03<br>9E:<span style="white-space: pre;">	</span>05<span style="white-space: pre;">	</span>04<br>AE:<span style="white-space: pre;">	</span>00<span style="white-space: pre;">	</span>05<br>BE:<span style="white-space: pre;">	</span>00<span style="white-space: pre;">	</span>06</code></pre><br><strong>NCV, NCV mV</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code">9C:<span style="white-space: pre;">	</span>00<span style="white-space: pre;">	</span>02<br>AC:<span style="white-space: pre;">	</span>00<span style="white-space: pre;">	</span>1D</code></pre> <br><strong>30 min Auto power off</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code"> FB:<span style="white-space: pre;">	</span>0F<span style="white-space: pre;">	</span>1E</code></pre><strong><br>3 min Backlight off</strong><br><div class="codeheader">Code: <a href="javascript:void(0)" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><pre style="margin: 0; padding: 0;"><code class="bbc_code"> FC:<span style="white-space: pre;">	</span>0F<span style="white-space: pre;">	</span>B4</code></pre><br>
+Hay open this HTML file in a txt editor for the i2cArduino210E.ino file contence.
+
+<!--
+#include <Wire.h>
+const int I2C_ADDR = 0x50;
+
+void MODeeprom() {
+
+  Serial.print("\n...Flashing EEPROM...\n");
+ 
+  //Dotless mode calibration data, copied from 0x50, 0x51
+  writeByte(I2C_ADDR, 0x56, (byte) 0x83);
+  writeByte(I2C_ADDR, 0x57, (byte) 0x75);
+
+  writeByte(I2C_ADDR, 0xFB, (byte) 0x1E); //Power off after 30min
+  writeByte(I2C_ADDR, 0xFC, (byte) 0xB4); //Backlight time 3min
+
+  //Count 6200
+  writeByte(I2C_ADDR, 0x12, (byte) 0x38);
+  writeByte(I2C_ADDR, 0x13, (byte) 0x18);
+
+  //Alarms disabled
+  writeByte(I2C_ADDR, 0x16, (byte) 0xFF);
+  writeByte(I2C_ADDR, 0x17, (byte) 0xFF);
+  writeByte(I2C_ADDR, 0x18, (byte) 0xFF);
+  writeByte(I2C_ADDR, 0x19, (byte) 0xFF);
+  writeByte(I2C_ADDR, 0x1C, (byte) 0xFF);
+
+  //With selector in 2A order:
+  writeByte(I2C_ADDR, 0x87, (byte) 0x1C);  //Dotless DCA
+  writeByte(I2C_ADDR, 0x97, (byte) 0x1D);  //Dotless ACA
+  writeByte(I2C_ADDR, 0xA7, (byte) 0x16);  //Dot DCA
+  writeByte(I2C_ADDR, 0xB7, (byte) 0x17);  //Dot ACA
+
+  //With selector in 20A order:
+  writeByte(I2C_ADDR, 0x8B, (byte) 0x18);  //Dot DCA
+  writeByte(I2C_ADDR, 0x9B, (byte) 0x19);  //Dot ACA
+
+  //With selector in NCV Display in mV
+  writeByte(I2C_ADDR, 0x9C, (byte) 0x02);
+  writeByte(I2C_ADDR, 0xAC, (byte) 0x1D);
+
+  //With selector in 100A order is: (DC)A - (AC)A
+  writeByte(I2C_ADDR, 0x8D, (byte) 0x1A);
+  writeByte(I2C_ADDR, 0x9D, (byte) 0x1B);
+  
+  //With selector in V range order is: V(DC) - V(AC) - V(DC mV) - V(AC mV)
+  writeByte(I2C_ADDR, 0x8E, (byte) 0x03);
+  writeByte(I2C_ADDR, 0x9E, (byte) 0x04);  
+  writeByte(I2C_ADDR, 0xAE, (byte) 0x05);
+  writeByte(I2C_ADDR, 0xBE, (byte) 0x06);
+}
+
+void printHex(int num, int precision) {
+  char tmp[16];
+  char format[128];
+
+  sprintf(format, "%%.%dX", precision);
+
+  sprintf(tmp, format, num);
+  Serial.print(tmp);
+}
+
+void setup() {
+
+  Serial.begin(9600);
+  Wire.begin();
+  Serial.print("\n...Before EEPROM Dump...\n");
+  dumpEEPROM();
+  delay(10);
+  
+  //MODeeprom();
+  
+  delay(10);
+  Serial.print("\n...After EEPROM Dump...\n");
+  dumpEEPROM();
+}
+void loop() {}
+
+void dumpEEPROM()
+{
+  for (int i = 0; i < 256; i++) {
+    byte b = readByte(I2C_ADDR, i);
+    //Serial.print(b, HEX); Serial.print(" ");
+    printHex(b, 2); Serial.print(" ");
+    if ((i + 1) % 16 == 0) Serial.println();
+  }
+  Serial.println();
+}
+
+void writeByte(int i2cAddr, unsigned int addr, byte data) {
+  Wire.beginTransmission(i2cAddr);
+  Wire.write(addr);
+  Wire.write(data);
+  Wire.endTransmission();
+  delay(5);
+}
+
+byte readByte(int i2cAddr, unsigned int addr) {
+  byte data = 0x00;
+  Wire.beginTransmission(i2cAddr);
+  Wire.write(addr);
+  Wire.endTransmission();
+  Wire.requestFrom(i2cAddr, 1);
+  while (!Wire.available()) ;
+  data = Wire.read();
+  return data;
+}
+-->
+</body>
+</html>
