@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>DC Load &#8211; Scullcom</title>
+	<atom:link href="http://www.scullcom.uk/category/projects/dc-load/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Sun, 09 Sep 2018 18:26:37 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>Design &#038; Build an Electronic DC Load</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/</link>
+		<comments>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comments</comments>
+		<pubDate>Sun, 25 Dec 2016 23:51:49 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[DC Load]]></category>
+		<category><![CDATA[Projects]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410</guid>
+		<description><![CDATA[In this project we will design an build an Electronic DC Load which is capable of Constant Current, Constant Power and Constant Resistance. The design will use a rotary encoder for input entry and a 20&#215;4 LCD display as the user interface. In Part 1 of this project we will discuss the basic design and [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In this project we will design an build an Electronic DC Load which is capable of Constant Current, Constant Power and Constant Resistance. The design will use a rotary encoder for input entry and a 20&#215;4 LCD display as the user interface. In Part 1 of this project we will discuss the basic design and then build and test the initial prototype.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/9fsf1CgnTRk?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Below are links for the prototype software plus a zip file with the schematic, PCB artwork and component layout:</p>
+<ul>
+<li><a class=" yt-uix-servicelink " href="http://www.scullcom.com/Electronic_Load_software_V1.ino" target="_blank" rel="nofollow noopener" data-servicelink="CC8Q6TgiEwjRpt2q2pnRAhVBpRwKHaIsBp0o-B0" data-target-new-window="True" data-url="http://www.scullcom.com/Electronic_Load_software_V1.ino">Arduino Software</a></li>
+<li><a class=" yt-uix-servicelink " href="http://www.scullcom.com/Electronic_DC_Load_part1.zip" target="_blank" rel="nofollow noopener" data-servicelink="CC8Q6TgiEwjRpt2q2pnRAhVBpRwKHaIsBp0o-B0" data-target-new-window="True" data-url="http://www.scullcom.com/Electronic_DC_Load_part1.zip">Schematic, PCB artwork and component layout</a></li>
+</ul>
+<p><img class="alignnone size-full wp-image-418" src="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Electronic_Load_block_diagram.jpg" alt="dc_electronic_load_block_diagram" width="769" height="466" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Electronic_Load_block_diagram.jpg 769w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Electronic_Load_block_diagram-300x182.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Electronic_Load_block_diagram-768x465.jpg 768w" sizes="(max-width: 769px) 100vw, 769px" /></p>
+<p><img class="alignnone size-full wp-image-422" src="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_wiring.jpg" alt="dc_load_wiring" width="719" height="455" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_wiring.jpg 719w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_wiring-300x190.jpg 300w" sizes="(max-width: 719px) 100vw, 719px" /></p>
+<p>Above shows the PCB wired for testing with heatsink and fan added.</p>
+<p><img class="size-large wp-image-420 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ICs.jpg" alt="dc_load_ics" width="648" height="361" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ICs.jpg 830w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ICs-300x167.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ICs-768x428.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>Underside of PCB showing the locations of the 3 IC&#8217;s.</p>
+<p><img class="size-large wp-image-419 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_display.jpg" alt="dc_load_display" width="604" height="375" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_display.jpg 604w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_display-300x186.jpg 300w" sizes="(max-width: 604px) 100vw, 604px" /></p>
+<p>Close up of 20&#215;4 LCD showing setting in Constant Current Mode.</p>
+<p><strong>PART 2</strong></p>
+<p>In part 2 of this project we will make some changes in the way the LCD displays the information. The set current and set power levels are now set in Amps and Watts to three decimal places. Safety limits have also been added to limit maximum current setting and maximum power. After start up the unit goes in to constant current mode. A battery capacity function has also been added to test the life of batteries in mAh. The power mosfet has now been changed to a BUK956R1-100E (from NXP) to improve power handling. Finally software has been upgraded to Version 2.0.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/V6RQgD-moJA?start=719&#038;feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Below are links to the downloads for Part 2 of this project:</p>
+<p><a href="http://www.scullcom.com/Electronic_Load_software_V2.0.ino" target="_blank" rel="noopener">http://www.scullcom.com/Electronic_Load_software_V2.0.ino</a><br />
+<a href="http://www.scullcom.com/MCP79410Timer-master.zip" target="_blank" rel="noopener">http://www.scullcom.com/MCP79410Timer-master.zip</a><br />
+<a href="http://www.scullcom.com/RTC_Module_PCB_Schematic.zip" target="_blank" rel="noopener">http://www.scullcom.com/RTC_Module_PCB_Schematic.zip</a><br />
+<a href="http://www.scullcom.com/Electronic_Load_Parts_List.pdf" target="_blank" rel="noopener">http://www.scullcom.com/Electronic_Load_Parts_List.pdf</a><br />
+<a href="http://www.scullcom.com/DC_Load_Circuit_Part2.pdf" target="_blank" rel="noopener">http://www.scullcom.com/DC_Load_Circuit_Part2.pdf</a></p>
+<p>Below is the new LCD layout with the heatsink temperature now at the top left of the display.</p>
+<p><img class="alignnone size-full wp-image-427" src="http://www.scullcom.uk/wp-content/uploads/2016/12/part2_CC_display.jpg" alt="part2_CC_display" width="847" height="360" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/part2_CC_display.jpg 847w, http://www.scullcom.uk/wp-content/uploads/2016/12/part2_CC_display-300x128.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/12/part2_CC_display-768x326.jpg 768w" sizes="(max-width: 847px) 100vw, 847px" /></p>
+<p>When the power limit is exceeded the Load switches OFF and the display informs &#8220;Exceeded Power Limit&#8221;.</p>
+<p><img class="alignnone wp-image-428" src="http://www.scullcom.uk/wp-content/uploads/2016/12/Part2_power_limit.jpg" alt="Part2_power_limit" width="733" height="331" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/Part2_power_limit.jpg 856w, http://www.scullcom.uk/wp-content/uploads/2016/12/Part2_power_limit-300x136.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/12/Part2_power_limit-768x347.jpg 768w" sizes="(max-width: 733px) 100vw, 733px" /></p>
+<p>To accommodate the new feature of Battery Capacity Testing we have now added a Real Time Clock (RTC) which also uses the I2C bus to interface with the Arduino.</p>
+<p><img class="size-large wp-image-429 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/12/part2_RTC_circuit.jpg" alt="part2_RTC_circuit" width="514" height="405" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/part2_RTC_circuit.jpg 514w, http://www.scullcom.uk/wp-content/uploads/2016/12/part2_RTC_circuit-300x236.jpg 300w" sizes="(max-width: 514px) 100vw, 514px" /></p>
+<p>Below is the Safe Operating Area graph, taken from the datasheet, of the Power Mosfet. This illustrates the ability of the Mosfet to handle 3A at 30 volt. However, this is at 25°C and in reality the power handling will be lower than that as the Mosfet heats up. At a later stage we will consider adding Mosfets in parallel to overcome this.</p>
+<p><img class="alignnone size-large wp-image-430" src="http://www.scullcom.uk/wp-content/uploads/2016/12/part2_SOA_mosfet.jpg" alt="part2_SOA_mosfet" width="648" height="315" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/part2_SOA_mosfet.jpg 852w, http://www.scullcom.uk/wp-content/uploads/2016/12/part2_SOA_mosfet-300x146.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/12/part2_SOA_mosfet-768x373.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p><strong>PART 3</strong></p>
+<p>In Part 3 of this project we will make a number of improvements and additions. These will include a keypad, improved accuracy, fault protection and enhanced battery capacity discharge test mode. A 4.096 volt reference had been added to the DAC improving accuracy. A battery capacity testing menu has been added.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/NRv1QLL1Gxg?start=1963&#038;feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Below are links to download the latest version of software (version 8) and the updated schematic of the whole project, which now includes Real Time Clock and Voltage Reference Modules:<br />
+<a href="http://www.scullcom.com/Electronic_Load_software_V8.ino" target="_blank" rel="noopener">http://www.scullcom.com/Electronic_Load_software_V8.ino</a><br />
+<a href="http://www.scullcom.com/DC_Load_Schematic_ver3.pdf" target="_blank" rel="noopener">http://www.scullcom.com/DC_Load_Schematic_ver3.pdf</a><br />
+Please not that the new software now uses a keypad library &#8211; ensure that you have the latest version of this library and read the information on the following web page:<br />
+<a href="http://playground.arduino.cc/Code/Keypad" target="_blank" rel="noopener">http://playground.arduino.cc/Code/Keypad</a><br />
+Direct link for the keypad.h library is below:<br />
+<a href="http://playground.arduino.cc/uploads/Code/keypad.zip" target="_blank" rel="noopener">http://playground.arduino.cc/uploads/Code/keypad.zip</a></p>
+<p><strong>PART 4</strong></p>
+<p>In Part 4 of this project on the Electronic DC Load we are going to add a remote voltage sense circuit, increase the power capacity by adding additional power mosfets and build the completed unit into a metal project case. We will also upgrade the software to allow for input entry via the keypad as well as the rotary encoder.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/2QzkMDqxruo?start=716&#038;feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Below are download links to the latest version of software.<br />
+Also a zip file with the updated schematic for the main PCB, schematic and PCB artwork for the Remote Voltage Sense , Parts List, details of alternative power mosfets, wiring diagram and any notes:<br />
+<a href="http://www.scullcom.com/Electronic_Load_software_V12.ino" target="_blank" rel="noopener">http://www.scullcom.com/Electronic_Load_software_V12.ino</a><br />
+<a href="http://www.scullcom.com/DC_Load_files_Part4.zip" target="_blank" rel="noopener">http://www.scullcom.com/DC_Load_files_Part4.zip</a><br />
+To increase the Power Cut-Off Level simply change the value in the code below in software:<br />
+float PowerCutOff = 50;<br />
+Suggest changing 50 to 99<br />
+<strong>WIRING DIAGRAM LAYOUT LINK BELOW:</strong><br />
+<a href="http://www.scullcom.com/DC_Load_wiring_layout.pdf" target="_blank" rel="noopener">http://www.scullcom.com/DC_Load_wiring_layout.pdf</a></p>
+<p>Below is the Remote Sense Circuit which uses a OPA277 OP Amp as a difference amplifier. The negative 5 volt supply for the OP Amp is generated by the a ICL7660 voltage converter IC.</p>
+<p><img class="size-full wp-image-433 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/12/Part4_remote_sense.jpg" alt="Part4_remote_sense" width="678" height="475" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/Part4_remote_sense.jpg 678w, http://www.scullcom.uk/wp-content/uploads/2016/12/Part4_remote_sense-300x210.jpg 300w" sizes="(max-width: 678px) 100vw, 678px" /></p>
+<p>The 20K preset between pins 1 &amp; 8 of the OP Amp is adjusted for a NULL sense output when the sense input terminals are shorted together.</p>
+<p><strong>PART 5</strong></p>
+<p>In part 5 of this project we will improve the power Mosfet&#8217;s current handling capability. Also a Transient Mode will be added providing a pulse option for the DC Load. The software will be updated providing extra features such as; user setting of battery cut-off voltage for battery capacity mode and user setup of safety limits.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/DxA67V5qPaM?start=861&#038;feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Below are links for downloading the latest software and updated schematic diagram:<br />
+<a href="http://www.scullcom.com/Electronic_Load_software_V24.ino" target="_blank" rel="noopener">http://www.scullcom.com/Electronic_Load_software_V24.ino</a><br />
+<a href="http://www.scullcom.com/DC_Load_Schematic_v5.pdf" target="_blank" rel="noopener">http://www.scullcom.com/DC_Load_Schematic_v5.pdf</a><br />
+The Remote Voltage Sense circuit remains as show in Part 4 of this project.</p>
+<p><img class="alignnone size-full wp-image-434" src="http://www.scullcom.uk/wp-content/uploads/2016/12/Part5_mosfet_par_update.jpg" alt="Part5_mosfet_par_update" width="712" height="479" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/Part5_mosfet_par_update.jpg 712w, http://www.scullcom.uk/wp-content/uploads/2016/12/Part5_mosfet_par_update-300x202.jpg 300w" sizes="(max-width: 712px) 100vw, 712px" /></p>
+<p>Above is the revised circuit for paralleling the Power Mosfets. Additional 0.1 ohm resistors have been added in the source return of each of the Mosfets so as to reduce the effect of the negative temperature coefficient of the gate/source threshold voltage.</p>
+<p><strong>Part 6</strong></p>
+<p>In Part 6 of this project we are going to make modifications to the Power Mosfet drive circuit to improve the ability to handle higher current/power levels whilst protecting the Mosfets from over heating and possibly going in to thermal runaway. We are also going to design, build and test the trigger input circuit. In addition to this I have updated the software to Version 25.<br />
+Below are links to download the latest software. Also there are two zip files providing the PCB artwork, Schematic and Parts List for both the Mosfet Drive Circuit and the Trigger Input Circuit.<br />
+<a href="http://www.scullcom.com/Electronic_Load_software_V25.ino">http://www.scullcom.com/Electronic_Load_software_V25.ino</a><br />
+<a href="http://www.scullcom.com/DC_Load_Mosfet_Drive.zip">http://www.scullcom.com/DC_Load_Mosfet_Drive.zip</a><br />
+<a href="http://www.scullcom.com/DC_Load_Trigger_CircuitPCB.zip">http://www.scullcom.com/DC_Load_Trigger_CircuitPCB.zip</a><br />
+<strong>IMPORTANT:</strong> PLEASE REMEMBER WHEN PRINTING THE PCB ART WORK SET YOUR PRINTER TO PRINT ACTUAL SIZE.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/9auu8hH4IPM?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p><strong>Part 7</strong></p>
+<p>In part 7 of this project we will have a look at a number of updates and improvements. We will also use a new single sided PCB with all the components on one board. The Arduino software has also been updated to version 27.<br />
+Below are download links to two zip files which provide all the details. One for the updates, schematic, PCB artwork and parts list etc. and another with all the KiCad files. Also a link for the latest software:</p>
+<p><a href="http://www.scullcom.com/Electronic_Load_software_V27.ino">http://www.scullcom.com/Electronic_Load_software_V27.ino</a><br />
+<a href="http://www.scullcom.com/DC_Load_version7_1.zip">http://www.scullcom.com/DC_Load_version7_1.zip</a><br />
+<a class="yt-uix-sessionlink " href="https://www.youtube.com/redirect?event=video_description&amp;v=_JReIwVH7eo&amp;q=http%3A%2F%2Fwww.scullcom.com%2FElectronic_Load_software_V27.ino&amp;redir_token=UbYT5Kdk4N5oi7OpG3IK7ygelZ98MTUxNTk0MzMwOEAxNTE1ODU2OTA4" target="_blank" rel="nofollow noopener" data-url="/redirect?event=video_description&amp;v=_JReIwVH7eo&amp;q=http%3A%2F%2Fwww.scullcom.com%2FElectronic_Load_software_V27.ino&amp;redir_token=UbYT5Kdk4N5oi7OpG3IK7ygelZ98MTUxNTk0MzMwOEAxNTE1ODU2OTA4" data-sessionlink="itct=CDAQ6TgYACITCNfYyYSf1dgCFQ7EFgoddUoHKij4HUjq25-qsMSXyvwB" data-target-new-window="True">http://www.scullcom.com/DC_Load_v7_1_KiCad_files.zip</a></p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/_JReIwVH7eo?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>The latest version now uses a double sided PCB.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/hhzmU6gOzMo?start=2402&#038;feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>Latest download links for this project are listed below:</p>
+<p>Arduino software for 5&#215;4 matrix keypad option:<br />
+<a href="http://www.scullcom.com/Electronic_load_software_V34.ino">http://www.scullcom.com/Electronic_load_software_V34.ino</a><br />
+Arduino software for 4&#215;4 matrix keypad option:<br />
+<a href="http://www.scullcom.com/Electronic_Load_software_V34B.ino">http://www.scullcom.com/Electronic_Load_software_V34B.ino</a><br />
+The schematic and all other documents are in the zip file below:<br />
+<a href="http://www.scullcom.com/DC_Load_9_2_files.zip">http://www.scullcom.com/DC_Load_9_2_files.zip</a></p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/FkvvmR4_D-A?start=1426&#038;feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p><strong>Download links for this project are listed below:</strong></p>
+<p>Arduino software update (Version V35) for 5&#215;4 matrix keypad option:<br />
+<a href="http://www.scullcom.com/Electronic_Load_software_V35.ino">http://www.scullcom.com/Electronic_Load_software_V35.ino</a></p>
+<p>Arduino software update (Version V35B) for 4&#215;4 matrix keypad option:<br />
+<a href="http://www.scullcom.com/Electronic_Load_software_V35B.ino">http://www.scullcom.com/Electronic_Load_software_V35B.ino</a></p>
+<p>The schematic and all other documents are in the zip file below:<br />
+<a href="http://www.scullcom.com/DC_Load_update_files.zip">http://www.scullcom.com/DC_Load_update_files.zip</a></p>
+<p>Additional files which include LCD wiring details, Rotary Encoder wiring details, I2C LCD Module variations and Arduino code changes and heatsink spacing details. can be downloaded from the link below:<br />
+<a href="http://www.scullcom.com/DC_Load_additional_files.zip">http://www.scullcom.com/DC_Load_additional_files.zip</a></p>
+<p>DC Load PCB version 9.2 Gerber Files can now be downloaded from the link below:<br />
+<a class="yt-simple-endpoint style-scope yt-formatted-string" href="http://www.scullcom.com/DC_Load_ver9_2_gerbers.zip">http://www.scullcom.com/DC_Load_ver9_2_gerbers.zip</a></p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/xDQeeLFKtiQ?start=370&#038;feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>The above video covers the data logging option in Battery Capacity Mode of the DC Load. We we pass serial data to a PC using a USB lead and use some freeware software. The data will be saved as a text file which can then be used later in a spreadsheet to create a graph.</p>
+<p>Below are links to an information sheet which shows the additional lines of code added to the Arduino software for this feature. Also an information sheet about CoolTerm the serial logging freeware also used: <a class="yt-simple-endpoint style-scope yt-formatted-string" href="http://www.scullcom.com/DC_Load_info_on_added_data_logging_code.pdf"><br />
+http://www.scullcom.com/DC_Load_info_on_added_data_logging_code.pdf</a> <a class="yt-simple-endpoint style-scope yt-formatted-string" href="http://www.scullcom.com/CoolTerm_info_sheet.pdf"><br />
+http://www.scullcom.com/CoolTerm_info_sheet.pdf</a></p>
+<p>Below is a link to Roger Meier&#8217;s web site where you can download CoolTerm:<br />
+<a class="yt-simple-endpoint style-scope yt-formatted-string" href="http://freeware.the-meiers.org/">http://freeware.the-meiers.org/</a></p>
+<p><strong>LATEST PCB (Version 9.3)</strong> now includes additional grounding tracks and extra pin added for keypad header so either 5&#215;4 or 4&#215;4 matrix keypad can be used easily.</p>
+<p style="text-align: center;"><img class="alignnone size-full wp-image-476" src="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ver9_3_PCB_bottom.jpg" alt="" width="779" height="797" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ver9_3_PCB_bottom.jpg 779w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ver9_3_PCB_bottom-293x300.jpg 293w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ver9_3_PCB_bottom-768x786.jpg 768w, http://www.scullcom.uk/wp-content/uploads/2016/12/DC_Load_ver9_3_PCB_bottom-60x60.jpg 60w" sizes="(max-width: 779px) 100vw, 779px" />Above shows underside of PCB showing changes<img class="size-large wp-image-477 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/12/Component_Layout_9_3.jpg" alt="" width="648" height="667" srcset="http://www.scullcom.uk/wp-content/uploads/2016/12/Component_Layout_9_3.jpg 781w, http://www.scullcom.uk/wp-content/uploads/2016/12/Component_Layout_9_3-291x300.jpg 291w, http://www.scullcom.uk/wp-content/uploads/2016/12/Component_Layout_9_3-768x791.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p><strong>The PCB (version 9.3) gerber files can be downloaded from the link below:</strong><br />
+<a href="http://www.scullcom.com/DC_Load_ver9_3_gerber_files.zip">http://www.scullcom.com/DC_Load_ver9_3_gerber_files.zip</a></p>
+<p>The version 9.3 schematic, component layout and updated parts list can be downloaded from the link below:<br />
+<a href="http://www.scullcom.com/DC_Load_ver9_3_files.zip">http://www.scullcom.com/DC_Load_ver9_3_files.zip</a></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/feed/</wfw:commentRss>
+		<slash:comments>211</slash:comments>
+		</item>
+	</channel>
+</rss>

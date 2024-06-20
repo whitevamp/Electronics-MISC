@@ -1,0 +1,87 @@
+Info: Adding library "TFT_selectable_voltage_Ref-rescue", file "${KIPRJMOD}/TFT_selectable_voltage_Ref-rescue.lib" to project symbol library table.
+Info: Backing up file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\TFT_selectable_voltage_Ref-rescue.dcm" to file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\rescue-backup\TFT_selectable_voltage_Ref-rescue-2021-04-23-22-18-51.dcm".
+Info: Backing up file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\TFT_selectable_voltage_Ref-cache.lib" to file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\rescue-backup\TFT_selectable_voltage_Ref-cache-2021-04-23-22-18-51.lib".
+Info: Backing up file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\sym-lib-table" to file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\rescue-backup\sym-lib-table-2021-04-23-22-18-51".
+Info: Backing up file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\TFT_selectable_voltage_Ref-rescue.lib" to file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\rescue-backup\TFT_selectable_voltage_Ref-rescue-2021-04-23-22-18-51.lib".
+Info: Backing up file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\TFT_selectable_voltage_Ref.pro" to file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\rescue-backup\TFT_selectable_voltage_Ref-2021-04-23-22-18-51.pro".
+Info: Backing up file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\TFT_selectable_voltage_Ref.sch" to file "C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\rescue-backup\TFT_selectable_voltage_Ref-2021-04-23-22-18-51.sch".
+Info: Symbol library table mapping complete!
+Symbol "GND" mapped to symbol library "power".
+Symbol "GND" mapped to symbol library "power".
+Symbol "+15V" mapped to symbol library "power".
+Symbol "+15V" mapped to symbol library "power".
+Symbol "+15V" mapped to symbol library "power".
+Symbol "+15V" mapped to symbol library "power".
+Symbol "+15V" mapped to symbol library "power".
+Symbol "+15V" mapped to symbol library "power".
+Symbol "+15V" mapped to symbol library "power".
+Symbol "TC962" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "INA105-RESCUE-TFT_selectable_voltage_Ref" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "-15V" mapped to symbol library "power".
+Symbol "C" mapped to symbol library "Device".
+Symbol "C" mapped to symbol library "Device".
+Symbol "GND" mapped to symbol library "power".
+Symbol "INA105-RESCUE-TFT_selectable_voltage_Ref" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "DG303B" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "DG303B" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "MCP4922EP" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "C" mapped to symbol library "Device".
+Symbol "Conn_01x02_Male" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "C" mapped to symbol library "Device".
+Symbol "MCP1501_SOIC-8" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "Jumper" mapped to symbol library "Device".
+Symbol "D_Zener" mapped to symbol library "Device".
+Symbol "Conn_01x03_Male" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "+4.096V" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "+1.024V" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "+5V" mapped to symbol library "power".
+Symbol "LM7912_TO220" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "+1.024V" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "GND" mapped to symbol library "power".
+Symbol "+5V" mapped to symbol library "power".
+Symbol "Conn_01x10_Male" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "-15V" mapped to symbol library "power".
+Symbol "-15V" mapped to symbol library "power".
+Symbol "-15V" mapped to symbol library "power".
+Symbol "-15V" mapped to symbol library "power".
+Symbol "-15V" mapped to symbol library "power".
+Symbol "C" mapped to symbol library "Device".
+Symbol "C" mapped to symbol library "Device".
+Symbol "GND" mapped to symbol library "power".
+Symbol "GND" mapped to symbol library "power".
+Symbol "+5V" mapped to symbol library "power".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "+4.096V" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "POT_TRIM" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "+5V" mapped to symbol library "power".
+Symbol "C" mapped to symbol library "Device".
+Symbol "C" mapped to symbol library "Device".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "D" mapped to symbol library "Device".
+Symbol "LM7805_TO220" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "LM7812_TO220" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "MAX6341" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "GND" mapped to symbol library "power".
+Symbol "+5V" mapped to symbol library "power".
+Symbol "Conn_01x04_Female" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "C" mapped to symbol library "Device".
+Symbol "CP" mapped to symbol library "Device".
+Symbol "C" mapped to symbol library "Device".
+Symbol "Conn_01x02" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "GND" mapped to symbol library "power".
+Symbol "Conn_01x02" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "GND" mapped to symbol library "power".
+Symbol "GND" mapped to symbol library "power".
+Symbol "C" mapped to symbol library "Device".
+Symbol "GND" mapped to symbol library "power".
+Symbol "GND" mapped to symbol library "power".
+Symbol "Jack-DC" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".
+Symbol "GND" mapped to symbol library "power".
+Symbol "GND" mapped to symbol library "power".
+Symbol "C" mapped to symbol library "Device".
+Symbol "Conn_01x02" mapped to symbol library "TFT_selectable_voltage_Ref-rescue".

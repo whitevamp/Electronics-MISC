@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name DC_Calibrator_Battery_Module-rescue)(type Legacy)(uri ${KIPRJMOD}/DC_Calibrator_Battery_Module-rescue.lib)(options "")(descr ""))
+)

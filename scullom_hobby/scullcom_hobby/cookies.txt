@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.google.com	TRUE	/	FALSE	1999999999	NID	187=HTrCK9_e2yw3WCeEV1O9Wkp6fvfN-cVr31kUS4AoVwm7r8MaNn-SnZXT3XGQTjxVZfovmvI8T6xYoTirkL4uRm1Uls1WWo6lqZH-oL4HW_HEn3V40MdsB8cB7eYdpYg2MQBH6u5TxcXoE-Zo5t4lbSjDH-xxNxnO9Q8dIcewGXE
+www.scullcom.uk	TRUE	/	FALSE	1999999999	PHPSESSID	l7sgk4g47fqhhv62ectclnl0v2
+www.scullcom.uk	TRUE	/	FALSE	1999999999	wordpress_test_cookie	WP+Cookie+check
+

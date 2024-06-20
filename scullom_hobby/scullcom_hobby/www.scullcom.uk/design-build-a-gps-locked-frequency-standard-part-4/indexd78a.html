@@ -1,0 +1,1404 @@
+<!doctype html>
+<!--[if !IE]>
+<html class="no-js non-ie" lang="en-GB"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="no-js ie7" lang="en-GB"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en-GB"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js ie9" lang="en-GB"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en-GB"> <!--<![endif]-->
+
+<!-- Mirrored from www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/?replytocom=308 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jul 2019 03:19:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Design &#038; Build a GPS locked Frequency Standard – Part 4 &#8211; Scullcom</title>
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Scullcom &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Scullcom &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Scullcom &raquo; Design &#038; Build a GPS locked Frequency Standard – Part 4 Comments Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.scullcom.uk\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='apss-font-awesome-css'  href='../wp-content/plugins/accesspress-social-share/css/font-awesome/font-awesome.min8f76.css?ver=4.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='apss-font-opensans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans&amp;ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='apss-frontend-css-css'  href='../wp-content/plugins/accesspress-social-share/css/frontend8f76.css?ver=4.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ye_dynamic-css'  href='../wp-content/plugins/youtube-embed/css/main.min6959.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-bootstrap-css'  href='../wp-content/themes/sparkling/assets/css/bootstrap.min6959.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-icons-css'  href='../wp-content/themes/sparkling/assets/css/font-awesome.min6959.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&amp;ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-style-css'  href='../wp-content/themes/sparkling/style6959.css?ver=4.9.3' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/vendor/modernizr.min6959.js?ver=4.9.3'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/vendor/bootstrap.min6959.js?ver=4.9.3'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/functions.min6959.js?ver=4.9.3'></script>
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Operational Amplifier (OP AMP)' href='../operational-amplifier-op-amp/index.html' />
+<link rel='next' title='Design &#038; Build a Low Current Reference Source' href='../design-build-a-low-current-reference-source/index.html' />
+<meta name="generator" content="WordPress 4.9.3" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../indexc807.html?p=250' />
+<meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed742e.json?url=http%3A%2F%2Fwww.scullcom.uk%2Fdesign-build-a-gps-locked-frequency-standard-part-4%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embedf3cb?url=http%3A%2F%2Fwww.scullcom.uk%2Fdesign-build-a-gps-locked-frequency-standard-part-4%2F&amp;format=xml" />
+<link rel="apple-touch-icon" sizes="57x57" href="../wp-content/uploads/fbrfg/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../wp-content/uploads/fbrfg/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../wp-content/uploads/fbrfg/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../wp-content/uploads/fbrfg/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../wp-content/uploads/fbrfg/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../wp-content/uploads/fbrfg/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../wp-content/uploads/fbrfg/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../wp-content/uploads/fbrfg/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../wp-content/uploads/fbrfg/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="../wp-content/uploads/fbrfg/manifest.json">
+<link rel="mask-icon" href="../wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/fbrfg/mstile-144x144.png">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"><style type="text/css"></style><link rel="pingback" href="../xmlrpc.php">		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+</head>
+
+<body class="post-template-default single single-post postid-250 single-format-video group-blog">
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="site-navigation-inner col-sm-12">
+						<div class="navbar-header">
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+														<div id="logo">
+																																<a href="../index.html"><img src="../wp-content/uploads/2016/03/logo_grey2.png"  height="76" width="300" alt="Scullcom"/></a>
+																																</div><!-- end of #logo -->
+						</div>
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-32"><a href="../index.html">Home</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-36 dropdown"><a href="../category/projects/index.html">Projects </a><span class="caret sparkling-dropdown"></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-208" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-208"><a href="../category/projects/index.html">All Projects</a></li>
+	<li id="menu-item-201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-201"><a href="../category/projects/5-volt-precision-reference/index.html">5 Volt Precision Reference</a></li>
+	<li id="menu-item-468" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-468"><a href="../category/projects/constant-current-source-box/index.html">Constant Current Source Box</a></li>
+	<li id="menu-item-416" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-416"><a href="../category/projects/dc-load/index.html">DC Load</a></li>
+	<li id="menu-item-469" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-469"><a href="../category/projects/dc-voltage-calibrator/index.html">DC Voltage Calibrator</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-203"><a href="../category/projects/diy-pcb-exposure-unit/index.html">DIY PCB Exposure Unit</a></li>
+	<li id="menu-item-199" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-199"><a href="../category/projects/frequency-reference/index.html">Frequency Reference</a></li>
+	<li id="menu-item-200" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-200"><a href="../category/projects/function-generator/index.html">Function Generator</a></li>
+	<li id="menu-item-502" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-502"><a href="../category/projects/function-generator-mk2/index.html">Function Generator Mk2</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-204"><a href="../category/projects/gps-system/index.html">GPS System</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-205"><a href="../category/projects/led-floodlight/index.html">LED Floodlight</a></li>
+	<li id="menu-item-470" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-470"><a href="../category/projects/low-current-reference/index.html">Low Current Reference</a></li>
+	<li id="menu-item-202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-202"><a href="../category/projects/milliohm-meter/index.html">Milliohm Meter</a></li>
+	<li id="menu-item-198" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198"><a href="../category/projects/millivolt-meter/index.html">Millivolt Meter</a></li>
+	<li id="menu-item-207" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-207"><a href="../category/projects/precision-voltage-reference-box/index.html">Precision Voltage Reference Box</a></li>
+	<li id="menu-item-355" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-355"><a href="../category/projects/stair-step-waveform-generator/index.html">Stair-Step Waveform Generator</a></li>
+	<li id="menu-item-389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-389"><a href="../category/projects/pulse-generator/index.html">Pulse Generator</a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38"><a href="../category/reviews/index.html">Reviews</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37"><a href="../category/teardowns/index.html">Teardowns</a></li>
+<li id="menu-item-132" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-132"><a href="../category/tutorials/index.html">Tutorials</a></li>
+<li id="menu-item-210" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-210 dropdown"><a href="../category/basics/index.html">Basics </a><span class="caret sparkling-dropdown"></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-218" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-218"><a href="../category/basics/resistor/index.html">Resistor</a></li>
+	<li id="menu-item-219" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-219"><a href="../category/basics/capacitor/index.html">Capacitor</a></li>
+	<li id="menu-item-221" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-221"><a href="../category/basics/inductor/index.html">Inductor</a></li>
+	<li id="menu-item-220" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-220"><a href="../category/basics/diode/index.html">Diode</a></li>
+	<li id="menu-item-245" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245"><a href="../category/basics/opto/index.html">Opto</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-222"><a href="../category/basics/transistor/index.html">Transistor</a></li>
+	<li id="menu-item-223" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-223"><a href="../category/basics/op-amp/index.html">OP Amp</a></li>
+	<li id="menu-item-224" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-224"><a href="../category/basics/logic-gates/index.html">Logic Gates</a></li>
+	<li id="menu-item-243" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-243"><a href="../category/basics/filters/index.html">Filters</a></li>
+	<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="../category/basics/sensors/index.html">Sensors</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-244"><a href="../category/basics/fuses/index.html">Fuses</a></li>
+	<li id="menu-item-242" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-242"><a href="../category/basics/batteries/index.html">Batteries</a></li>
+	<li id="menu-item-247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="../category/basics/transformer/index.html">Transformer</a></li>
+	<li id="menu-item-241" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-241"><a href="../category/basics/antenna/index.html">Antenna</a></li>
+</ul>
+</li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="../about/index.html">About</a></li>
+</ul></div>					</div>
+				</div>
+			</div>
+		</nav><!-- .site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="top-section">
+								</div>
+
+		<div class="container main-content-area">
+						<div class="row side-pull-left">
+				<div class="main-content-inner col-sm-12 col-md-8">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<article id="post-250" class="post-250 post type-post status-publish format-video has-post-thumbnail hentry category-frequency-reference category-projects category-uncategorised post_format-post-format-video">
+	<img width="750" height="410" src="../wp-content/uploads/2016/03/frs4-750x410.jpg" class="single-featured wp-post-image" alt="" />	<div class="post-inner-content">
+		<header class="entry-header page-header">
+
+			<h1 class="entry-title ">Design &#038; Build a GPS locked Frequency Standard – Part 4</h1>
+
+			<div class="entry-meta">
+				<span class="posted-on"><i class="fa fa-calendar"></i> <a href="index.html" rel="bookmark"><time class="entry-date published" datetime="2016-03-24T23:19:00+00:00">24th March 2016</time><time class="updated" datetime="2016-03-29T12:36:41+00:00">29th March 2016</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="../author/louis/index.html">Louis Scully</a></span></span>
+								<span class="cat-links"><i class="fa fa-folder-open-o"></i>
+				 <a href="../category/projects/frequency-reference/index.html" rel="category tag">Frequency Reference</a>, <a href="../category/projects/index.html" rel="category tag">Projects</a>, <a href="../category/uncategorised/index.html" rel="category tag">Uncategorised</a>				</span>
+								
+			</div><!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p>In this 4th part of this project we upgrade the software to give satellite data and frequency lock display. Plus the current frequency on the display is improved to give reading in MHz, KHz or Hz.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/QUiVZFkBh8k?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>The new software version can be downloaded from the link below:<br />
+<a href="http://www.scullcom.com/GPS_Ref_Version6.zip" target="_blank">http://www.scullcom.com/GPS_Ref_Version6.zip</a><br />
+PLEASE NOTE TO COMPILE THIS CODE YOU NEED TO BE RUNNING THE LATEST VERSION OF ARDUINO IDE (version 1.6.7)<br />
+Below is a link to download a user guide on this project which includes circuit detail, PCB detailed layouts, schematics and software details. The file is a zip file which contains a PDF document:<br />
+<a href="http://www.scullcom.com/Scullcom_GPS_Ref_manual.zip" target="_blank">http://www.scullcom.com/Scullcom_GPS_Ref_manual.zip</a></p>
+<p><strong>Reading the GPS module data to extract the number of Satellites detected</strong></p>
+<p>When the GPS module starts receiving satellite data it provides a constant stream of data sentences which are know as NMEA sentences. Within this data stream the most important NMEA sentences include the GGA which provides the current Fix data, the RMC which provides the minimum GPS sentences information, and the GSA which provides the Satellite status data. In our project we will use the GGA data stream to extract the number of satellites detected and locked on to.</p>
+<p>Below is an example of a typical GGA data sentence:</p>
+<p><strong>$GPGGA,123519.00,4807.03830,N,01131.00000,E,1,08,0.9,545.4,M,46.9,M,,*47</strong></p>
+<p>Where:</p>
+<ul>
+<li>GGA                      Global Positioning System Fix Data</li>
+<li>123519.00            Fix taken at 12:35:19 UTC (current time)</li>
+<li>4807.03830,N    Latitude 48 deg 07.038&#8242; N</li>
+<li>01131.00000,E   Longitude 11 deg 31.000&#8242; E</li>
+<li>1 Fix quality:  0 = invalid, 1 = GPS fix (SPS), 2 = DGPS fix, 3 = PPS fix, 4 = Real Time Kinematic,<br />
+5 = Float RTK, 6 = estimated (dead reckoning) (2.3 feature), 7 = Manual input mode,<br />
+8 = Simulation mode</li>
+<li>08                    Number of satellites being tracked</li>
+<li>0.9                   Horizontal dilution of position</li>
+<li>545.4,M         Altitude, Meters, above mean sea level</li>
+<li>46.9,M           Height of geoid (mean sea level) above WGS84 ellipsoid</li>
+<li>(empty field) time in seconds since last DGPS update</li>
+<li>(empty field) DGPS station ID number</li>
+<li>*47                   the checksum data, always begins with *</li>
+</ul>
+<p>We will be using the data highlighted above to show the number of satellite on our LCD. In order to extract this information we will set up a second Software Serial port.</p>
+<p>First we need to identify the NMEA data we need to capture and we do this with the flowing code:</p>
+<p>char gpsin[8] = &#8220;$GPGGA,&#8221;;             //define a character string “$GPGGA,”<br />
+if (GPSreceiver.find(gpsin)) {           //if serial data starts with the characters “$GPGGA,”<br />
+GPGGAdata = GPSreceiver.readStringUntil(&#8216;\n&#8217;);  //read data until carriage return</p>
+<p>When the characters &#8220;$GPGGA,&#8221; are detected it starts reading the remainder of the string data in to the buffer. So the captured data starts from the first digit of the &#8216;time&#8217; data (and not from the $ character). The captured data then looks as follows:</p>
+<p><strong>123519.00,4807.03830,N,01131.00000,E,1,08,0.9,545.4,M,46.9,M,,*47</strong></p>
+<p>With in the main loop we will use the substring command to extract the number of satellites from the GGA data sentence. This is a simply and easy way of extracting the data you wish to use. The substring command is defined as follows:<br />
+substring(index, to) – this returns a string with the characters starting from index and ending at the character location before the to<br />
+So to extract the number of satellites (highlighted in read) from the GGA data sentence below</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-large wp-image-322" src="../wp-content/uploads/2016/03/NMEA_data_stripped-1024x142.jpg" alt="NMEA_data_stripped" width="648" height="90" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-1024x142.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-300x42.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-768x107.jpg 768w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped.jpg 1446w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>We use the following code:</p>
+<p><code class="codeblock">sats = GPGGAdata.substring(39,41);</code></p>
+<p>The string “sats” now is equal to “08”<br />
+If you wanted to extract other data you simply need to change the “index, to” numbers in the substring. For example to extract the current time to a string labeled time then you would use:</p>
+<p><code class="codeblock">time = GPGGAdata.substring(7,13); //the string “time” now is equal to “123519”</code></p>
+<p><strong>Details of Code used in program loop to extract number of satellites and display on LCD</strong></p>
+<p><code class="codeblock">//new variables added at start of program<br />
+String sats; //number of satellites detected<br />
+String GPGGAdata;           //satellite data string from GPS module<br />
+String FreqStatus;          //used to print Frequency locked if applicable<br />
+int satNum;                 //number of satellites detected as an integer<br />
+//set up a Software Serial port called GPSreceiver<br />
+SoftwareSerial GPSreceiver (14,255); //14(A0) is RX on Arduino connected to GPS TX pin.<br />
+//255 a nonexistent pin number used to free up a pin<br />
+//in void setup() include serial monitor command and set to 57600 baud.<br />
+Serial.begin(57600);                 //this is simply used for testing<br />
+//The # key used to tell the unit to display the number of satellites on LCD.<br />
+// below is the software code used in the main loop to show number of satellites when //“#” key pressed:<br />
+case '#'://# pressed Show number of satellites detected and frequency status<br />
+lcd.clear(); //clear LCD<br />
+lcd.print("Satellites =");        //print the word 'Satellites =' on the top line of LCD<br />
+do {                             //now loop<br />
+GPSreceiver.flush();   //clear any data which may be in the Serial Buffer<br />
+if (GPSreceiver.available())          //if any GPS data is available<br />
+{<br />
+GPSreceiver.read();         //read GPS serial data streams if available<br />
+}<br />
+char gpsin[8] = "$GPGGA,";       //define a character string “$GPGGA,”<br />
+if (GPSreceiver.find(gpsin)) {     //if serial data starts with the characters “$GPGGA,”<br />
+GPGGAdata = GPSreceiver.readStringUntil('\n'); //read data until a carriage return<br />
+sats = GPGGAdata.substring(39,41); //extract number of satellites from data string<br />
+}<br />
+satNum = sats.toInt(); //convert sats string to an integer so as to remove leading zero<br />
+if (satNum &gt;0){<br />
+FreqStatus = "Frequency Locked";  //if satellites detected the status string<br />
+//= “Frequency Locked”<br />
+}else{<br />
+FreqStatus = " ";                 //16 spaces to clear line if no lock<br />
+}<br />
+Serial.print(GPGGAdata);   //These serial print lines are for testing using<br />
+//Serial Monitor<br />
+Serial.println(); //full GPGGA data sentence printed and then carriage return<br />
+Serial.print("Satellite = ");<br />
+Serial.print(satNum);<br />
+Serial.println();<br />
+Serial.print(FreqStatus);<br />
+Serial.println();<br />
+lcd.setCursor(13,0); //set cursor position to column 13 of row 0 (first line on LCD)<br />
+lcd.print(" ");  //clears number if no satellites detected (3 spaces used)<br />
+lcd.setCursor(13,0); //set cursor position to column 13 of row 0 (first line on LCD)<br />
+lcd.print(satNum);         //print number of satellites to LCD<br />
+lcd.setCursor(0,1); //set cursor position to column 0 of row 1 (second line on LCD)<br />
+lcd.print(FreqStatus);     //print Frequency Locked status<br />
+}<br />
+while (customKeypad.getKey()!= '#'); //if # key pressed again break out of loop<br />
+displayCurrentFrequency();   //and display current frequency subroutine<br />
+break;                       //break and return to main program loop</code></p>
+<p><strong>The software for this project is made up of three parts all of which are include in a download zip file.</strong></p>
+<p><img class="alignnone size-full wp-image-253" src="../wp-content/uploads/2016/03/folder1.jpg" alt="folder1" width="846" height="85" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/folder1.jpg 846w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder1-300x30.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder1-768x77.jpg 768w" sizes="(max-width: 846px) 100vw, 846px" /></p>
+<p>Once the file is unzipped you will have a folder as above. In this folder you will find the following files shown below:</p>
+<p><img class="alignnone size-full wp-image-254" src="../wp-content/uploads/2016/03/folder2.jpg" alt="folder2" width="847" height="132" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/folder2.jpg 847w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder2-300x47.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder2-768x120.jpg 768w" sizes="(max-width: 847px) 100vw, 847px" /></p>
+<p>Please ensure that you are running the latest version of the Arduino IDE which is “Arduino 1.6.7” (older versions may not work). Run the “GPS_Ref_Version6” file and you should find the software opens up in the Arduino IDE as shown below:</p>
+<p><img class="alignnone size-full wp-image-302" src="../wp-content/uploads/2016/03/codeV6.jpg" alt="codeV6" width="808" height="704" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6.jpg 808w, http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6-300x261.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6-768x669.jpg 768w" sizes="(max-width: 808px) 100vw, 808px" /></p>
+<p>Now compile and upload the software to the Arduino nano on the main PCB.</p>
+<hr />
+<p><strong>GPS Locked Frequency Standard Project</strong></p>
+<p>This project will use a small GPS module which has the u-blox Neo-7 GPS receiver. These modules are readily available on sites like eBay for around £12, they tend to be advertised for use with flight controllers on model aircraft.<br />
+The u-blox receiver is normally fitted in the centre of a small PCB. Additional components on the PCB include a 3.3 volt Low Drop Voltage Regulator, timepulse and power on LED’s and EEPROM. There is also some short term back-up supply for the DRAM of the Neo-7 receiver by use of a 0.08F super capacitor (Seiko XH414HG). These capacitors normally only provide power off back-up for around a day or so if you are lucky.<br />
+These GPS modules are usually configured by default to provide a 1Hz timing pulse output which is normally used to flash a green LED to indicate when the unit has a fix on satellites and the local oscillator is locked to the GPS signal. By default this timing pulse provides a 100mSec pulse every 1000mSec, as shown below.</p>
+<p><img class="alignnone size-full wp-image-262" src="../wp-content/uploads/2016/03/TimePulse.jpg" alt="TimePulse" width="737" height="246" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse.jpg 737w, http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse-300x100.jpg 300w" sizes="(max-width: 737px) 100vw, 737px" /></p>
+<p>This timing pulse can be configured to provide different frequencies and different duty cycle and we will be using this option in this project to change the frequency and fix the duty cycle to 50%.<br />
+GPS satellites are primarily used as a navigation system; this global positioning system can also used to disseminate precise time, time intervals, and frequency. The GPS carrier signals originate from an on-board atomic clock (oscillator) which is also monitored and controlled by ground stations in the United States to ensure it agrees with the Coordinated Universal Time (UTC). UTC is the primary time standard by which the world regulates clocks and time.<br />
+Atomic clocks are based on the natural atomic oscillations of gases in resonant cavities. When isolated from magnetic fields, rubidium and cesium gases will resonate at specific frequencies under controlled conditions. These frequencies are so accurate that since 1967 the length of the second has been defined as the frequency of a specific resonant mode of the cesium atom, producing 9,192,631,770 oscillations in one second.</p>
+<p>The u-blox receiver uses a built-in 48MHz oscillator.</p>
+<p>There are various versions of the u-blox receiver available, some of which can be configured to provide a frequency pulse output in the range 0.25Hz to 10MHz. Those which are suitable for this project are listed in the table below:</p>
+<table  class=" table table-hover" style="height: 490px;" width="644">
+<tbody>
+<tr>
+<td width="205"><strong>u-blox Receiver Type</strong></td>
+<td width="205"><strong>Type of Memory fitted</strong></td>
+<td width="205"><strong>Type of Oscillator used</strong></td>
+</tr>
+<tr>
+<td width="205">Neo-6T</td>
+<td width="205">ROM</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-7M</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-7N</td>
+<td width="205">FLASH</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-7P</td>
+<td width="205">FLASH</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-M8M</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-M8N</td>
+<td width="205">FLASH</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-M8Q</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+</tbody>
+</table>
+<p>In this project we will use the Neo-7M. As this uses a ROM, the option to use a 3 volt backup battery on the PCB will help to speed up satellite lock after switch-on (this is optional). If the back-up battery is not used it may take a few minutes before the unit locks on to satellites. If the Neo-7N version is used then as it uses a FLASH memory there is no need for a back-up supply.</p>
+<div class='apss-social-share apss-theme-3 clearfix' >
+
+
+				<div class='apss-facebook apss-single-icon'>
+					<a rel='nofollow'  title="Share on Facebook" target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-facebook'></i>
+							<span class='apss-social-text'>Share on Facebook</span>
+							<span class='apss-share'>Share</span>
+						</div>
+													<div class='count apss-count' data-url='http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/' data-social-network='facebook' data-social-detail="_facebook.html">0</div>
+											</a>
+				</div>
+								<div class='apss-twitter apss-single-icon'>
+					<a rel='nofollow'  href="https://twitter.com/intent/tweet?text=Design%20%26%20Build%20a%20GPS%20locked%20Frequency%20Standard%20%E2%80%93%20Part%204&amp;url=http%3A%2F%2Fwww.scullcom.uk%2Fdesign-build-a-gps-locked-frequency-standard-part-4%2F&amp;"  title="Share on Twitter" target='_blank'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-twitter'></i>
+							<span class='apss-social-text'>Share on Twitter</span><span class='apss-share'>Tweet</span>
+						</div>
+													<div class='count apss-count' data-url='http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/' data-social-network='twitter' data-social-detail="_twitter.html">0</div>
+											</a>
+				</div>
+								<div class='apss-google-plus apss-single-icon'>
+					<a rel='nofollow'  title="Share on Google Plus" target='_blank' href='https://plus.google.com/share?url=http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-google-plus'></i>
+							<span class='apss-social-text'>Share on Google Plus</span>
+							<span class='apss-share'>Share</span>
+						</div>
+											</a>
+				</div>
+				
+				<div class='apss-pinterest apss-single-icon'>
+					<a rel='nofollow' title="Share on Pinterest" href='javascript:pinIt();'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-pinterest'></i>
+							<span class='apss-social-text'>Share on Pinterest</span>
+							<span class='apss-share'>Share</span>
+						</div>
+													<div class='count apss-count' data-url='http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/' data-social-network='pinterest' data-social-detail="_pinterest.html">0</div>
+						
+					</a>
+				</div>
+								<div class='apss-email apss-single-icon'>
+					<a rel='nofollow' class='share-email-popup' title="Share it on Email" target='_blank' href='mailto:?subject=Please visit this link http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/&amp;body=Hi!, I found this information for you: "Design%20%26%20Build%20a%20GPS%20locked%20Frequency%20Standard%20%E2%80%93%20Part%204". Here is the website link: http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/. Thank you.'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa  fa-envelope'></i>
+							<span class='apss-social-text'>Send email</span>
+							<span class='apss-share'>Mail</span>
+						</div>
+					</a>
+				</div>
+
+				</div>					</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+			
+		</footer><!-- .entry-meta -->
+	</div>
+
+	
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			30 thoughts to &ldquo;Design &#038; Build a GPS locked Frequency Standard – Part 4&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-2" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-2" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/77cee77845f8069bd5bb0efa164eaa3b?s=60&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/77cee77845f8069bd5bb0efa164eaa3b?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Cyril Muller</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-2">
+							<time datetime="2016-03-25T10:14:56+00:00">
+								25th March 2016 at 10:14 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Read my comments on youtube. The conclusion is that the mcu won&#8217;t output a clean clock without a PLL. It can only output a signal synchronized with the 48 MHz clock and will add extra cycles from time to time to generate the right number of cycles ON AVERAGE but not on a single period. With frequencies that are low enough the problem is reduced (because changing the half period by +- 1/48000000 s is negligeable if the half cycle is 1/48000s) but will never disappear.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index0e22.html?replytocom=2#respond' onclick='return addComment.moveForm( "div-comment-2", "2", "respond", "250" )' aria-label='Reply to Cyril Muller'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-5" class="comment byuser comment-author-louis bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-5" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-5">
+							<time datetime="2016-03-26T15:22:31+00:00">
+								26th March 2016 at 3:22 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I have found if you select any random frequency up to about 2 MHz the output always gives a nice clean square wave with no phase jitter. The output waveform of any frequency between 3 MHz to 4 MHz also stays fairly clean. Once you go higher than these frequencies the square wave has some phase noise but the frequency is still accurate when monitored on a frequency counter or spectrum analyser. Choosing frequencies which have a factor of 48 MHz like 4, 6, 8 or 12 MHz does show some slight improvement but the phase jitter on the waveform is still there. To remove this phase jitter altogether a Phase Locked Loop circuit could be used, but I will leave this for future project as it involves a second PCB with a Voltage Controlled Oscillator and a Programmable Frequency Divider in the feedback loop. The project as it stands at the moment does give out an accurate frequency reference signal so is still quite useful for the hobbyist and a good source of reference to check the accuracy of frequency counter.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index8e42.html?replytocom=5#respond' onclick='return addComment.moveForm( "div-comment-5", "5", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-56" class="comment even depth-3">
+			<article id="div-comment-56" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/554e50cb8bd8491a6474ef84f9e14e09?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/554e50cb8bd8491a6474ef84f9e14e09?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Geoffrey Bennett</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-56">
+							<time datetime="2017-09-08T16:41:01+00:00">
+								8th September 2017 at 4:41 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks for all your helpful work on this project.<br />
+Do you think you could give some advice on how to do the PLL circuit you suggested? It has been nearly a year and a half, and the PLL circuit is for me the most useful part of the project.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index28b4.html?replytocom=56#respond' onclick='return addComment.moveForm( "div-comment-56", "56", "respond", "250" )' aria-label='Reply to Geoffrey Bennett'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-3" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-3" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/2564620f57dd9557faedeae8298f43f9?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/2564620f57dd9557faedeae8298f43f9?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Willis</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-3">
+							<time datetime="2016-03-25T14:53:08+00:00">
+								25th March 2016 at 2:53 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I believe the issues you are seeing with &#8220;phase distortion&#8221; are rather due to the pulse dropping method that ublox uses for synthesis of frequencies that are not integer multiples of the 48 MHz crystal frequency. This means that 12,8,6,4,2,1 MHz etc. will be clean but 10 MHz etc. will not.</p>
+<p>Over an averaging period such as that used by a frequency counter the frequency will look spot on, but as you&#8217;ve demonstrated a spectrum analyzer and oscilloscope will notice the difference.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index3094.html?replytocom=3#respond' onclick='return addComment.moveForm( "div-comment-3", "3", "respond", "250" )' aria-label='Reply to Willis'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-7" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-7" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/9e68a01a6a4b5fd329a82cfd27d81964?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/9e68a01a6a4b5fd329a82cfd27d81964?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Phil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-7">
+							<time datetime="2016-05-08T16:46:57+00:00">
+								8th May 2016 at 4:46 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Louis,<br />
+What is the accuracy of the GPS reference ?<br />
+Thank you for your videos and your excellent teaching skills !!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index41b7.html?replytocom=7#respond' onclick='return addComment.moveForm( "div-comment-7", "7", "respond", "250" )' aria-label='Reply to Phil'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-15" class="comment byuser comment-author-louis bypostauthor odd alt depth-2">
+			<article id="div-comment-15" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-15">
+							<time datetime="2016-10-10T22:16:36+00:00">
+								10th October 2016 at 10:16 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Phil,<br />
+I have compared it with my rubidium standard which would mean to within a few parts in 10 to the power 11.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index8528.html?replytocom=15#respond' onclick='return addComment.moveForm( "div-comment-15", "15", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-24" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-24" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/87c8f158906bbb2924a9a5175826588e?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/87c8f158906bbb2924a9a5175826588e?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">David</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-24">
+							<time datetime="2017-02-19T17:48:36+00:00">
+								19th February 2017 at 5:48 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Louis,</p>
+<p>Where did you get your NEO module from ?<br />
+Would you trust Ali-very-fast for those modules at very very low price ?<br />
+Thanks for your projects and videos.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index745d.html?replytocom=24#respond' onclick='return addComment.moveForm( "div-comment-24", "24", "respond", "250" )' aria-label='Reply to David'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-25" class="comment byuser comment-author-louis bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-25" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-25">
+							<time datetime="2017-02-22T22:18:15+00:00">
+								22nd February 2017 at 10:18 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi David, I purchased mine on eBay and had no problems.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexfaf1.html?replytocom=25#respond' onclick='return addComment.moveForm( "div-comment-25", "25", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-26" class="comment even depth-3">
+			<article id="div-comment-26" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/87c8f158906bbb2924a9a5175826588e?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/87c8f158906bbb2924a9a5175826588e?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">David</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-26">
+							<time datetime="2017-02-26T17:17:39+00:00">
+								26th February 2017 at 5:17 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>OK, thanks for your reply.   I&#8217;ll give it a chance.<br />
+I hope to see new projects and new videos</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index1dff.html?replytocom=26#respond' onclick='return addComment.moveForm( "div-comment-26", "26", "respond", "250" )' aria-label='Reply to David'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-51" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-51" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f0d620ffd89953b35fc97d5081c593a9?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f0d620ffd89953b35fc97d5081c593a9?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Steve</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-51">
+							<time datetime="2017-08-13T15:44:48+00:00">
+								13th August 2017 at 3:44 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Louis,</p>
+<p>Such a reference std has been on my to-do list for a couple of years. I happened upon your excellent video presentations and am encouraged to do something about it!</p>
+<p>Is it possible to send me a 1:1 image of the final PCB? Ideally a reversed image would be excellent since I routinely use the &#8216;iron-on&#8217; method for producing my PCBs.</p>
+<p>Thanks,<br />
+Steve.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index740f.html?replytocom=51#respond' onclick='return addComment.moveForm( "div-comment-51", "51", "respond", "250" )' aria-label='Reply to Steve'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-62" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-62" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/0ea0081c82a882da7cce6fd6a21871d2?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/0ea0081c82a882da7cce6fd6a21871d2?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Anthony Jaques</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-62">
+							<time datetime="2017-10-31T08:00:51+00:00">
+								31st October 2017 at 8:00 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Louis,<br />
+      I got it working, and I am very impressed.  My previous reference was a 100KHz signal derived from Droitwich. It is interesting to compare the two (with your design producing 100KHz of course). There appear locked of course, but after several hours there was a relative phase shift of about a quarter of a cycle. Probably of no practical consequence but mildly interesting.<br />
+     If I might be cheeky enough to suggest two software changes:<br />
+     It would be useful if the numeric keys were ignored until the &#8220;A&#8221; key is pushed. I have a habit of pushing a numeric button, and then remembering that I should have done an A first! Then, when the brain rights itself, using the A does not clear the junk already entered. So a nonsense frequency has to be sent before the process can be done properly.<br />
+     Secondly, and related to that, a possible use for the * key would be to erase anything previously entered, to fix a misstype!<br />
+      Nice project Louis. Thank you for it.<br />
+Tony<br />
+(G3PTD)</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index172f.html?replytocom=62#respond' onclick='return addComment.moveForm( "div-comment-62", "62", "respond", "250" )' aria-label='Reply to Anthony Jaques'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-70" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-70" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/9fd5dc4d942cd167f22cf6a5f8f2b2f9?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/9fd5dc4d942cd167f22cf6a5f8f2b2f9?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Robert Riley</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-70">
+							<time datetime="2018-02-27T18:02:58+00:00">
+								27th February 2018 at 6:02 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Louis<br />
+I have finally got down to building the frequency standard, but when I try to Arduino: 1.8.5 (Windows 10), Board: &#8220;Arduino/Genuino Uno&#8221; verify the program I get the following error message :</p>
+<p>C:\Users\Robert\Documents\Arduino\GPS_Ref_Version6\GPS_Ref_Version6.ino:19:112: fatal error: Keypad.h: No such file or directory</p>
+<p> #include    //dowmload and add this library from <a href="http://playground.arduino.cc/uploads/Code/Keypad.zip" rel="nofollow">http://playground.arduino.cc/uploads/Code/Keypad.zip</a></p>
+<p>                                                                                                                ^</p>
+<p>compilation terminated.</p>
+<p>exit status 1<br />
+Error compiling for board Arduino/Genuino Uno.</p>
+<p>This report would have more information with<br />
+&#8220;Show verbose output during compilation&#8221;<br />
+option enabled in File -&gt; Preferences.</p>
+<p>I can see the Keyboard.H program  but as I am not familiar with the Adruino I am not sure in which file it should be residing . can you help?</p>
+<p>Whilst I wa checking what I had done I noticed that you showed the original download as GPS_Ref_version5,<br />
+I could not find version 5 so used version6.<br />
+I can be contacted on 07974204219 or <a href="mailto:rileyr103nun@sky.com">rileyr103nun@sky.com</a> if you want any further details.<br />
+regards<br />
+bob riley</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexdcee.html?replytocom=70#respond' onclick='return addComment.moveForm( "div-comment-70", "70", "respond", "250" )' aria-label='Reply to Robert Riley'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-121" class="comment byuser comment-author-louis bypostauthor even depth-2">
+			<article id="div-comment-121" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-121">
+							<time datetime="2018-03-28T09:15:03+00:00">
+								28th March 2018 at 9:15 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Bob,<br />
+Sorry for delay only just seen your message.<br />
+You need to download the Keypad.h libary from the link I gave, namely;<br />
+<a href="http://playground.arduino.cc/uploads/Code/Keypad.zip" rel="nofollow">http://playground.arduino.cc/uploads/Code/Keypad.zip</a><br />
+This will be a zip file which will be saved in your download folder.<br />
+You then need to install that library in your Arduino IDE.<br />
+There are basically two ways of doing this.<br />
+Below is a link to a You Tube video which describes both these methods. I would recommend you use the second method he explains as it is the simplest &#8211; it starts at 2.00 mins in to the video but I recommend you view the whole video first before doing it.<br />
+<a href="https://www.youtube.com/watch?v=d5LU1ig4BQQ" rel="nofollow">https://www.youtube.com/watch?v=d5LU1ig4BQQ</a><br />
+Once the library is installed you should be able to compile and upload the code. If you still have any issues then shut down the Arduino IDE software and then start the Arduino IDE again so it is reset &#8211; sometimes it needs to reset before the library is recognized.<br />
+Regards,<br />
+Louis<br />
+Regards,<br />
+Louis</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index786f.html?replytocom=121#respond' onclick='return addComment.moveForm( "div-comment-121", "121", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-71" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-71" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/86a28bd2643fea545b50d95fce00734b?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/86a28bd2643fea545b50d95fce00734b?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Robert Riley</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-71">
+							<time datetime="2018-02-28T22:59:14+00:00">
+								28th February 2018 at 10:59 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Louis<br />
+Please ignore my question about where the Keypad file had to go, having put it in manually I found out the correct (very simple) way to install it, so on to finishing the population of my board.   Many thank for all yhe time and effort that it must take. It really is appreciated.<br />
+Regards<br />
+Bob R</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index616c.html?replytocom=71#respond' onclick='return addComment.moveForm( "div-comment-71", "71", "respond", "250" )' aria-label='Reply to Robert Riley'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-77" class="comment even depth-2 parent">
+			<article id="div-comment-77" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/6e69bff50dc9ed2917350a71601dce21?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/6e69bff50dc9ed2917350a71601dce21?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Allan pierron</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-77">
+							<time datetime="2018-03-04T19:47:01+00:00">
+								4th March 2018 at 7:47 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi bob<br />
+how did you get the software to install on your arduino nano board .when i try to install the software i get a error (keypad.h no such file) could you please  write back.</p>
+<p>Allan pierron</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index027c.html?replytocom=77#respond' onclick='return addComment.moveForm( "div-comment-77", "77", "respond", "250" )' aria-label='Reply to Allan pierron'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-110" class="comment odd alt depth-3">
+			<article id="div-comment-110" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/86a28bd2643fea545b50d95fce00734b?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/86a28bd2643fea545b50d95fce00734b?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Bob Riley (G4NQZ)</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-110">
+							<time datetime="2018-03-22T21:32:09+00:00">
+								22nd March 2018 at 9:32 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Allan<br />
+Sorry for the delay but have only just seen your request</p>
+<p>I cannot remember the exact procedure,  but I went to the Arduino site.<br />
+<a href="https://www.arduino.cc/en/guide/homepage" rel="nofollow">https://www.arduino.cc/en/guide/homepage</a>.<br />
+         Learn Arduino<br />
+                       &#8211; libraries<br />
+                                      How to install a library.</p>
+<p>Got rid of all the rubbish that I had tried to enter, followed the instructions and it went in without any problems.<br />
+Good Luck it is well worth the effort.<br />
+Bob</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index22d1.html?replytocom=110#respond' onclick='return addComment.moveForm( "div-comment-110", "110", "respond", "250" )' aria-label='Reply to Bob Riley (G4NQZ)'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-76" class="comment even thread-even depth-1">
+			<article id="div-comment-76" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/6e69bff50dc9ed2917350a71601dce21?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/6e69bff50dc9ed2917350a71601dce21?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Allan Pierron</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-76">
+							<time datetime="2018-03-04T16:19:04+00:00">
+								4th March 2018 at 4:19 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi<br />
+I build your frequency standard .but I&#8217;m having a problem with the software.it will not let me install the gps_ref_version 6 on to the arduous nano .I on zipped gps_ref_version6 all three files are there gps_ref_version6 8k and ublox 3k and ublox.h 1k  but when I try to up load it to the nano board I get a error saying (keypad.h no such file)?? and yes I&#8217;m running the latest version of Android 1.8.3<br />
+but it will let me up load arduous blink from the arduous library and it works I can make changes to the blink rate slower or faster no problem just can&#8217;t upload your software. plese write back.<br />
+Allan pierron</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index3171.html?replytocom=76#respond' onclick='return addComment.moveForm( "div-comment-76", "76", "respond", "250" )' aria-label='Reply to Allan Pierron'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-111" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-111" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/86a28bd2643fea545b50d95fce00734b?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/86a28bd2643fea545b50d95fce00734b?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Bob Riley (G4NQZ)</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-111">
+							<time datetime="2018-03-22T21:57:45+00:00">
+								22nd March 2018 at 9:57 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Louis,<br />
+Thank you again for all the time and effort that you put into these fine projects<br />
+I have got my Frequency Standard working, and I am very impressed, It worked first time, (ignoring the slight problem when loading the Arduino Nano {refused to accept the keyboard.h file}.)<br />
+Looking forward to the next project.<br />
+Regards<br />
+Bob</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index61d3.html?replytocom=111#respond' onclick='return addComment.moveForm( "div-comment-111", "111", "respond", "250" )' aria-label='Reply to Bob Riley (G4NQZ)'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-112" class="comment byuser comment-author-louis bypostauthor even depth-2">
+			<article id="div-comment-112" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-112">
+							<time datetime="2018-03-22T22:26:24+00:00">
+								22nd March 2018 at 10:26 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Bob,<br />
+Glad to hear you got it working. Sometimes installing Arduino libraries can be an issue.<br />
+All the best,<br />
+Louis</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index4a14.html?replytocom=112#respond' onclick='return addComment.moveForm( "div-comment-112", "112", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-137" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-137" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/85f5a86403c991e2dace60f8275e91d3?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/85f5a86403c991e2dace60f8275e91d3?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Nigel Pritchard G8AYM</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-137">
+							<time datetime="2018-04-14T16:58:46+00:00">
+								14th April 2018 at 4:58 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Can you advise the part number of the keypad you use and the source; most of the membrane keypads I&#8217;ve seen on eBay are the stick-on type and I would prefer to mount via screws to a  front-panel.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexf4c0.html?replytocom=137#respond' onclick='return addComment.moveForm( "div-comment-137", "137", "respond", "250" )' aria-label='Reply to Nigel Pritchard G8AYM'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-154" class="comment byuser comment-author-louis bypostauthor even depth-2 parent">
+			<article id="div-comment-154" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-154">
+							<time datetime="2018-04-19T21:46:08+00:00">
+								19th April 2018 at 9:46 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Nigel,<br />
+You should be able to get one from Farnells. There order code for the 4&#215;4 Button Keypad is 1182239. Direct link below:<br />
+<a href="http://uk.farnell.com/multicomp/mcak1604nbwb/keypad-4x4-array-0-02a-24vdc-plastic/dp/1182239?st=matrix%20keypad" rel="nofollow">http://uk.farnell.com/multicomp/mcak1604nbwb/keypad-4&#215;4-array-0-02a-24vdc-plastic/dp/1182239?st=matrix%20keypad</a><br />
+They are also available on eBay much cheaper &#8211; one example is the link below:<br />
+<a href="https://www.ebay.co.uk/itm/4x4-Matrix-Keyboard-Keypad-Module-Use-Key-PIC-AVR-Stamp-Plastic-Keys-Switch-UK/253005966171?hash=item3ae854ab5b:g:pKwAAOSwvjdZS9tW" rel="nofollow">https://www.ebay.co.uk/itm/4&#215;4-Matrix-Keyboard-Keypad-Module-Use-Key-PIC-AVR-Stamp-Plastic-Keys-Switch-UK/253005966171?hash=item3ae854ab5b:g:pKwAAOSwvjdZS9tW</a><br />
+Regards,<br />
+Louis</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexc024.html?replytocom=154#respond' onclick='return addComment.moveForm( "div-comment-154", "154", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-308" class="comment odd alt depth-3">
+			<article id="div-comment-308" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/85f5a86403c991e2dace60f8275e91d3?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/85f5a86403c991e2dace60f8275e91d3?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Nigel Pritchard G8AYM</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-308">
+							<time datetime="2018-12-22T17:21:46+00:00">
+								22nd December 2018 at 5:21 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>The project is a bit slow-going here (too many actually !) but I did buy a keypad similar to your design but just as an aside; what exactly is the difference between a &#8220;keypad&#8221; and a &#8220;membrane keypad&#8221;? I naively imagined they would have the same pin-out&#8230;.. but of course not !!</p>
+<p>I&#8217;ve decided that since the physics of my design are going to be substantially different to your layout that I might just as well use veroboard and do it the hard way.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='indexd78a.html?replytocom=308#respond' onclick='return addComment.moveForm( "div-comment-308", "308", "respond", "250" )' aria-label='Reply to Nigel Pritchard G8AYM'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-206" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-206" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/814562cb62a1e4f33d0dfedfa69915f4?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/814562cb62a1e4f33d0dfedfa69915f4?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Kevin Pearce</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-206">
+							<time datetime="2018-07-04T04:03:02+00:00">
+								4th July 2018 at 4:03 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Louis,<br />
+I have been following your excellent projects for some time now, and am in the process of building the DC Voltage Calibrator and the GPS locked Frequency Reference. Do you have available the Gerber production files for the GPS Freq Ref. project ?  I downloaded them for the DC Calibrator and had the pcb commercially manufactured, but it has been some time since I made my own boards photographically. Maybe you could email them to me if available, or post them as a link.<br />
+Keep up the fantastic projects and support videos. All the best &#8211; Kevin Pearce.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index20e7.html?replytocom=206#respond' onclick='return addComment.moveForm( "div-comment-206", "206", "respond", "250" )' aria-label='Reply to Kevin Pearce'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-209" class="comment byuser comment-author-louis bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-209" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-209">
+							<time datetime="2018-07-05T19:12:52+00:00">
+								5th July 2018 at 7:12 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Kevin,<br />
+I sent you an email with the gerber files and also the KiCad files for the latest double sided PCB (with no wire links required). I have alos made them available as downloads from the links below:<br />
+<a href="http://www.scullcom.com/GPS_Disciplined_Oscillator_Gerber_Files.zip" rel="nofollow">http://www.scullcom.com/GPS_Disciplined_Oscillator_Gerber_Files.zip</a><br />
+The PCB size is 100mm x 160mm<br />
+<a href="http://www.scullcom.com/GPS_Disciplined_Oscillator_KiCad_Files.zip" rel="nofollow">http://www.scullcom.com/GPS_Disciplined_Oscillator_KiCad_Files.zip</a><br />
+regards,<br />
+Louis</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index31b8.html?replytocom=209#respond' onclick='return addComment.moveForm( "div-comment-209", "209", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-214" class="comment even depth-3 parent">
+			<article id="div-comment-214" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/814562cb62a1e4f33d0dfedfa69915f4?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/814562cb62a1e4f33d0dfedfa69915f4?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Kevin Pearce</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-214">
+							<time datetime="2018-07-06T07:28:03+00:00">
+								6th July 2018 at 7:28 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks heaps Louis.<br />
+I never received your email (you may have left out the &#8220;g&#8221; in the middle), but I have successfully downloaded the files from your links.<br />
+I have ordered the PCB&#8217;s to be manufactured.<br />
+Still needing enough time to assemble your DC voltage calibrator, but will get to that shortly.<br />
+Thanks again for your very fast response, and my very best wishes for the future.<br />
+I will remain &#8220;glued&#8221; to your channel for as long as it exists.<br />
+Kindest regards,   Kevin.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index8477.html?replytocom=214#respond' onclick='return addComment.moveForm( "div-comment-214", "214", "respond", "250" )' aria-label='Reply to Kevin Pearce'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-215" class="comment byuser comment-author-louis bypostauthor odd alt depth-4">
+			<article id="div-comment-215" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-215">
+							<time datetime="2018-07-06T22:56:33+00:00">
+								6th July 2018 at 10:56 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Kevin,<br />
+I double check my email to you. I did use the correct email address, may be it is in your spam mail due to the fact that I added 2 zip files.<br />
+Anyway as long as you have the files you wanted from my download links here.<br />
+Regards,<br />
+Louis</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index8351.html?replytocom=215#respond' onclick='return addComment.moveForm( "div-comment-215", "215", "respond", "250" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-222" class="comment even thread-even depth-1">
+			<article id="div-comment-222" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/3a8e84dda6786b763e5e4d35c9c2c4b3?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/3a8e84dda6786b763e5e4d35c9c2c4b3?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Tom</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-222">
+							<time datetime="2018-07-23T15:01:49+00:00">
+								23rd July 2018 at 3:01 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi, Louis,<br />
+I am starting the process of building this project. I will be attempting to make a few changes, to accommodate my skill sets:<br />
+&#8211; Use of a PIC18F4550 microcontroller. Google &#8220;PIC 18F Pinquino&#8221;<br />
+&#8211; Use of the chips PLL, to calm jitters<br />
+&#8211; Use the chip&#8217;s memory, instead of a separate EEPROM<br />
+&#8211; Use of C Code<br />
+&#8211; Use of all 3.3 volt components, to reduce power usage and give better battery life.</p>
+<p>3.3 volt, 1602 character displays are available on Ebay. You need to specify the voltage, in the search terms and read the description, carefully. I have had good experiences, with this seller:<br />
+<a href="https://www.ebay.com/itm/DC-3-3V-HD44780-1602-LCD-Display-Module-16x2-Character-LCM-Blue-Blacklight-NEW/191563253688?ssPageName=STRK%3AMEBIDX%3AIT&amp;_trksid=p2057872.m2749.l2649" rel="nofollow">https://www.ebay.com/itm/DC-3-3V-HD44780-1602-LCD-Display-Module-16&#215;2-Character-LCM-Blue-Blacklight-NEW/191563253688?ssPageName=STRK%3AMEBIDX%3AIT&#038;_trksid=p2057872.m2749.l2649</a></p>
+<p>I have ordered some of the larger components. The GPS module has arrived. At 3.3 volts, I was able to configure it (thanks to your great tutorial, in Episode #1) and fully acquire a signal lock. I used this USB to TTL Converter:<br />
+<a href="https://www.banggood.com/3_3V-5V-USB-to-TTL-Converter-CH340G-UART-Serial-Adapter-Module-STC-p-1232728.html?rmmds=myorder&amp;cur_warehouse=CN" rel="nofollow">https://www.banggood.com/3_3V-5V-USB-to-TTL-Converter-CH340G-UART-Serial-Adapter-Module-STC-p-1232728.html?rmmds=myorder&#038;cur_warehouse=CN</a></p>
+<p>Care must be taken, when using this converter. The converter is not intended to power the DUT, from the limited laptop USB supply. DMM testing of the open positive pin (See Jumper) shows that it is the inverse voltage of the programming logic level&#8230; 5 volts on unused jumper/power pin, at 3.3v logic&#8230; 3.3 volts on unused jumper/power pin, at 5v logic. Meaning the use of the jumper is not intended to make power available, from the unused jumper pin. Therefore, the DUT/GPS needs its own power supply.</p>
+<p>I believe that, regardless of the DUT&#8217;s/GPS&#8217;s power source, the grounds need to be tied, to enable programming. The converter is tied to earth, through the laptop. I used my bench PSU and configured to it leave the ground floating. This setup worked well and I did not toast anything.</p>
+<p>This is the proper RP-SMA (The &#8220;RP&#8221; designation is important) connector, to attach the powered antenna directly to the PCB:<br />
+<a href="https://www.ebay.com/itm/10pcs-RP-SMA-Female-Plug-Bulkhead-Solder-Edge-PCB-Clip-Mount-RF-Connector-zg/232697419551?ssPageName=STRK%3AMEBIDX%3AIT&amp;_trksid=p2057872.m2749.l2649" rel="nofollow">https://www.ebay.com/itm/10pcs-RP-SMA-Female-Plug-Bulkhead-Solder-Edge-PCB-Clip-Mount-RF-Connector-zg/232697419551?ssPageName=STRK%3AMEBIDX%3AIT&#038;_trksid=p2057872.m2749.l2649</a></p>
+<p>This is the powered antenna I purchased:<br />
+<a href="https://www.amazon.com/gp/product/B00LHKKJY4/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1" rel="nofollow">https://www.amazon.com/gp/product/B00LHKKJY4/ref=oh_aui_detailpage_o01_s00?ie=UTF8&#038;psc=1</a></p>
+<p>This is my GPS unit:<br />
+<a href="https://www.amazon.com/gp/product/B06Y2P5NST/ref=oh_aui_detailpage_o02_s00?ie=UTF8&amp;psc=1" rel="nofollow">https://www.amazon.com/gp/product/B06Y2P5NST/ref=oh_aui_detailpage_o02_s00?ie=UTF8&#038;psc=1</a><br />
+If I were to do it again, I would order the bare receiver, without a passive antenna, as you need to order a powered antenna, anyway. That will save you a couple of dollars.</p>
+<p>Anyway, I listed the parts, because they all worked together, correctly, at the desired 3.3 volts.</p>
+<p>I know that this will be a very long-term project, for me. But, I will post updates and the final project, when completed.</p>
+<p>If anyone would like to work on this, with me, please reply. Maybe we can get Louis to forward our contact information,  to each other, without posting it publicly.</p>
+<p>Thanks, so much!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index4c3e.html?replytocom=222#respond' onclick='return addComment.moveForm( "div-comment-222", "222", "respond", "250" )' aria-label='Reply to Tom'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-309" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-309" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/85f5a86403c991e2dace60f8275e91d3?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/85f5a86403c991e2dace60f8275e91d3?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Nigel Pritchard G8AYM</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-309">
+							<time datetime="2018-12-22T17:32:34+00:00">
+								22nd December 2018 at 5:32 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I seem to have lost the plot on what all the jumpers were intended for in this project; I can&#8217;t seem to find any past reference to the purpose of each one. For my application It looks like I can simply remove all the jumpers (ie short them all out)?</p>
+<p>Not entirely sure what JP4/5/6 are doing (i&#8217;m using a std keypad, not a membrane)?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index8245.html?replytocom=309#respond' onclick='return addComment.moveForm( "div-comment-309", "309", "respond", "250" )' aria-label='Reply to Nigel Pritchard G8AYM'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-316" class="comment even thread-even depth-1">
+			<article id="div-comment-316" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/d3a33ece59c1d73293232acdb037f1bc?s=60&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/d3a33ece59c1d73293232acdb037f1bc?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='https://digilander.libero.it/i2ndt/' rel='external nofollow' class='url'>i2NDT Claudio</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-316">
+							<time datetime="2019-01-07T19:12:23+00:00">
+								7th January 2019 at 7:12 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Good evening Louis,<br />
+I am going to built this GPS frequency standard and I would like to avoid to use a back-up battery.<br />
+as you said that &#8220;if a NEO-7N is purchased you do not need a back-up battery&#8221; I would like to use a NEO-7N (or a M8N) module.<br />
+but looking at the pictures of the boards which use the 7N (and also M8N) I can see that the high value capacitor is still there! so what is its purpose?<br />
+and what is the difference between a NEO-7N and a NEO-M8N?</p>
+<p>best regards</p>
+<p>i2NDT Claudio</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index0ec2.html?replytocom=316#respond' onclick='return addComment.moveForm( "div-comment-316", "316", "respond", "250" )' aria-label='Reply to i2NDT Claudio'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-357" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-357" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/0521b648d6470dfffd00db5cf00cf72a?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/0521b648d6470dfffd00db5cf00cf72a?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">William van Sutphen</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-357">
+							<time datetime="2019-03-30T16:12:14+00:00">
+								30th March 2019 at 4:12 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi mr scully,<br />
+Recently i found this youtube channel an enjoy your way if explaning the projects.<br />
+so is start with the GPS frequency standard.<br />
+The GPS and arduio are bought recently.<br />
+Question, do yoy sell the PCB ?<br />
+I do not have the opportunity to make the PCB myself.<br />
+thanks<br />
+regards,<br />
+William (PE1BZF)</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index2485.html?replytocom=357#respond' onclick='return addComment.moveForm( "div-comment-357", "357", "respond", "250" )' aria-label='Reply to William van Sutphen'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply to <a href="#comment-308">Nigel Pritchard G8AYM</a> <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond">Cancel reply</a></small></h3>			<form action="http://www.scullcom.uk/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1"></div></div><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='250' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='308' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="995e670f76" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="54"/></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="../operational-amplifier-op-amp/index.html" rel="prev"><i class="fa fa-chevron-left"></i> <span class="post-title">Operational Amplifier (OP AMP)</span></a></div><div class="nav-next"><a href="../design-build-a-low-current-reference-source/index.html" rel="next"><span class="post-title">Design &#038; Build a Low Current Reference Source <i class="fa fa-chevron-right"></i></span></a></div></div>
+	</nav>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+</div><!-- close .main-content-inner -->
+<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+	<div class="well">
+							<aside id="youtubesubscribebuttonwidget-4" class="widget widget_youtubesubscribebuttonwidget">								<div class="g-ytsubscribe" data-channelid="UCDqryeq1kMDSEQwltWqASrA" data-layout="full" data-theme="default"></div>
+<div id="youtubebuttcredit"></div>
+<script type='text/javascript'>document.getElementById("youtubebuttcredit").style.display="none";window.___gcfg = {lang: 'en'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = '../../apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>			</aside>		<aside id="search-2" class="widget widget_search">
+<form role="search" method="get" class="form-search" action="http://www.scullcom.uk/">
+  <div class="input-group">
+	  <label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" class="form-control search-query" placeholder="Search&hellip;" value="" name="s" title="Search for:" />
+	<span class="input-group-btn">
+	  <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+	</span>
+  </div>
+</form>
+</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-12"><a href="../category/projects/5-volt-precision-reference/index.html" >5 Volt Precision Reference</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="../category/basics/index.html" >Basics</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="../category/projects/constant-current-source-box/index.html" >Constant Current Source Box</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="../category/projects/dc-load/index.html" >DC Load</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="../category/projects/dc-voltage-calibrator/index.html" >DC Voltage Calibrator</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="../category/projects/diy-pcb-exposure-unit/index.html" >DIY PCB Exposure Unit</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="../category/projects/frequency-reference/index.html" >Frequency Reference</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="../category/projects/function-generator/index.html" >Function Generator</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="../category/projects/function-generator-mk2/index.html" >Function Generator Mk2</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="../category/projects/gps-system/index.html" >GPS System</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="../category/projects/led-floodlight/index.html" >LED Floodlight</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="../category/projects/low-current-reference/index.html" >Low Current Reference</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="../category/projects/milliohm-meter/index.html" >Milliohm Meter</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="../category/projects/millivolt-meter/index.html" >Millivolt Meter</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="../category/basics/op-amp/index.html" >OP Amp</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="../category/projects/precision-voltage-reference-box/index.html" >Precision Voltage Reference Box</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="../category/projects/index.html" >Projects</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="../category/projects/pulse-generator/index.html" >Pulse Generator</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="../category/basics/resistor/index.html" >Resistor</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="../category/reviews/index.html" >Reviews</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="../category/projects/stair-step-waveform-generator/index.html" >Stair-Step Waveform Generator</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="../category/teardowns/index.html" >Teardowns</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="../category/tutorials/index.html" >Tutorials</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="../category/uncategorised/index.html" >Uncategorised</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="../category/projects/zx80/index.html" >ZX80</a>
+</li>
+		</ul>
+</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='../2018/08/index.html'>August 2018</a></li>
+	<li><a href='../2017/12/index.html'>December 2017</a></li>
+	<li><a href='../2017/06/index.html'>June 2017</a></li>
+	<li><a href='../2016/12/index.html'>December 2016</a></li>
+	<li><a href='../2016/11/index.html'>November 2016</a></li>
+	<li><a href='../2016/09/index.html'>September 2016</a></li>
+	<li><a href='../2016/06/index.html'>June 2016</a></li>
+	<li><a href='../2016/05/index.html'>May 2016</a></li>
+	<li><a href='../2016/03/index.html'>March 2016</a></li>
+	<li><a href='../2016/02/index.html'>February 2016</a></li>
+	<li><a href='../2016/01/index.html'>January 2016</a></li>
+	<li><a href='../2015/12/index.html'>December 2015</a></li>
+	<li><a href='../2015/10/index.html'>October 2015</a></li>
+	<li><a href='../2015/09/index.html'>September 2015</a></li>
+	<li><a href='../2015/08/index.html'>August 2015</a></li>
+	<li><a href='../2015/07/index.html'>July 2015</a></li>
+	<li><a href='../2015/05/index.html'>May 2015</a></li>
+	<li><a href='../2015/04/index.html'>April 2015</a></li>
+	<li><a href='../2015/03/index.html'>March 2015</a></li>
+	<li><a href='../2015/02/index.html'>February 2015</a></li>
+		</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">james king</span> on <a href="../design-build-an-electronic-dc-load-part-1/index.html#comment-415">Design &#038; Build an Electronic DC Load</a></li><li class="recentcomments"><span class="comment-author-link">Cory Benjamin</span> on <a href="../function-generator-mk2/index.html#comment-414">Function Generator Mk2</a></li><li class="recentcomments"><span class="comment-author-link">Mark</span> on <a href="../dc-voltage-calibrator/index.html#comment-413">DC Voltage Calibrator</a></li><li class="recentcomments"><span class="comment-author-link">Patrick Ward</span> on <a href="../design-build-an-electronic-dc-load-part-1/index.html#comment-412">Design &#038; Build an Electronic DC Load</a></li><li class="recentcomments"><span class="comment-author-link">Lewis Bryant</span> on <a href="../dc-voltage-calibrator/index.html#comment-409">DC Voltage Calibrator</a></li></ul></aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">Meta</h3>			<div class="textwidget"><ul>
+<li>
+<a href="../wp-login.html">Log In</a>
+</li>
+<li>
+<a href="../indexd784.html?feed=rss2">Posts RSS</a>
+</li>
+<li>
+<a href="../indexa6da.html?feed=comments-rss2">Posts RSS</a>
+</li>
+</ul></div>
+		</aside>	</div>
+</div><!-- #secondary -->
+		</div><!-- close .row -->
+	</div><!-- close .container -->
+</div><!-- close .site-content -->
+
+	<div id="footer-area">
+		<div class="container footer-inner">
+			<div class="row">
+				
+				</div>
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info container">
+				<div class="row">
+										<nav role="navigation" class="col-md-6">
+											</nav>
+					<div class="copyright col-md-6">
+						Scullcom.uk all lefts reversed 						Theme by <a href="http://colorlib.com/" target="_blank">Colorlib</a> Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>					</div>
+				</div>
+			</div><!-- .site-info -->
+			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
+		</footer><!-- #colophon -->
+	</div>
+</div><!-- #page -->
+
+		  <script type="text/javascript">
+			jQuery( document ).ready( function( $ ){
+			  if ( $( window ).width() >= 767 ){
+				$( '.navbar-nav > li.menu-item > a' ).click( function(){
+					if( $( this ).attr('target') !== '_blank' ){
+						window.location = $( this ).attr( 'href' );
+					}
+				});
+			  }
+			});
+		  </script>
+			<script type="text/javascript">
+      var anr_onloadCallback = function() {
+	  				var anr_captcha_1;
+				anr_captcha_1 = grecaptcha.render('anr_captcha_field_1', {
+				  'sitekey' : '6LdMaxoTAAAAAO_z9VYWyJZuLeFIcjMuhm3P9UYy',
+				  'theme' : 'light',
+				  'size' : 'normal'
+				});
+		      };
+    </script>
+	<script src="../../www.google.com/recaptcha/api97a4.js?onload=anr_onloadCallback&amp;render=explicit"
+        async defer>
+    </script>
+
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var frontend_ajax_object = {"ajax_url":"http:\/\/www.scullcom.uk\/wp-admin\/admin-ajax.php","ajax_nonce":"0d3408070d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/accesspress-social-share/js/frontend8f76.js?ver=4.3.5'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/skip-link-focus-fix.mined4c.js?ver=20140222'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min6959.js?ver=4.9.3'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min6959.js?ver=4.9.3'></script>
+<script async="async" type='text/javascript' src='../wp-content/plugins/akismet/_inc/form05da.js?ver=4.0.2'></script>
+
+</body>
+
+<!-- Mirrored from www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/?replytocom=308 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jul 2019 03:19:00 GMT -->
+</html>

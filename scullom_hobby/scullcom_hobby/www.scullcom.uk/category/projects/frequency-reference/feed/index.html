@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Frequency Reference &#8211; Scullcom</title>
+	<atom:link href="http://www.scullcom.uk/category/projects/frequency-reference/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Sun, 09 Sep 2018 18:26:37 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>Design &#038; Build a GPS locked Frequency Standard – Part 4</title>
+		<link>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/</link>
+		<comments>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/#comments</comments>
+		<pubDate>Thu, 24 Mar 2016 23:19:00 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[Frequency Reference]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorised]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=250</guid>
+		<description><![CDATA[In this 4th part of this project we upgrade the software to give satellite data and frequency lock display. Plus the current frequency on the display is improved to give reading in MHz, KHz or Hz. The new software version can be downloaded from the link below: http://www.scullcom.com/GPS_Ref_Version6.zip PLEASE NOTE TO COMPILE THIS CODE YOU [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In this 4th part of this project we upgrade the software to give satellite data and frequency lock display. Plus the current frequency on the display is improved to give reading in MHz, KHz or Hz.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/QUiVZFkBh8k?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>The new software version can be downloaded from the link below:<br />
+<a href="http://www.scullcom.com/GPS_Ref_Version6.zip" target="_blank">http://www.scullcom.com/GPS_Ref_Version6.zip</a><br />
+PLEASE NOTE TO COMPILE THIS CODE YOU NEED TO BE RUNNING THE LATEST VERSION OF ARDUINO IDE (version 1.6.7)<br />
+Below is a link to download a user guide on this project which includes circuit detail, PCB detailed layouts, schematics and software details. The file is a zip file which contains a PDF document:<br />
+<a href="http://www.scullcom.com/Scullcom_GPS_Ref_manual.zip" target="_blank">http://www.scullcom.com/Scullcom_GPS_Ref_manual.zip</a></p>
+<p><strong>Reading the GPS module data to extract the number of Satellites detected</strong></p>
+<p>When the GPS module starts receiving satellite data it provides a constant stream of data sentences which are know as NMEA sentences. Within this data stream the most important NMEA sentences include the GGA which provides the current Fix data, the RMC which provides the minimum GPS sentences information, and the GSA which provides the Satellite status data. In our project we will use the GGA data stream to extract the number of satellites detected and locked on to.</p>
+<p>Below is an example of a typical GGA data sentence:</p>
+<p><strong>$GPGGA,123519.00,4807.03830,N,01131.00000,E,1,08,0.9,545.4,M,46.9,M,,*47</strong></p>
+<p>Where:</p>
+<ul>
+<li>GGA                      Global Positioning System Fix Data</li>
+<li>123519.00            Fix taken at 12:35:19 UTC (current time)</li>
+<li>4807.03830,N    Latitude 48 deg 07.038&#8242; N</li>
+<li>01131.00000,E   Longitude 11 deg 31.000&#8242; E</li>
+<li>1 Fix quality:  0 = invalid, 1 = GPS fix (SPS), 2 = DGPS fix, 3 = PPS fix, 4 = Real Time Kinematic,<br />
+5 = Float RTK, 6 = estimated (dead reckoning) (2.3 feature), 7 = Manual input mode,<br />
+8 = Simulation mode</li>
+<li>08                    Number of satellites being tracked</li>
+<li>0.9                   Horizontal dilution of position</li>
+<li>545.4,M         Altitude, Meters, above mean sea level</li>
+<li>46.9,M           Height of geoid (mean sea level) above WGS84 ellipsoid</li>
+<li>(empty field) time in seconds since last DGPS update</li>
+<li>(empty field) DGPS station ID number</li>
+<li>*47                   the checksum data, always begins with *</li>
+</ul>
+<p>We will be using the data highlighted above to show the number of satellite on our LCD. In order to extract this information we will set up a second Software Serial port.</p>
+<p>First we need to identify the NMEA data we need to capture and we do this with the flowing code:</p>
+<p>char gpsin[8] = &#8220;$GPGGA,&#8221;;             //define a character string “$GPGGA,”<br />
+if (GPSreceiver.find(gpsin)) {           //if serial data starts with the characters “$GPGGA,”<br />
+GPGGAdata = GPSreceiver.readStringUntil(&#8216;\n&#8217;);  //read data until carriage return</p>
+<p>When the characters &#8220;$GPGGA,&#8221; are detected it starts reading the remainder of the string data in to the buffer. So the captured data starts from the first digit of the &#8216;time&#8217; data (and not from the $ character). The captured data then looks as follows:</p>
+<p><strong>123519.00,4807.03830,N,01131.00000,E,1,08,0.9,545.4,M,46.9,M,,*47</strong></p>
+<p>With in the main loop we will use the substring command to extract the number of satellites from the GGA data sentence. This is a simply and easy way of extracting the data you wish to use. The substring command is defined as follows:<br />
+substring(index, to) – this returns a string with the characters starting from index and ending at the character location before the to<br />
+So to extract the number of satellites (highlighted in read) from the GGA data sentence below</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-large wp-image-322" src="http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-1024x142.jpg" alt="NMEA_data_stripped" width="648" height="90" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-1024x142.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-300x42.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-768x107.jpg 768w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped.jpg 1446w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>We use the following code:</p>
+<p><code class="codeblock">sats = GPGGAdata.substring(39,41);</code></p>
+<p>The string “sats” now is equal to “08”<br />
+If you wanted to extract other data you simply need to change the “index, to” numbers in the substring. For example to extract the current time to a string labeled time then you would use:</p>
+<p><code class="codeblock">time = GPGGAdata.substring(7,13); //the string “time” now is equal to “123519”</code></p>
+<p><strong>Details of Code used in program loop to extract number of satellites and display on LCD</strong></p>
+<p><code class="codeblock">//new variables added at start of program<br />
+String sats; //number of satellites detected<br />
+String GPGGAdata;           //satellite data string from GPS module<br />
+String FreqStatus;          //used to print Frequency locked if applicable<br />
+int satNum;                 //number of satellites detected as an integer<br />
+//set up a Software Serial port called GPSreceiver<br />
+SoftwareSerial GPSreceiver (14,255); //14(A0) is RX on Arduino connected to GPS TX pin.<br />
+//255 a nonexistent pin number used to free up a pin<br />
+//in void setup() include serial monitor command and set to 57600 baud.<br />
+Serial.begin(57600);                 //this is simply used for testing<br />
+//The # key used to tell the unit to display the number of satellites on LCD.<br />
+// below is the software code used in the main loop to show number of satellites when //“#” key pressed:<br />
+case '#'://# pressed Show number of satellites detected and frequency status<br />
+lcd.clear(); //clear LCD<br />
+lcd.print("Satellites =");        //print the word 'Satellites =' on the top line of LCD<br />
+do {                             //now loop<br />
+GPSreceiver.flush();   //clear any data which may be in the Serial Buffer<br />
+if (GPSreceiver.available())          //if any GPS data is available<br />
+{<br />
+GPSreceiver.read();         //read GPS serial data streams if available<br />
+}<br />
+char gpsin[8] = "$GPGGA,";       //define a character string “$GPGGA,”<br />
+if (GPSreceiver.find(gpsin)) {     //if serial data starts with the characters “$GPGGA,”<br />
+GPGGAdata = GPSreceiver.readStringUntil('\n'); //read data until a carriage return<br />
+sats = GPGGAdata.substring(39,41); //extract number of satellites from data string<br />
+}<br />
+satNum = sats.toInt(); //convert sats string to an integer so as to remove leading zero<br />
+if (satNum &gt;0){<br />
+FreqStatus = "Frequency Locked";  //if satellites detected the status string<br />
+//= “Frequency Locked”<br />
+}else{<br />
+FreqStatus = " ";                 //16 spaces to clear line if no lock<br />
+}<br />
+Serial.print(GPGGAdata);   //These serial print lines are for testing using<br />
+//Serial Monitor<br />
+Serial.println(); //full GPGGA data sentence printed and then carriage return<br />
+Serial.print("Satellite = ");<br />
+Serial.print(satNum);<br />
+Serial.println();<br />
+Serial.print(FreqStatus);<br />
+Serial.println();<br />
+lcd.setCursor(13,0); //set cursor position to column 13 of row 0 (first line on LCD)<br />
+lcd.print(" ");  //clears number if no satellites detected (3 spaces used)<br />
+lcd.setCursor(13,0); //set cursor position to column 13 of row 0 (first line on LCD)<br />
+lcd.print(satNum);         //print number of satellites to LCD<br />
+lcd.setCursor(0,1); //set cursor position to column 0 of row 1 (second line on LCD)<br />
+lcd.print(FreqStatus);     //print Frequency Locked status<br />
+}<br />
+while (customKeypad.getKey()!= '#'); //if # key pressed again break out of loop<br />
+displayCurrentFrequency();   //and display current frequency subroutine<br />
+break;                       //break and return to main program loop</code></p>
+<p><strong>The software for this project is made up of three parts all of which are include in a download zip file.</strong></p>
+<p><img class="alignnone size-full wp-image-253" src="http://www.scullcom.uk/wp-content/uploads/2016/03/folder1.jpg" alt="folder1" width="846" height="85" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/folder1.jpg 846w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder1-300x30.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder1-768x77.jpg 768w" sizes="(max-width: 846px) 100vw, 846px" /></p>
+<p>Once the file is unzipped you will have a folder as above. In this folder you will find the following files shown below:</p>
+<p><img class="alignnone size-full wp-image-254" src="http://www.scullcom.uk/wp-content/uploads/2016/03/folder2.jpg" alt="folder2" width="847" height="132" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/folder2.jpg 847w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder2-300x47.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder2-768x120.jpg 768w" sizes="(max-width: 847px) 100vw, 847px" /></p>
+<p>Please ensure that you are running the latest version of the Arduino IDE which is “Arduino 1.6.7” (older versions may not work). Run the “GPS_Ref_Version6” file and you should find the software opens up in the Arduino IDE as shown below:</p>
+<p><img class="alignnone size-full wp-image-302" src="http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6.jpg" alt="codeV6" width="808" height="704" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6.jpg 808w, http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6-300x261.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6-768x669.jpg 768w" sizes="(max-width: 808px) 100vw, 808px" /></p>
+<p>Now compile and upload the software to the Arduino nano on the main PCB.</p>
+<hr />
+<p><strong>GPS Locked Frequency Standard Project</strong></p>
+<p>This project will use a small GPS module which has the u-blox Neo-7 GPS receiver. These modules are readily available on sites like eBay for around £12, they tend to be advertised for use with flight controllers on model aircraft.<br />
+The u-blox receiver is normally fitted in the centre of a small PCB. Additional components on the PCB include a 3.3 volt Low Drop Voltage Regulator, timepulse and power on LED’s and EEPROM. There is also some short term back-up supply for the DRAM of the Neo-7 receiver by use of a 0.08F super capacitor (Seiko XH414HG). These capacitors normally only provide power off back-up for around a day or so if you are lucky.<br />
+These GPS modules are usually configured by default to provide a 1Hz timing pulse output which is normally used to flash a green LED to indicate when the unit has a fix on satellites and the local oscillator is locked to the GPS signal. By default this timing pulse provides a 100mSec pulse every 1000mSec, as shown below.</p>
+<p><img class="alignnone size-full wp-image-262" src="http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse.jpg" alt="TimePulse" width="737" height="246" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse.jpg 737w, http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse-300x100.jpg 300w" sizes="(max-width: 737px) 100vw, 737px" /></p>
+<p>This timing pulse can be configured to provide different frequencies and different duty cycle and we will be using this option in this project to change the frequency and fix the duty cycle to 50%.<br />
+GPS satellites are primarily used as a navigation system; this global positioning system can also used to disseminate precise time, time intervals, and frequency. The GPS carrier signals originate from an on-board atomic clock (oscillator) which is also monitored and controlled by ground stations in the United States to ensure it agrees with the Coordinated Universal Time (UTC). UTC is the primary time standard by which the world regulates clocks and time.<br />
+Atomic clocks are based on the natural atomic oscillations of gases in resonant cavities. When isolated from magnetic fields, rubidium and cesium gases will resonate at specific frequencies under controlled conditions. These frequencies are so accurate that since 1967 the length of the second has been defined as the frequency of a specific resonant mode of the cesium atom, producing 9,192,631,770 oscillations in one second.</p>
+<p>The u-blox receiver uses a built-in 48MHz oscillator.</p>
+<p>There are various versions of the u-blox receiver available, some of which can be configured to provide a frequency pulse output in the range 0.25Hz to 10MHz. Those which are suitable for this project are listed in the table below:</p>
+<table  class=" table table-hover" style="height: 490px;" width="644">
+<tbody>
+<tr>
+<td width="205"><strong>u-blox Receiver Type</strong></td>
+<td width="205"><strong>Type of Memory fitted</strong></td>
+<td width="205"><strong>Type of Oscillator used</strong></td>
+</tr>
+<tr>
+<td width="205">Neo-6T</td>
+<td width="205">ROM</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-7M</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-7N</td>
+<td width="205">FLASH</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-7P</td>
+<td width="205">FLASH</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-M8M</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-M8N</td>
+<td width="205">FLASH</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-M8Q</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+</tbody>
+</table>
+<p>In this project we will use the Neo-7M. As this uses a ROM, the option to use a 3 volt backup battery on the PCB will help to speed up satellite lock after switch-on (this is optional). If the back-up battery is not used it may take a few minutes before the unit locks on to satellites. If the Neo-7N version is used then as it uses a FLASH memory there is no need for a back-up supply.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/feed/</wfw:commentRss>
+		<slash:comments>30</slash:comments>
+		</item>
+		<item>
+		<title>Design &#038; Build a GPS locked Frequency Standard &#8211; Part 3</title>
+		<link>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-3/</link>
+		<comments>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-3/#comments</comments>
+		<pubDate>Sun, 06 Mar 2016 17:50:16 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[Frequency Reference]]></category>
+		<category><![CDATA[Projects]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=71</guid>
+		<description><![CDATA[In Part 3 of this project we will add a keypad for direct frequency entry and program the GPS module on the fly directly from the Arduino Nano. We will also add a battery check feature and make some changes to the original circuit. A new PCB design will allow all components to be on [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In Part 3 of this project we will add a keypad for direct frequency entry and program the GPS module on the fly directly from the Arduino Nano. We will also add a battery check feature and make some changes to the original circuit. A new PCB design will allow all components to be on one board.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/zZ6tc_ROdfU?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>You can download the new PCB artwork, schematic and software from the links below:<br />
+<a class="yt-uix-sessionlink " href="http://www.scullcom.com/GPS_Locked_Freq_Keypad_PCB.pdf" target="_blank" rel="nofollow" data-sessionlink="ei=emHgVv3sPMqaWszMhpgI">http://www.scullcom.com/GPS_Locked_Freq_Keypad_PCB.pdf</a><br />
+<a href="http://www.scullcom.com/GPS_Locked_Freq_Keypad_Schematic.pdf" target="_blank">http://www.scullcom.com/GPS_Locked_Freq_Keypad_Schematic.pdf</a></p>
+<p>Below is the link for the Arduino Code this is a zip file which when unzipped contains 3 files to the program.<br />
+<a class="yt-uix-sessionlink " href="http://www.scullcom.com/GPS_10MHz_Ref_Keypad_v4.zip" target="_blank" rel="nofollow" data-sessionlink="ei=emHgVv3sPMqaWszMhpgI">http://www.scullcom.com/GPS_10MHz_Ref_Keypad_v4.zip</a></p>
+<p>The files will unzip in to a folder named &#8220;GPS_10Mhz_Ref_Keypad_v4&#8221; which will contain 3 files, if you then open the main program file &#8220;GPS_10Mhz_Ref_Keypad_v4&#8221; in the Arduino IDE the other two files will automatically load, these include the &#8220;ublox.cpp and ublox.h&#8221; files.</p>
+<p>If you do not have the keypad library already installed in your Arduino IDE then you can download it from:<br />
+<a class="yt-uix-sessionlink " href="http://playground.arduino.cc/uploads/Code/Keypad.zip" target="_blank" rel="nofollow" data-sessionlink="ei=emHgVv3sPMqaWszMhpgI">http://playground.arduino.cc/uploads/Code/Keypad.zip</a></p>
+<p><strong>PLEASE NOTE TO COMPILE THIS CODE YOU NEED TO BE RUNNING THE LATEST VERSION OF ARDUINO IDE (version 1.6.7)<br />
+</strong><br />
+<img class="size-large wp-image-251 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/Block_diagram4-1024x774.jpg" alt="Block_diagram4" width="648" height="490" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/Block_diagram4-1024x774.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/03/Block_diagram4-300x227.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/Block_diagram4-768x580.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>In this project we will use the Neo-7M. As this uses a ROM, the option to use a 3 volt backup battery on the PCB will help to speed up satellite lock after switch-on (this is optional). If the back-up battery is not used it may take a few minutes before the unit locks on to satellites. If the Neo-7N version is used then as it uses a FLASH memory there is no need for a back-up supply.</p>
+<p>List of other u-blox versions suitable below:</p>
+<p><strong>u-blox Receiver                     Type Type of Memory fitted                     Type of Oscillator used</strong><br />
+Neo-6T                                                    ROM                                                           TCXO<br />
+Neo-7M                                                   ROM                                                           Crystal<br />
+Neo-7N                                                   FLASH                                                        TCXO<br />
+Neo-7P                                                    FLASH                                                        Crystal<br />
+Neo-M8M                                               ROM                                                           Crystal<br />
+Neo-M8N                                               FLASH                                                         TCXO<br />
+Neo-M8Q                                               ROM                                                            Crystal</p>
+<p><img class="size-large wp-image-260 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/IMG_1656_lightLabled-1024x759.jpg" alt="IMG_1656_lightLabled" width="648" height="480" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/IMG_1656_lightLabled-1024x759.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/03/IMG_1656_lightLabled-300x222.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/IMG_1656_lightLabled-768x569.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p><img class="size-large wp-image-258 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/Image3gps4-1024x512.jpg" alt="Image3gps4" width="648" height="324" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/Image3gps4-1024x512.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/03/Image3gps4-300x150.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/Image3gps4-768x384.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p><strong>Operation of the level converter/shifter circuit used</strong></p>
+<p><img class="size-large wp-image-259 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/Image33A-1024x634.jpg" alt="Image33A" width="648" height="401" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/Image33A-1024x634.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/03/Image33A-300x186.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/Image33A-768x476.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>The u-blox Neo-7 GPS module operates at 3.3 volts and therefore care should be taken when connecting GPS serial TX and RX pins directly to the Arduino which is operating at 5 volt. Although in practice if only the GPS TX serial pin is used it seems to work fine as the Arduino appears to be able to handle lower logic level inputs from the GPS module. However, if the GPS RX pin is also connected to the Arduino this may cause damage to the GPS u-blox Neo-7 as the Arduino will drive it with 5 volt logic levels. Therefore, it is technically correct to use a logic level converter circuit to shift the 5 volt logic levels to 3 volt logic levels.<br />
+The above circuit which uses two ‘N’ channel MOSFETS provides a simple method of converting/shifter these logic levels and we use this technique in our project.<br />
+The logic level converter idea has been around for some time. During the late 1990’s Philips R &amp; D Engineers in The Netherlands, had some issues with logic level problems with their I²C Bus technology and there engineers came up with this idea of using a &#8216;N&#8217; Channel MOSFET to shift the logic high levels. At the time developments in IC technology was improving which resulted in the clearances on the silicon chip substrate reducing to less than 0.5μm which limited the logic high level and supply voltages to around 3.3 volt.<br />
+This bi-directional level converter/shifter is used to connect the serial TX and RX pins of the GPS module to the Arduino, each with a different supply voltage and different logic levels. The above circuit has two logic level shifters, both identical. So we will consider the left hand side of the diagram. The source of the MOSFET, which is connected to the GPS module, has pull-up resistors connected to a 3.3 Volt supply, whilst the drain of the MOSFET, which is connected to the Arduino, has pull-up resistors connected to a 5 Volt supply.<br />
+The following three states should be considered during the operation of this level converter/shifter:<br />
+1. Neither the GPS module nor the Arduino is pulling the logic level LOW. The source of the MOSFET and therefore the GPS serial line is pulled up by its 10K pull-up resistors to 3.3 V. The gate and the source of the MOSFET is at 3.3 V, so its VGS is below the threshold voltage and the MOSFET is therefore not conducting. This allows the level at Arduino pin to be pulled up by the MOSFET drain pull-up resistor to 5 V logic level. So the lines of both sections are HIGH, but at a different voltage level.<br />
+2. The GPS module 3.3 V logic level is pulled down to a LOW level. The source of the MOSFET also becomes LOW, while the gate stays at 3.3 V. VGS rises above the threshold and the MOSFET starts to conduct. The drain of the MOSFET is now pulled down to a LOW level by the action of the GPS module. So now both the GPS module and the Arduino go LOW to the same voltage level.<br />
+3. The Arduino 5 V logic level at the drain of the MOSFET is pulled down to a LOW level by the Arduino. Now the drain-substrate diode of the MOSFET conducts and pulls the source of the MOSFET down until VGS passes the threshold and the MOSFET starts to conduct. The source of the MOSFET is then further pulled down to a LOW level by this action of the Arduino taking the 5 V logic level LOW. So both the Arduino and the GPS module go LOW to the same voltage level.<br />
+The three states explain above show that the logic levels are transferred in both directions, independent of which device is driving the logic level.</p>
+<p><img class="size-full wp-image-257 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/Image2F.jpg" alt="Image2F" width="555" height="880" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/Image2F.jpg 555w, http://www.scullcom.uk/wp-content/uploads/2016/03/Image2F-189x300.jpg 189w" sizes="(max-width: 555px) 100vw, 555px" /></p>
+<p><img class="size-full wp-image-256 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/Image2B.jpg" alt="Image2B" width="555" height="880" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/Image2B.jpg 555w, http://www.scullcom.uk/wp-content/uploads/2016/03/Image2B-189x300.jpg 189w" sizes="(max-width: 555px) 100vw, 555px" /></p>
+<p><img class="size-full wp-image-261 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/PCB.jpg" alt="PCB" width="556" height="883" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/PCB.jpg 556w, http://www.scullcom.uk/wp-content/uploads/2016/03/PCB-189x300.jpg 189w" sizes="(max-width: 556px) 100vw, 556px" /></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-3/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+		</item>
+		<item>
+		<title>Design &#038; Build a GPS locked Frequency Standard &#8211; Part 2</title>
+		<link>http://www.scullcom.uk/hello-world/</link>
+		<comments>http://www.scullcom.uk/hello-world/#comments</comments>
+		<pubDate>Sat, 05 Mar 2016 17:30:09 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[Frequency Reference]]></category>
+		<category><![CDATA[Projects]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=1</guid>
+		<description><![CDATA[&#160; In Part 2 of this project we will improve the reception of the GPS module and build the project on to printed circuit boards and test the unit. In addition we will look at ways of converting the 10MHz square wave to a sine wave. Below are links to download the schematics and PCB [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p><iframe width="648" height="365" src="https://www.youtube.com/embed/lbns-FvpzK4?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<p>In Part 2 of this project we will improve the reception of the GPS module and build the project on to printed circuit boards and test the unit. In addition we will look at ways of converting the 10MHz square wave to a sine wave.</p>
+<p>Below are links to download the schematics and PCB layouts for both the Main Frequency PCB and the Display PCB also the parts list.</p>
+<ul>
+<li><a href="http://www.scullcom.uk/wp-content/uploads/2016/03/10MHz_GPS_Ref_Schematic.pdf" rel="">10MHz_GPS_Ref_Schematic</a></li>
+<li><a href="http://www.scullcom.uk/wp-content/uploads/2016/03/10MHz_GPS_locked_Parts_List.pdf" rel="">10MHz_GPS_locked_Parts_List</a></li>
+<li><a href="http://www.scullcom.uk/wp-content/uploads/2016/03/10MHz_GPS_Freq_Ref_PCB.pdf" rel="">10MHz_GPS_Freq_Ref_PCB</a></li>
+<li><a href="http://www.scullcom.uk/wp-content/uploads/2016/03/10MHz_GPS_Display_Schematic.pdf" rel="">10MHz_GPS_Display_Schematic</a></li>
+<li><a href="http://www.scullcom.uk/wp-content/uploads/2016/03/10MHz_GPS_Display_PCB.pdf" rel="">10MHz_GPS_Display_PCB</a></li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/hello-world/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+		</item>
+		<item>
+		<title>Design &#038; Build a GPS locked Frequency Reference Standard &#8211; Part 1</title>
+		<link>http://www.scullcom.uk/design-build-a-gps-locked-frequency-reference-standard-part-1/</link>
+		<comments>http://www.scullcom.uk/design-build-a-gps-locked-frequency-reference-standard-part-1/#comments</comments>
+		<pubDate>Tue, 16 Feb 2016 12:28:20 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[Frequency Reference]]></category>
+		<category><![CDATA[Projects]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=19</guid>
+		<description><![CDATA[In this project we will design and build a 10MHz GPS locked frequency standard with additional outputs of 1MHz, 100KHz, 10KHz, 1KHz and 100Hz. The output frequency will also be present even when no satellite lock is available but will be free running. We will use a Arduino Nano and LCD display to indicate if [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In this project we will design and build a 10MHz GPS locked frequency standard with additional outputs of 1MHz, 100KHz, 10KHz, 1KHz and 100Hz. The output frequency will also be present even when no satellite lock is available but will be free running. We will use a Arduino Nano and LCD display to indicate if the frequency output is locked or unlocked. A ublox Neo-7M GPS module will be used and you will need to download a free software program from ublox to carry out the configuration of the GPS unit.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/lbns-FvpzK4?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>Ublox software can be downloaded from the link below:<br />
+<a class="yt-uix-sessionlink " href="https://www.u-blox.com/en/product/u-center-windows" target="_blank" rel="nofollow" data-sessionlink="ei=0iHcVpPHB5LbcZGngOgB">https://www.u-blox.com/en/product/u-c&#8230;</a></p>
+<p>Additional Arduino library required for this project if you don&#8217;t have it installed:<br />
+TinyGPS.h (<a class="yt-uix-sessionlink " href="https://github.com/mikalhart/TinyGPS" target="_blank" rel="nofollow" data-sessionlink="ei=0iHcVpPHB5LbcZGngOgB">https://github.com/mikalhart/TinyGPS</a>)</p>
+<p>Arduino Software Code for this project can be downloaded from the link below:<br />
+<a class="yt-uix-sessionlink " href="http://www.scullcom.com/GPS_Freq_Standard.ino" target="_blank" rel="nofollow" data-sessionlink="ei=0iHcVpPHB5LbcZGngOgB">http://www.scullcom.com/GPS_Freq_Stan&#8230;</a></p>
+<ul>
+<li>Parts required for Part 1 of this project below:</li>
+<li>1 x GPS NEO-7M Module (if a NEO-7N is purchased you do not need a back-up battery)</li>
+<li>1 x Arduino Nano module</li>
+<li>1 x 78L05 &#8211; 5 volt regulator</li>
+<li>1 x 16&#215;2 LCD display</li>
+<li>1 x 74AC14 (or 74HC14)</li>
+<li>3 x 74HC390</li>
+<li>1 x 14 pin DIL IC socket</li>
+<li>3 x 16 pin DIL IC sockets</li>
+<li>1 x 5mm Green LED (low current if possible)</li>
+<li>1 x IN4148 diode</li>
+<li>1 x 470uF capacitor</li>
+<li>1 x 100uF capacitor</li>
+<li>7 x 100nF capacitors</li>
+<li>1 x 10nF capacitor</li>
+<li>2 x 100 ohm resistors</li>
+<li>1 x 220 ohm resistor</li>
+<li>1 x 120 ohm resistor</li>
+<li>1 x Battery Holder/Snap On Connector for 6 AA 1.5 volt batteries</li>
+<li>6 x 1.5 volt batteries</li>
+<li>1 x CR2032 (3 volt lithium battery)</li>
+</ul>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/design-build-a-gps-locked-frequency-reference-standard-part-1/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+		</item>
+	</channel>
+</rss>

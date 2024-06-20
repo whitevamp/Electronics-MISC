@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Uncategorised &#8211; Scullcom</title>
+	<atom:link href="http://www.scullcom.uk/category/uncategorised/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Sun, 09 Sep 2018 18:26:37 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>Design &#038; Build a GPS locked Frequency Standard – Part 4</title>
+		<link>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/</link>
+		<comments>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/#comments</comments>
+		<pubDate>Thu, 24 Mar 2016 23:19:00 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[Frequency Reference]]></category>
+		<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Uncategorised]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=250</guid>
+		<description><![CDATA[In this 4th part of this project we upgrade the software to give satellite data and frequency lock display. Plus the current frequency on the display is improved to give reading in MHz, KHz or Hz. The new software version can be downloaded from the link below: http://www.scullcom.com/GPS_Ref_Version6.zip PLEASE NOTE TO COMPILE THIS CODE YOU [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In this 4th part of this project we upgrade the software to give satellite data and frequency lock display. Plus the current frequency on the display is improved to give reading in MHz, KHz or Hz.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/QUiVZFkBh8k?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>The new software version can be downloaded from the link below:<br />
+<a href="http://www.scullcom.com/GPS_Ref_Version6.zip" target="_blank">http://www.scullcom.com/GPS_Ref_Version6.zip</a><br />
+PLEASE NOTE TO COMPILE THIS CODE YOU NEED TO BE RUNNING THE LATEST VERSION OF ARDUINO IDE (version 1.6.7)<br />
+Below is a link to download a user guide on this project which includes circuit detail, PCB detailed layouts, schematics and software details. The file is a zip file which contains a PDF document:<br />
+<a href="http://www.scullcom.com/Scullcom_GPS_Ref_manual.zip" target="_blank">http://www.scullcom.com/Scullcom_GPS_Ref_manual.zip</a></p>
+<p><strong>Reading the GPS module data to extract the number of Satellites detected</strong></p>
+<p>When the GPS module starts receiving satellite data it provides a constant stream of data sentences which are know as NMEA sentences. Within this data stream the most important NMEA sentences include the GGA which provides the current Fix data, the RMC which provides the minimum GPS sentences information, and the GSA which provides the Satellite status data. In our project we will use the GGA data stream to extract the number of satellites detected and locked on to.</p>
+<p>Below is an example of a typical GGA data sentence:</p>
+<p><strong>$GPGGA,123519.00,4807.03830,N,01131.00000,E,1,08,0.9,545.4,M,46.9,M,,*47</strong></p>
+<p>Where:</p>
+<ul>
+<li>GGA                      Global Positioning System Fix Data</li>
+<li>123519.00            Fix taken at 12:35:19 UTC (current time)</li>
+<li>4807.03830,N    Latitude 48 deg 07.038&#8242; N</li>
+<li>01131.00000,E   Longitude 11 deg 31.000&#8242; E</li>
+<li>1 Fix quality:  0 = invalid, 1 = GPS fix (SPS), 2 = DGPS fix, 3 = PPS fix, 4 = Real Time Kinematic,<br />
+5 = Float RTK, 6 = estimated (dead reckoning) (2.3 feature), 7 = Manual input mode,<br />
+8 = Simulation mode</li>
+<li>08                    Number of satellites being tracked</li>
+<li>0.9                   Horizontal dilution of position</li>
+<li>545.4,M         Altitude, Meters, above mean sea level</li>
+<li>46.9,M           Height of geoid (mean sea level) above WGS84 ellipsoid</li>
+<li>(empty field) time in seconds since last DGPS update</li>
+<li>(empty field) DGPS station ID number</li>
+<li>*47                   the checksum data, always begins with *</li>
+</ul>
+<p>We will be using the data highlighted above to show the number of satellite on our LCD. In order to extract this information we will set up a second Software Serial port.</p>
+<p>First we need to identify the NMEA data we need to capture and we do this with the flowing code:</p>
+<p>char gpsin[8] = &#8220;$GPGGA,&#8221;;             //define a character string “$GPGGA,”<br />
+if (GPSreceiver.find(gpsin)) {           //if serial data starts with the characters “$GPGGA,”<br />
+GPGGAdata = GPSreceiver.readStringUntil(&#8216;\n&#8217;);  //read data until carriage return</p>
+<p>When the characters &#8220;$GPGGA,&#8221; are detected it starts reading the remainder of the string data in to the buffer. So the captured data starts from the first digit of the &#8216;time&#8217; data (and not from the $ character). The captured data then looks as follows:</p>
+<p><strong>123519.00,4807.03830,N,01131.00000,E,1,08,0.9,545.4,M,46.9,M,,*47</strong></p>
+<p>With in the main loop we will use the substring command to extract the number of satellites from the GGA data sentence. This is a simply and easy way of extracting the data you wish to use. The substring command is defined as follows:<br />
+substring(index, to) – this returns a string with the characters starting from index and ending at the character location before the to<br />
+So to extract the number of satellites (highlighted in read) from the GGA data sentence below</p>
+<p>&nbsp;</p>
+<p><img class="alignnone size-large wp-image-322" src="http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-1024x142.jpg" alt="NMEA_data_stripped" width="648" height="90" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-1024x142.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-300x42.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped-768x107.jpg 768w, http://www.scullcom.uk/wp-content/uploads/2016/03/NMEA_data_stripped.jpg 1446w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>We use the following code:</p>
+<p><code class="codeblock">sats = GPGGAdata.substring(39,41);</code></p>
+<p>The string “sats” now is equal to “08”<br />
+If you wanted to extract other data you simply need to change the “index, to” numbers in the substring. For example to extract the current time to a string labeled time then you would use:</p>
+<p><code class="codeblock">time = GPGGAdata.substring(7,13); //the string “time” now is equal to “123519”</code></p>
+<p><strong>Details of Code used in program loop to extract number of satellites and display on LCD</strong></p>
+<p><code class="codeblock">//new variables added at start of program<br />
+String sats; //number of satellites detected<br />
+String GPGGAdata;           //satellite data string from GPS module<br />
+String FreqStatus;          //used to print Frequency locked if applicable<br />
+int satNum;                 //number of satellites detected as an integer<br />
+//set up a Software Serial port called GPSreceiver<br />
+SoftwareSerial GPSreceiver (14,255); //14(A0) is RX on Arduino connected to GPS TX pin.<br />
+//255 a nonexistent pin number used to free up a pin<br />
+//in void setup() include serial monitor command and set to 57600 baud.<br />
+Serial.begin(57600);                 //this is simply used for testing<br />
+//The # key used to tell the unit to display the number of satellites on LCD.<br />
+// below is the software code used in the main loop to show number of satellites when //“#” key pressed:<br />
+case '#'://# pressed Show number of satellites detected and frequency status<br />
+lcd.clear(); //clear LCD<br />
+lcd.print("Satellites =");        //print the word 'Satellites =' on the top line of LCD<br />
+do {                             //now loop<br />
+GPSreceiver.flush();   //clear any data which may be in the Serial Buffer<br />
+if (GPSreceiver.available())          //if any GPS data is available<br />
+{<br />
+GPSreceiver.read();         //read GPS serial data streams if available<br />
+}<br />
+char gpsin[8] = "$GPGGA,";       //define a character string “$GPGGA,”<br />
+if (GPSreceiver.find(gpsin)) {     //if serial data starts with the characters “$GPGGA,”<br />
+GPGGAdata = GPSreceiver.readStringUntil('\n'); //read data until a carriage return<br />
+sats = GPGGAdata.substring(39,41); //extract number of satellites from data string<br />
+}<br />
+satNum = sats.toInt(); //convert sats string to an integer so as to remove leading zero<br />
+if (satNum &gt;0){<br />
+FreqStatus = "Frequency Locked";  //if satellites detected the status string<br />
+//= “Frequency Locked”<br />
+}else{<br />
+FreqStatus = " ";                 //16 spaces to clear line if no lock<br />
+}<br />
+Serial.print(GPGGAdata);   //These serial print lines are for testing using<br />
+//Serial Monitor<br />
+Serial.println(); //full GPGGA data sentence printed and then carriage return<br />
+Serial.print("Satellite = ");<br />
+Serial.print(satNum);<br />
+Serial.println();<br />
+Serial.print(FreqStatus);<br />
+Serial.println();<br />
+lcd.setCursor(13,0); //set cursor position to column 13 of row 0 (first line on LCD)<br />
+lcd.print(" ");  //clears number if no satellites detected (3 spaces used)<br />
+lcd.setCursor(13,0); //set cursor position to column 13 of row 0 (first line on LCD)<br />
+lcd.print(satNum);         //print number of satellites to LCD<br />
+lcd.setCursor(0,1); //set cursor position to column 0 of row 1 (second line on LCD)<br />
+lcd.print(FreqStatus);     //print Frequency Locked status<br />
+}<br />
+while (customKeypad.getKey()!= '#'); //if # key pressed again break out of loop<br />
+displayCurrentFrequency();   //and display current frequency subroutine<br />
+break;                       //break and return to main program loop</code></p>
+<p><strong>The software for this project is made up of three parts all of which are include in a download zip file.</strong></p>
+<p><img class="alignnone size-full wp-image-253" src="http://www.scullcom.uk/wp-content/uploads/2016/03/folder1.jpg" alt="folder1" width="846" height="85" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/folder1.jpg 846w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder1-300x30.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder1-768x77.jpg 768w" sizes="(max-width: 846px) 100vw, 846px" /></p>
+<p>Once the file is unzipped you will have a folder as above. In this folder you will find the following files shown below:</p>
+<p><img class="alignnone size-full wp-image-254" src="http://www.scullcom.uk/wp-content/uploads/2016/03/folder2.jpg" alt="folder2" width="847" height="132" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/folder2.jpg 847w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder2-300x47.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/folder2-768x120.jpg 768w" sizes="(max-width: 847px) 100vw, 847px" /></p>
+<p>Please ensure that you are running the latest version of the Arduino IDE which is “Arduino 1.6.7” (older versions may not work). Run the “GPS_Ref_Version6” file and you should find the software opens up in the Arduino IDE as shown below:</p>
+<p><img class="alignnone size-full wp-image-302" src="http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6.jpg" alt="codeV6" width="808" height="704" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6.jpg 808w, http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6-300x261.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/codeV6-768x669.jpg 768w" sizes="(max-width: 808px) 100vw, 808px" /></p>
+<p>Now compile and upload the software to the Arduino nano on the main PCB.</p>
+<hr />
+<p><strong>GPS Locked Frequency Standard Project</strong></p>
+<p>This project will use a small GPS module which has the u-blox Neo-7 GPS receiver. These modules are readily available on sites like eBay for around £12, they tend to be advertised for use with flight controllers on model aircraft.<br />
+The u-blox receiver is normally fitted in the centre of a small PCB. Additional components on the PCB include a 3.3 volt Low Drop Voltage Regulator, timepulse and power on LED’s and EEPROM. There is also some short term back-up supply for the DRAM of the Neo-7 receiver by use of a 0.08F super capacitor (Seiko XH414HG). These capacitors normally only provide power off back-up for around a day or so if you are lucky.<br />
+These GPS modules are usually configured by default to provide a 1Hz timing pulse output which is normally used to flash a green LED to indicate when the unit has a fix on satellites and the local oscillator is locked to the GPS signal. By default this timing pulse provides a 100mSec pulse every 1000mSec, as shown below.</p>
+<p><img class="alignnone size-full wp-image-262" src="http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse.jpg" alt="TimePulse" width="737" height="246" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse.jpg 737w, http://www.scullcom.uk/wp-content/uploads/2016/03/TimePulse-300x100.jpg 300w" sizes="(max-width: 737px) 100vw, 737px" /></p>
+<p>This timing pulse can be configured to provide different frequencies and different duty cycle and we will be using this option in this project to change the frequency and fix the duty cycle to 50%.<br />
+GPS satellites are primarily used as a navigation system; this global positioning system can also used to disseminate precise time, time intervals, and frequency. The GPS carrier signals originate from an on-board atomic clock (oscillator) which is also monitored and controlled by ground stations in the United States to ensure it agrees with the Coordinated Universal Time (UTC). UTC is the primary time standard by which the world regulates clocks and time.<br />
+Atomic clocks are based on the natural atomic oscillations of gases in resonant cavities. When isolated from magnetic fields, rubidium and cesium gases will resonate at specific frequencies under controlled conditions. These frequencies are so accurate that since 1967 the length of the second has been defined as the frequency of a specific resonant mode of the cesium atom, producing 9,192,631,770 oscillations in one second.</p>
+<p>The u-blox receiver uses a built-in 48MHz oscillator.</p>
+<p>There are various versions of the u-blox receiver available, some of which can be configured to provide a frequency pulse output in the range 0.25Hz to 10MHz. Those which are suitable for this project are listed in the table below:</p>
+<table  class=" table table-hover" style="height: 490px;" width="644">
+<tbody>
+<tr>
+<td width="205"><strong>u-blox Receiver Type</strong></td>
+<td width="205"><strong>Type of Memory fitted</strong></td>
+<td width="205"><strong>Type of Oscillator used</strong></td>
+</tr>
+<tr>
+<td width="205">Neo-6T</td>
+<td width="205">ROM</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-7M</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-7N</td>
+<td width="205">FLASH</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-7P</td>
+<td width="205">FLASH</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-M8M</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+<tr>
+<td width="205">Neo-M8N</td>
+<td width="205">FLASH</td>
+<td width="205">TCXO</td>
+</tr>
+<tr>
+<td width="205">Neo-M8Q</td>
+<td width="205">ROM</td>
+<td width="205">Crystal</td>
+</tr>
+</tbody>
+</table>
+<p>In this project we will use the Neo-7M. As this uses a ROM, the option to use a 3 volt backup battery on the PCB will help to speed up satellite lock after switch-on (this is optional). If the back-up battery is not used it may take a few minutes before the unit locks on to satellites. If the Neo-7N version is used then as it uses a FLASH memory there is no need for a back-up supply.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/feed/</wfw:commentRss>
+		<slash:comments>30</slash:comments>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>OP Amp &#8211; Scullcom</title>
+	<atom:link href="http://www.scullcom.uk/category/basics/op-amp/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Sun, 09 Sep 2018 18:26:37 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>Operational Amplifier (OP AMP)</title>
+		<link>http://www.scullcom.uk/operational-amplifier-op-amp/</link>
+		<comments>http://www.scullcom.uk/operational-amplifier-op-amp/#respond</comments>
+		<pubDate>Sun, 13 Mar 2016 19:55:49 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[Basics]]></category>
+		<category><![CDATA[OP Amp]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=225</guid>
+		<description><![CDATA[An OP Amp or Operational Amplifier is a differential input, single ended output amplifier. The gain of these amplifiers is determined by an external feedback element which is usually a resistor network. The symbol for a OP Amp is below: The name “Operational Amplifier” originated from the fact that devices of this design were originally [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>An OP Amp or Operational Amplifier is a differential input, single ended output amplifier. The gain of these amplifiers is determined by an external feedback element which is usually a resistor network. The symbol for a OP Amp is below:</p>
+<p><img class="alignnone size-full wp-image-226" src="http://www.scullcom.uk/wp-content/uploads/2016/03/OP_Amp_Symbol.jpg" alt="OP_Amp_Symbol" width="577" height="522" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/OP_Amp_Symbol.jpg 577w, http://www.scullcom.uk/wp-content/uploads/2016/03/OP_Amp_Symbol-300x271.jpg 300w" sizes="(max-width: 577px) 100vw, 577px" /></p>
+<p>The name “Operational Amplifier” originated from the fact that devices of this design were originally used in analog computers to help perform mathematical operations such as addition, multiplication, and many more.</p>
+<p>An <strong>ideal</strong> OP Amp has the following attributes:</p>
+<p>Infinite open-loop gain.<br />
+Zero input offset voltage.<br />
+Infinite input impedance, and therefore zero input current.<br />
+Infinite voltage range available at the output.<br />
+Infinite bandwidth with zero phase shift and infinite slew rate.<br />
+Zero output impedance.<br />
+Zero noise.<br />
+Infinite Common-Mode Rejection Ratio (CMRR)<br />
+Infinite Power Supply Rejection Ratio.</p>
+<p>These ideals may be summarised by the two &#8220;Key Rules&#8221; which should be remembered:</p>
+<p>1. In a closed loop the output attempts to do whatever is necessary to make the voltage difference between the inputs zero.<br />
+2. The inputs draw no current.</p>
+<p>Internally, the op amp is basically a three-stage amplifier circuit using multiple transistors. The three stages are as follows:</p>
+<p>1. A differential stage that makes a comparison of the two input voltage signals and outputs the amplified difference value.</p>
+<p>2 A high gain stage that receives the differential stage output and amplifies it further.</p>
+<p>3. An output buffer stage that may also serve as a “power amplifier” stage for driving large capacitive or resistive loads and for providing a low output impedance.</p>
+<p><img class="alignnone wp-image-231" src="http://www.scullcom.uk/wp-content/uploads/2016/03/OP_Amp_topology.jpg" alt="OP_Amp_topology" width="792" height="182" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/OP_Amp_topology.jpg 792w, http://www.scullcom.uk/wp-content/uploads/2016/03/OP_Amp_topology-300x69.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/03/OP_Amp_topology-768x176.jpg 768w" sizes="(max-width: 792px) 100vw, 792px" /></p>
+<p>The input impedance of an Op Amp is made to be very high so that very little current flows (ideally no current) in the signal inputs, and thus any preceding circuit providing the input signal has very little load imposed upon it and very little power is consumed.</p>
+<p>Unlike other signal boosting amplifier circuits, the Op Amp circuit uses no coupling capacitors at the input or output terminals. This direct coupling method allows the Op Amp to work with both DC and AC voltages.</p>
+<p>The voltage gain of an Op Amp in an “Open Loop” configuration (i.e. no output feedback is provided) is typically very high, in the range of 10,000 to 100,000, and some may even exceed 1,000,000. For most circuit application a closed loop configuration is used in which feedback to an input terminal is provided from the output using a resistor network.</p>
+<p style="text-align: center;"><strong><br />
+Basic Inverting Amplifier</strong></p>
+<p style="text-align: left;"><img class="alignnone size-full wp-image-233" src="http://www.scullcom.uk/wp-content/uploads/2016/03/Inverting_op_amp_gain.jpg" alt="Inverting_op_amp_gain" width="743" height="650" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/Inverting_op_amp_gain.jpg 743w, http://www.scullcom.uk/wp-content/uploads/2016/03/Inverting_op_amp_gain-300x262.jpg 300w" sizes="(max-width: 743px) 100vw, 743px" /><br />
+In the above circuit the input impedance is almost equal to the resistance of R2, since one side of this resistor always remains at about ground potential. To minimise the effect of small currents flowing in to the amplifier inputs the value of R3 should equal the value of R2 in parallel with R1.</p>
+<p style="text-align: center;"><strong>Basic Non-Inverting Amplifier circuit</strong></p>
+<p style="text-align: center;"><img class="alignnone size-full wp-image-234" src="http://www.scullcom.uk/wp-content/uploads/2016/03/Non_inverting_op_amp_gain.jpg" alt="Non_inverting_op_amp_gain" width="663" height="517" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/Non_inverting_op_amp_gain.jpg 663w, http://www.scullcom.uk/wp-content/uploads/2016/03/Non_inverting_op_amp_gain-300x234.jpg 300w" sizes="(max-width: 663px) 100vw, 663px" /></p>
+<p style="text-align: center;"><strong>Op Amp Buffer</strong><br />
+<strong>(voltage follower with 100% negative feedback)</strong></p>
+<p style="text-align: left;"><img class="size-full wp-image-235 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/03/OP_amp_buffer.jpg" alt="OP_amp_buffer" width="663" height="517" srcset="http://www.scullcom.uk/wp-content/uploads/2016/03/OP_amp_buffer.jpg 663w, http://www.scullcom.uk/wp-content/uploads/2016/03/OP_amp_buffer-300x234.jpg 300w" sizes="(max-width: 663px) 100vw, 663px" /><br />
+The voltage follower above is sometimes called an &#8220;impedance converter&#8221; as it converts the high input impedance to a low output impedance.</p>
+<p><strong>OP AMP TOPOLOGIES</strong></p>
+<p>The above circuit examples relate to voltage feedback Op Amps but there are two basic Op Amp topologies, namely; voltage feedback and current feedback.</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/operational-amplifier-op-amp/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>

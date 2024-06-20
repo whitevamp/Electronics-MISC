@@ -1,0 +1,182 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 12 Jul 2019 19:59:13 at http://www.scullcom.uk/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://www.scullcom.uk/ -O1 "K:\scullom_hobby\scullcom_hobby" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+19:59:14	Warning: 	Note: due to www.scullcom.uk remote robots.txt rules, links beginning with these path will be forbidden: /wp-admin/ (see in the options to disable this)
+20:11:14	Warning: 	Moved Permanently for www.scullcom.uk/?feed=rss2
+20:11:14	Warning: 	File has moved from www.scullcom.uk/?feed=rss2 to http://www.scullcom.uk/feed/
+20:11:16	Warning: 	Moved Permanently for www.scullcom.uk/?feed=comments-rss2
+20:11:16	Warning: 	File has moved from www.scullcom.uk/?feed=comments-rss2 to http://www.scullcom.uk/comments/feed/
+20:11:56	Error: 	"Not Found" (404) at link www.scullcom.uk/Popover requires tooltip.js (from www.scullcom.uk/wp-content/cache/wpfc-minified/7477c1eecc21a1313e4f68e38cc5df6d/1518483267index.js)
+20:16:03	Error: 	"Error when decompressing" (-1) at link www.scullcom.uk/design-build-6½-digit-millivolt-meter-part-4/ (from www.scullcom.uk/category/projects/millivolt-meter/)
+20:16:04	Error: 	"Error when decompressing" (-1) at link www.scullcom.uk/design-build-a-6½-digit-millivolt-meter-part-3/ (from www.scullcom.uk/category/projects/millivolt-meter/)
+20:16:05	Error: 	"Error when decompressing" (-1) at link www.scullcom.uk/design-build-a-6½-digit-millivolt-meter-part-2/ (from www.scullcom.uk/category/projects/millivolt-meter/)
+20:16:05	Error: 	"Error when decompressing" (-1) at link www.scullcom.uk/design-build-6½-digit-millivolt-meter-part-1/ (from www.scullcom.uk/category/projects/millivolt-meter/)
+20:17:18	Warning: 	Moved Permanently for www.scullcom.uk/?p=33
+20:17:18	Warning: 	File has moved from www.scullcom.uk/?p=33 to http://www.scullcom.uk/about/
+20:17:18	Error: 	"Not Found" (404) at link www.scullcom.uk/about/_facebook (from www.scullcom.uk/about/)
+20:17:18	Error: 	"Not Found" (404) at link www.scullcom.uk/about/_twitter (from www.scullcom.uk/about/)
+20:17:18	Error: 	"Not Found" (404) at link www.scullcom.uk/about/_pinterest (from www.scullcom.uk/about/)
+20:17:18	Warning: 	Moved Permanently for www.scullcom.uk/?p=492
+20:17:18	Warning: 	File has moved from www.scullcom.uk/?p=492 to http://www.scullcom.uk/function-generator-mk2/
+20:17:18	Error: 	"Method Not Allowed" (405) at link www.scullcom.uk/xmlrpc.php (from www.scullcom.uk/function-generator-mk2/)
+20:17:18	Error: 	"Not Found" (404) at link www.scullcom.uk/function-generator-mk2/_pinterest (from www.scullcom.uk/function-generator-mk2/)
+20:17:29	Warning: 	Moved Permanently for www.scullcom.uk/?p=463
+20:17:29	Warning: 	File has moved from www.scullcom.uk/?p=463 to http://www.scullcom.uk/dc-voltage-calibrator/
+20:17:29	Error: 	"Not Found" (404) at link www.scullcom.uk/dc-voltage-calibrator/_pinterest (from www.scullcom.uk/dc-voltage-calibrator/)
+20:17:31	Warning: 	Moved Permanently for www.scullcom.uk/?p=457
+20:17:31	Warning: 	File has moved from www.scullcom.uk/?p=457 to http://www.scullcom.uk/build-a-sinclair-zx80-clone/
+20:17:31	Error: 	"Not Found" (404) at link www.scullcom.uk/build-a-sinclair-zx80-clone/_pinterest (from www.scullcom.uk/build-a-sinclair-zx80-clone/)
+20:17:31	Warning: 	Moved Permanently for www.scullcom.uk/?p=410
+20:17:31	Warning: 	File has moved from www.scullcom.uk/?p=410 to http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/
+20:17:31	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-an-electronic-dc-load-part-1/_facebook (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:17:31	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-an-electronic-dc-load-part-1/_twitter (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:17:31	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-an-electronic-dc-load-part-1/_pinterest (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:17:40	Warning: 	Retry after error -5 (Unable to get server's address: No such host is known. ) at link https://s2.postimg.org/t5g4vi2kp/pcb1.png (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:17:40	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://s2.postimg.org/z7nrlzr0p/pcb2.png (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:18:59	Warning: 	Moved Permanently for www.scullcom.uk/?p=407
+20:18:59	Warning: 	File has moved from www.scullcom.uk/?p=407 to http://www.scullcom.uk/millivolt-meter-mk2/
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/millivolt-meter-mk2/_pinterest (from www.scullcom.uk/millivolt-meter-mk2/)
+20:18:59	Warning: 	Moved Permanently for www.scullcom.uk/?p=402
+20:18:59	Warning: 	File has moved from www.scullcom.uk/?p=402 to http://www.scullcom.uk/milliohm-meter-update/
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/milliohm-meter-update/_pinterest (from www.scullcom.uk/milliohm-meter-update/)
+20:18:59	Warning: 	Moved Permanently for www.scullcom.uk/?p=378
+20:18:59	Warning: 	File has moved from www.scullcom.uk/?p=378 to http://www.scullcom.uk/design-build-a-pulse-generator-part-1/
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-pulse-generator-part-1/_facebook (from www.scullcom.uk/design-build-a-pulse-generator-part-1/)
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-pulse-generator-part-1/_twitter (from www.scullcom.uk/design-build-a-pulse-generator-part-1/)
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-pulse-generator-part-1/_pinterest (from www.scullcom.uk/design-build-a-pulse-generator-part-1/)
+20:18:59	Warning: 	Moved Permanently for www.scullcom.uk/?p=334
+20:18:59	Warning: 	File has moved from www.scullcom.uk/?p=334 to http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-stair-step-waveform-generator/_pinterest (from www.scullcom.uk/design-build-a-stair-step-waveform-generator/)
+20:18:59	Warning: 	Moved Permanently for www.scullcom.uk/?p=324
+20:18:59	Warning: 	File has moved from www.scullcom.uk/?p=324 to http://www.scullcom.uk/design-build-a-low-current-reference-source/
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-low-current-reference-source/_pinterest (from www.scullcom.uk/design-build-a-low-current-reference-source/)
+20:18:59	Warning: 	Moved Permanently for www.scullcom.uk/?p=250
+20:18:59	Warning: 	File has moved from www.scullcom.uk/?p=250 to http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/_facebook (from www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/)
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/_twitter (from www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/)
+20:18:59	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/_pinterest (from www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-4/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=126
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=126 to http://www.scullcom.uk/upgrade-to-5-volt-precision-reference-standard-part-2/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/upgrade-to-5-volt-precision-reference-standard-part-2/_pinterest (from www.scullcom.uk/upgrade-to-5-volt-precision-reference-standard-part-2/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=133
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=133 to http://www.scullcom.uk/5-volt-precision-reference-standard-upgrade-part-1/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/5-volt-precision-reference-standard-upgrade-part-1/_pinterest (from www.scullcom.uk/5-volt-precision-reference-standard-upgrade-part-1/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=136
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=136 to http://www.scullcom.uk/design-build-5-volt-reference-standard/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-5-volt-reference-standard/_pinterest (from www.scullcom.uk/design-build-5-volt-reference-standard/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=140
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=140 to http://www.scullcom.uk/building-a-constant-current-source-box/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/building-a-constant-current-source-box/_pinterest (from www.scullcom.uk/building-a-constant-current-source-box/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=117
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=117 to http://www.scullcom.uk/build-a-pcb-uv-exposure-unit/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/build-a-pcb-uv-exposure-unit/_pinterest (from www.scullcom.uk/build-a-pcb-uv-exposure-unit/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=71
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=71 to http://www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-3/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-3/_pinterest (from www.scullcom.uk/design-build-a-gps-locked-frequency-standard-part-3/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=1
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=1 to http://www.scullcom.uk/hello-world/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/hello-world/_pinterest (from www.scullcom.uk/hello-world/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=19
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=19 to http://www.scullcom.uk/design-build-a-gps-locked-frequency-reference-standard-part-1/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-gps-locked-frequency-reference-standard-part-1/_pinterest (from www.scullcom.uk/design-build-a-gps-locked-frequency-reference-standard-part-1/)
+20:19:09	Warning: 	Moved Permanently for www.scullcom.uk/?p=114
+20:19:09	Warning: 	File has moved from www.scullcom.uk/?p=114 to http://www.scullcom.uk/build-a-function-generator-part-3/
+20:19:09	Error: 	"Not Found" (404) at link www.scullcom.uk/build-a-function-generator-part-3/_pinterest (from www.scullcom.uk/build-a-function-generator-part-3/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=120
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=120 to http://www.scullcom.uk/build-a-function-generator-part-2/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/build-a-function-generator-part-2/_pinterest (from www.scullcom.uk/build-a-function-generator-part-2/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=123
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=123 to http://www.scullcom.uk/build-a-function-generator-part-1/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/build-a-function-generator-part-1/_pinterest (from www.scullcom.uk/build-a-function-generator-part-1/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=172
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=172 to http://www.scullcom.uk/precision-voltage-reference-modules/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/precision-voltage-reference-modules/_pinterest (from www.scullcom.uk/precision-voltage-reference-modules/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=154
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=154 to http://www.scullcom.uk/gps-system-with-arduino-mini-oled-display/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/gps-system-with-arduino-mini-oled-display/_pinterest (from www.scullcom.uk/gps-system-with-arduino-mini-oled-display/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=157
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=157 to http://www.scullcom.uk/convert-240v-ac-pir-floodlight-to-12v-dc-led/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/convert-240v-ac-pir-floodlight-to-12v-dc-led/_pinterest (from www.scullcom.uk/convert-240v-ac-pir-floodlight-to-12v-dc-led/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=53
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=53 to http://www.scullcom.uk/design-build-a-milliohm-meter/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-milliohm-meter/_facebook (from www.scullcom.uk/design-build-a-milliohm-meter/)
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-milliohm-meter/_twitter (from www.scullcom.uk/design-build-a-milliohm-meter/)
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/design-build-a-milliohm-meter/_pinterest (from www.scullcom.uk/design-build-a-milliohm-meter/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=163
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=163 to http://www.scullcom.uk/design-building-a-precision-voltage-reference-box/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/design-building-a-precision-voltage-reference-box/_pinterest (from www.scullcom.uk/design-building-a-precision-voltage-reference-box/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=39
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=39 to http://www.scullcom.uk/39/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/39/_pinterest (from www.scullcom.uk/39/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=143
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=143 to http://www.scullcom.uk/dc-dc-boost-converter-test-review/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/dc-dc-boost-converter-test-review/_pinterest (from www.scullcom.uk/dc-dc-boost-converter-test-review/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=43
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=43 to http://www.scullcom.uk/peak-electronic-design-zener-diode-analyzer/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/peak-electronic-design-zener-diode-analyzer/_pinterest (from www.scullcom.uk/peak-electronic-design-zener-diode-analyzer/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=148
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=148 to http://www.scullcom.uk/keithley-225-current-source-review-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/keithley-225-current-source-review-teardown/_pinterest (from www.scullcom.uk/keithley-225-current-source-review-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=169
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=169 to http://www.scullcom.uk/time-electronics-404s-404n-dc-millivolt-source-teardown-review/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/time-electronics-404s-404n-dc-millivolt-source-teardown-review/_pinterest (from www.scullcom.uk/time-electronics-404s-404n-dc-millivolt-source-teardown-review/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=166
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=166 to http://www.scullcom.uk/fluke-8842a-digital-multimeter-review-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/fluke-8842a-digital-multimeter-review-teardown/_pinterest (from www.scullcom.uk/fluke-8842a-digital-multimeter-review-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=181
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=181 to http://www.scullcom.uk/thurlby-1905a-intelligent-digital-multimeter-review-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/thurlby-1905a-intelligent-digital-multimeter-review-teardown/_pinterest (from www.scullcom.uk/thurlby-1905a-intelligent-digital-multimeter-review-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=184
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=184 to http://www.scullcom.uk/datron-1065-autocal-digital-multimeter-review-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/datron-1065-autocal-digital-multimeter-review-teardown/_pinterest (from www.scullcom.uk/datron-1065-autocal-digital-multimeter-review-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=187
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=187 to http://www.scullcom.uk/muirhead-d825g-decade-resistance-box-review-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/muirhead-d825g-decade-resistance-box-review-teardown/_pinterest (from www.scullcom.uk/muirhead-d825g-decade-resistance-box-review-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=46
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=46 to http://www.scullcom.uk/philips-pm5127-function-generator-repair-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/philips-pm5127-function-generator-repair-teardown/_pinterest (from www.scullcom.uk/philips-pm5127-function-generator-repair-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=151
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=151 to http://www.scullcom.uk/sinclair-digital-multimeter-pdm35-teardown-also-micronta/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/sinclair-digital-multimeter-pdm35-teardown-also-micronta/_pinterest (from www.scullcom.uk/sinclair-digital-multimeter-pdm35-teardown-also-micronta/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=49
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=49 to http://www.scullcom.uk/keithley-197-digital-multimeter/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/keithley-197-digital-multimeter/_pinterest (from www.scullcom.uk/keithley-197-digital-multimeter/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=175
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=175 to http://www.scullcom.uk/keithley-178-multimeter-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/keithley-178-multimeter-teardown/_pinterest (from www.scullcom.uk/keithley-178-multimeter-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=178
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=178 to http://www.scullcom.uk/keithley-168-multimeter-teardown/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/keithley-168-multimeter-teardown/_pinterest (from www.scullcom.uk/keithley-168-multimeter-teardown/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=129
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=129 to http://www.scullcom.uk/making-your-own-pcb-the-easy-way/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/making-your-own-pcb-the-easy-way/_pinterest (from www.scullcom.uk/making-your-own-pcb-the-easy-way/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=225
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=225 to http://www.scullcom.uk/operational-amplifier-op-amp/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/operational-amplifier-op-amp/_facebook (from www.scullcom.uk/operational-amplifier-op-amp/)
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/operational-amplifier-op-amp/_twitter (from www.scullcom.uk/operational-amplifier-op-amp/)
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/operational-amplifier-op-amp/_pinterest (from www.scullcom.uk/operational-amplifier-op-amp/)
+20:19:10	Warning: 	Moved Permanently for www.scullcom.uk/?p=212
+20:19:10	Warning: 	File has moved from www.scullcom.uk/?p=212 to http://www.scullcom.uk/resistor-basics/
+20:19:10	Error: 	"Not Found" (404) at link www.scullcom.uk/resistor-basics/_pinterest (from www.scullcom.uk/resistor-basics/)
+20:20:22	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://s2.postimg.org/t5g4vi2kp/pcb1.png (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:20:22	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://s2.postimg.org/z7nrlzr0p/pcb2.png (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:20:22	Warning: 	Moved Permanently for www.scullcom.uk/?p=190
+20:20:22	Warning: 	File has moved from www.scullcom.uk/?p=190 to http://www.scullcom.uk/keithley-175a-multimeter-review-teardown/
+20:20:22	Error: 	"Not Found" (404) at link www.scullcom.uk/keithley-175a-multimeter-review-teardown/_pinterest (from www.scullcom.uk/keithley-175a-multimeter-review-teardown/)
+20:20:22	Warning: 	Moved Permanently for www.scullcom.uk/?p=193
+20:20:22	Warning: 	File has moved from www.scullcom.uk/?p=193 to http://www.scullcom.uk/imax-b6ac-genuine-viz-fake-review-teardown/
+20:20:22	Error: 	"Not Found" (404) at link www.scullcom.uk/imax-b6ac-genuine-viz-fake-review-teardown/_pinterest (from www.scullcom.uk/imax-b6ac-genuine-viz-fake-review-teardown/)
+20:20:22	Warning: 	Moved Permanently for www.scullcom.uk/?p=107
+20:20:22	Warning: 	File has moved from www.scullcom.uk/?p=107 to http://www.scullcom.uk/drok-dc-to-dc-converter-upgrade/
+20:20:22	Error: 	"Not Found" (404) at link www.scullcom.uk/drok-dc-to-dc-converter-upgrade/_pinterest (from www.scullcom.uk/drok-dc-to-dc-converter-upgrade/)
+20:20:27	Error: 	"Not Found" (404) at link www.scullcom.uk/function-generator-mk2/Popover requires tooltip.js (from www.scullcom.uk/wp-content/themes/sparkling/assets/js/vendor/bootstrap.min.js?ver=4.9.3)
+20:20:27	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://s2.postimg.org/t5g4vi2kp/pcb1.png (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+20:20:27	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://s2.postimg.org/z7nrlzr0p/pcb2.png (from www.scullcom.uk/design-build-an-electronic-dc-load-part-1/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 21 minutes 14 seconds : 967 links scanned, 845 files written (119981582 bytes overall) [36015689 bytes received at 28269 bytes/sec], 105480364 bytes transferred using HTTP compression in 539 files, ratio 18%, 13.5 requests per connection
+(68 errors, 103 warnings, 0 messages)

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments for Scullcom</title>
+	<atom:link href="http://www.scullcom.uk/comments/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Tue, 02 Jul 2019 22:02:27 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>Comment on Design &#038; Build an Electronic DC Load by james king</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-415</link>
+		<dc:creator><![CDATA[james king]]></dc:creator>
+		<pubDate>Tue, 02 Jul 2019 22:02:27 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-415</guid>
+		<description><![CDATA[I have done some analysis of the behaviour and measurement caperbilities of the load, and have some observations. Naturally some of these observations depend somewhat on the adjustments for current null and current sensitivity etc but some are calibration independant.
+Test conditions: I modified the program so that it displayed the raw values read from the ADC for the current and voltage
+I set the voltage adc channel to 18 bit resolution
+I set the current adc to 18 bit resoluation and 8x gain
+Observations
+1. voltage measurement can be made quite accurate. 
+I shorted the voltage sense + and - together and adjusted the voltage null until the adc outputed 0
+I inputed 57 volts and noted the adc output in my case 728001
+I then ploted voltages in 10, 5, 1 and 100mv decrements from 57V down to 0 and found the adc to be very linear. I ended up modifying the ActualVoltage calculation to 57.0*voltage/728001. In other words the actual voltage is the voltage read from the adc scaled by the adc output for my 57.0V reference. The result is only around 1mV out over the entire range I could measure 57V-0V. this is very good.
+The current side of things is not so good.
+2. at low input voltages only small currents can be draw. I suspect this is because of the protection diode on the current input. For example if I want to draw 1A I need about 1V input. inputing only 0.5V means even if I request 1A current draw the device does not draw this much current. Bellow about 320mV no current can be draw regardless of the current draw requested. This makes the device less useful for say nimh battery testing.
+3. the current devices measurment is non linear and has multiple issues at around 35mA draw down to 15mA and worse bellow that.
+from 2.2A (the most I can draw from my dc supply) down to about 35mA I can get a good fit to the data using a linear function. (2nd order poly is slightly better). Bellow around 35mA the current reading from the dac becomes very non linear and I need to use a completely different 2nd order poly to get anything like accurate results. Bellow about 15mA there is not enough resultion in the dac and all current draws below this valve result in the same output from the current adc. The actual current draw setting produces ok results down to about 5mA. I therefore altered the ActualCurrent calculation to use one curve for adc readings above 1000 (which equate to about 35mA draw) and a different curve bellow that. Accuracy is now good. BUT this does not fix the problem that the protection diode does not allow high current draw at low voltages.
+Conclusion
+the adc is linear - its the same adc used for voltage and current measurement. BUT so little voltage gets to the adc when measuring current its forced to use internal amplification and this is noisy and not so linear. The result is compromised low current measurement.
+The protection diode makes certain combinations of current draw and voltage input impossible.
+The dac that controls the current draw is not bad even though its less than 16 bit.
+If the voltage adc is not set to 18 bit the results are still linear and predictable but the sub 10mV readings are not so good (lack of resolution). I know the 18 bit setting is using interpolation BUT the dac iss et to 1x gain and so is not running too noisily and 18 bit mode works better than 16 bit in this case
+the current dac even if left at x4 and 16 bit mode does not have enough input voltage to handle reading low currents accurately. Setting 18bit and x8 does not help much because its already getting a lots of noise and issues from the gain and this messes up the 18 bit interpolation to.
+I strongly suspect that too get good sub 35mA current readings the ouput of the sense resistor will need amplification but a good opamp rather than just being buffered. However this would limit the high current range... So ideally there needs to be a switching mechanism and one op amp gain for currents down to say 50mA and another for sub 50mA currents...]]></description>
+		<content:encoded><![CDATA[<p>I have done some analysis of the behaviour and measurement caperbilities of the load, and have some observations. Naturally some of these observations depend somewhat on the adjustments for current null and current sensitivity etc but some are calibration independant.<br />
+Test conditions: I modified the program so that it displayed the raw values read from the ADC for the current and voltage<br />
+I set the voltage adc channel to 18 bit resolution<br />
+I set the current adc to 18 bit resoluation and 8x gain<br />
+Observations<br />
+1. voltage measurement can be made quite accurate.<br />
+I shorted the voltage sense + and &#8211; together and adjusted the voltage null until the adc outputed 0<br />
+I inputed 57 volts and noted the adc output in my case 728001<br />
+I then ploted voltages in 10, 5, 1 and 100mv decrements from 57V down to 0 and found the adc to be very linear. I ended up modifying the ActualVoltage calculation to 57.0*voltage/728001. In other words the actual voltage is the voltage read from the adc scaled by the adc output for my 57.0V reference. The result is only around 1mV out over the entire range I could measure 57V-0V. this is very good.<br />
+The current side of things is not so good.<br />
+2. at low input voltages only small currents can be draw. I suspect this is because of the protection diode on the current input. For example if I want to draw 1A I need about 1V input. inputing only 0.5V means even if I request 1A current draw the device does not draw this much current. Bellow about 320mV no current can be draw regardless of the current draw requested. This makes the device less useful for say nimh battery testing.<br />
+3. the current devices measurment is non linear and has multiple issues at around 35mA draw down to 15mA and worse bellow that.<br />
+from 2.2A (the most I can draw from my dc supply) down to about 35mA I can get a good fit to the data using a linear function. (2nd order poly is slightly better). Bellow around 35mA the current reading from the dac becomes very non linear and I need to use a completely different 2nd order poly to get anything like accurate results. Bellow about 15mA there is not enough resultion in the dac and all current draws below this valve result in the same output from the current adc. The actual current draw setting produces ok results down to about 5mA. I therefore altered the ActualCurrent calculation to use one curve for adc readings above 1000 (which equate to about 35mA draw) and a different curve bellow that. Accuracy is now good. BUT this does not fix the problem that the protection diode does not allow high current draw at low voltages.<br />
+Conclusion<br />
+the adc is linear &#8211; its the same adc used for voltage and current measurement. BUT so little voltage gets to the adc when measuring current its forced to use internal amplification and this is noisy and not so linear. The result is compromised low current measurement.<br />
+The protection diode makes certain combinations of current draw and voltage input impossible.<br />
+The dac that controls the current draw is not bad even though its less than 16 bit.<br />
+If the voltage adc is not set to 18 bit the results are still linear and predictable but the sub 10mV readings are not so good (lack of resolution). I know the 18 bit setting is using interpolation BUT the dac iss et to 1x gain and so is not running too noisily and 18 bit mode works better than 16 bit in this case<br />
+the current dac even if left at x4 and 16 bit mode does not have enough input voltage to handle reading low currents accurately. Setting 18bit and x8 does not help much because its already getting a lots of noise and issues from the gain and this messes up the 18 bit interpolation to.<br />
+I strongly suspect that too get good sub 35mA current readings the ouput of the sense resistor will need amplification but a good opamp rather than just being buffered. However this would limit the high current range&#8230; So ideally there needs to be a switching mechanism and one op amp gain for currents down to say 50mA and another for sub 50mA currents&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Function Generator Mk2 by Cory Benjamin</title>
+		<link>http://www.scullcom.uk/function-generator-mk2/#comment-414</link>
+		<dc:creator><![CDATA[Cory Benjamin]]></dc:creator>
+		<pubDate>Sat, 29 Jun 2019 14:46:41 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=492#comment-414</guid>
+		<description><![CDATA[Hi Louis,
+
+I hope you&#039;re still alright, I miss your amazing YouTube content!
+
+Cory]]></description>
+		<content:encoded><![CDATA[<p>Hi Louis,</p>
+<p>I hope you&#8217;re still alright, I miss your amazing YouTube content!</p>
+<p>Cory</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on DC Voltage Calibrator by Mark</title>
+		<link>http://www.scullcom.uk/dc-voltage-calibrator/#comment-413</link>
+		<dc:creator><![CDATA[Mark]]></dc:creator>
+		<pubDate>Sat, 29 Jun 2019 13:47:26 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=463#comment-413</guid>
+		<description><![CDATA[Hi Lewis
+
+Only thing I can think of is try reprogramming the arduino nano as this appears to be the 
+brains of the operation or try exchanging it if you have another to hand.
+Failing that I would check for bad connections etc.
+
+Regards
+Mark.]]></description>
+		<content:encoded><![CDATA[<p>Hi Lewis</p>
+<p>Only thing I can think of is try reprogramming the arduino nano as this appears to be the<br />
+brains of the operation or try exchanging it if you have another to hand.<br />
+Failing that I would check for bad connections etc.</p>
+<p>Regards<br />
+Mark.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Design &#038; Build an Electronic DC Load by Patrick Ward</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-412</link>
+		<dc:creator><![CDATA[Patrick Ward]]></dc:creator>
+		<pubDate>Sat, 29 Jun 2019 10:51:40 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-412</guid>
+		<description><![CDATA[Hi, great series, thank you for the wonderful design and enhancement journey, you are a great teacher indeed. 
+Do you still have any PCB&#039;s for sale? 
+Patrick]]></description>
+		<content:encoded><![CDATA[<p>Hi, great series, thank you for the wonderful design and enhancement journey, you are a great teacher indeed.<br />
+Do you still have any PCB&#8217;s for sale?<br />
+Patrick</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on DC Voltage Calibrator by Lewis Bryant</title>
+		<link>http://www.scullcom.uk/dc-voltage-calibrator/#comment-409</link>
+		<dc:creator><![CDATA[Lewis Bryant]]></dc:creator>
+		<pubDate>Fri, 28 Jun 2019 02:33:31 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=463#comment-409</guid>
+		<description><![CDATA[Thanks Louis for another Great project. Just finished putting mine together and all works great up to 8v, however anything over 8v and up to 10v only gives me around 8v .
+Im using a Keysight U1272A auto ranging DMM. I did use 16v Tantalum Caps for C2 and C14 but have since changed those to the Required 25V tantalum Caps. after I changed these I got 10V but then it collapsed back to the 8V.
+Any Suggestions would be greatly appreciated from anyone.
+
+
+Thanks for all your great Projects]]></description>
+		<content:encoded><![CDATA[<p>Thanks Louis for another Great project. Just finished putting mine together and all works great up to 8v, however anything over 8v and up to 10v only gives me around 8v .<br />
+Im using a Keysight U1272A auto ranging DMM. I did use 16v Tantalum Caps for C2 and C14 but have since changed those to the Required 25V tantalum Caps. after I changed these I got 10V but then it collapsed back to the 8V.<br />
+Any Suggestions would be greatly appreciated from anyone.</p>
+<p>Thanks for all your great Projects</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on DC Voltage Calibrator by Stuart</title>
+		<link>http://www.scullcom.uk/dc-voltage-calibrator/#comment-405</link>
+		<dc:creator><![CDATA[Stuart]]></dc:creator>
+		<pubDate>Fri, 14 Jun 2019 11:01:17 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=463#comment-405</guid>
+		<description><![CDATA[@Mark
+
+Hi Mark,
+
+Great stuff, I have ordered a couple.
+
+Thanks for the info, much appreciated
+
+Kind Regards,
+
+Stuart]]></description>
+		<content:encoded><![CDATA[<p>@Mark</p>
+<p>Hi Mark,</p>
+<p>Great stuff, I have ordered a couple.</p>
+<p>Thanks for the info, much appreciated</p>
+<p>Kind Regards,</p>
+<p>Stuart</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on DC Voltage Calibrator by Mark</title>
+		<link>http://www.scullcom.uk/dc-voltage-calibrator/#comment-404</link>
+		<dc:creator><![CDATA[Mark]]></dc:creator>
+		<pubDate>Fri, 14 Jun 2019 07:49:06 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=463#comment-404</guid>
+		<description><![CDATA[Hi Stuart, give these a try they are the ones I used and the calibrator works fine.
+
+Ebay - 121632980358.
+
+Regards Mark.]]></description>
+		<content:encoded><![CDATA[<p>Hi Stuart, give these a try they are the ones I used and the calibrator works fine.</p>
+<p>Ebay &#8211; 121632980358.</p>
+<p>Regards Mark.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on DC Voltage Calibrator by Stuart</title>
+		<link>http://www.scullcom.uk/dc-voltage-calibrator/#comment-403</link>
+		<dc:creator><![CDATA[Stuart]]></dc:creator>
+		<pubDate>Thu, 13 Jun 2019 15:01:08 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=463#comment-403</guid>
+		<description><![CDATA[The ACT variants of the voltage regulators are now obsolete, upshot of this is that the replacement for the LM7815ACT has a minimum input voltage of 23V along with all the other variants I have come across.
+
+Kind of stuck on how to progress this project now ( I&#039;m a beginner ).....]]></description>
+		<content:encoded><![CDATA[<p>The ACT variants of the voltage regulators are now obsolete, upshot of this is that the replacement for the LM7815ACT has a minimum input voltage of 23V along with all the other variants I have come across.</p>
+<p>Kind of stuck on how to progress this project now ( I&#8217;m a beginner )&#8230;..</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Design &#038; Build an Electronic DC Load by Stephen Nixey</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-402</link>
+		<dc:creator><![CDATA[Stephen Nixey]]></dc:creator>
+		<pubDate>Sun, 09 Jun 2019 13:19:22 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-402</guid>
+		<description><![CDATA[eBay - as no one was selling - I have had a few made and have them for sale on eBay for a while with a few left.
+
+https://www.ebay.co.uk/itm/283458246652
+
+I hope this helps]]></description>
+		<content:encoded><![CDATA[<p>eBay &#8211; as no one was selling &#8211; I have had a few made and have them for sale on eBay for a while with a few left.</p>
+<p><a href="https://www.ebay.co.uk/itm/283458246652" rel="nofollow">https://www.ebay.co.uk/itm/283458246652</a></p>
+<p>I hope this helps</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>Comment on Design &#038; Build an Electronic DC Load by Domenico</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-395</link>
+		<dc:creator><![CDATA[Domenico]]></dc:creator>
+		<pubDate>Tue, 04 Jun 2019 21:04:45 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-395</guid>
+		<description><![CDATA[GOOD JOB
+
+HOW CAN I BUY PCB?]]></description>
+		<content:encoded><![CDATA[<p>GOOD JOB</p>
+<p>HOW CAN I BUY PCB?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name DC_Cal_TFT_Arduino_Module-rescue)(type Legacy)(uri ${KIPRJMOD}/DC_Cal_TFT_Arduino_Module-rescue.lib)(options "")(descr ""))
+)

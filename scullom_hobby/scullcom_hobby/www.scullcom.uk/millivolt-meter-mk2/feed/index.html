@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Millivolt Meter MK2</title>
+	<atom:link href="http://www.scullcom.uk/millivolt-meter-mk2/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk/millivolt-meter-mk2/</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Tue, 02 Jul 2019 22:02:27 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>By: Julian Bowen</title>
+		<link>http://www.scullcom.uk/millivolt-meter-mk2/#comment-177</link>
+		<dc:creator><![CDATA[Julian Bowen]]></dc:creator>
+		<pubDate>Sun, 20 May 2018 15:01:19 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=407#comment-177</guid>
+		<description><![CDATA[Hi,
+
+I need help!
+I have created a perf board variation of the mk2 millivolt meter and it doesn&#039;t work.  I have placed a pdf of the circuit board layout in the link below.
+
+https://drive.google.com/open?id=1WF7aGF4wwLYKMQYC_pfe-S47Mx0pNHwQ
+
+The 3 smd ics, are mounted to smd to dip adapters to make it compatible with 2.54mm pitch perf board.  The AD8628 is a SOT23 package, the ADR4540 &#038; LTC2400 are both 8 pin.
+The 10 to 1 voltage divider is created using 6 x 232K 0.1% resistors in a series + parallel (3R, R/3) layout, give 696K &#038; 77.333K network.
+
+The connections to the arduino nano are made via pin headers.
+
+So the circuit / software runs but the voltage reading is wrong and inconsistent, ie 5V displays as anything between 5V and 1050V.
+If you calibrate it to a 5v reference it gives a calibration offset of around 4200.
+
+Without the op amp buffer connected, the 4.096V reference from the ADR4540 can be measured as 4.096V, with the op amp connected it measures around 0.83V.
+
+Any help would be greatly appreciated.]]></description>
+		<content:encoded><![CDATA[<p>Hi,</p>
+<p>I need help!<br />
+I have created a perf board variation of the mk2 millivolt meter and it doesn&#8217;t work.  I have placed a pdf of the circuit board layout in the link below.</p>
+<p><a href="https://drive.google.com/open?id=1WF7aGF4wwLYKMQYC_pfe-S47Mx0pNHwQ" rel="nofollow">https://drive.google.com/open?id=1WF7aGF4wwLYKMQYC_pfe-S47Mx0pNHwQ</a></p>
+<p>The 3 smd ics, are mounted to smd to dip adapters to make it compatible with 2.54mm pitch perf board.  The AD8628 is a SOT23 package, the ADR4540 &amp; LTC2400 are both 8 pin.<br />
+The 10 to 1 voltage divider is created using 6 x 232K 0.1% resistors in a series + parallel (3R, R/3) layout, give 696K &amp; 77.333K network.</p>
+<p>The connections to the arduino nano are made via pin headers.</p>
+<p>So the circuit / software runs but the voltage reading is wrong and inconsistent, ie 5V displays as anything between 5V and 1050V.<br />
+If you calibrate it to a 5v reference it gives a calibration offset of around 4200.</p>
+<p>Without the op amp buffer connected, the 4.096V reference from the ADR4540 can be measured as 4.096V, with the op amp connected it measures around 0.83V.</p>
+<p>Any help would be greatly appreciated.</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Louis Scully</title>
+		<link>http://www.scullcom.uk/millivolt-meter-mk2/#comment-166</link>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+		<pubDate>Sat, 05 May 2018 17:51:51 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=407#comment-166</guid>
+		<description><![CDATA[Hi Julian,
+Thanks for your kind comments.
+With regards your questions:
+1. Yes you can use the internal 4.096V reference for calibration.
+2. The new small PCB used in Mk2 was designed by one of my viewers who for some reason designed his print layout to use the 900K / 100K divider of the Caddock Resistor Networks. Originally I used the 9M / 1M option. You can use either but the latter option gives you a higher input impedance which is better. To use the 9M / 1M option on the new Mk2 PCB (from OSH Park) you will need to raise the Caddock Resistor Networks off the PCB slightly and then use wires connecting the 9M / 1M sections to the PCB.
+I am currently working on a new project which will be a Function Generator with some new design features. I am currently designing a PCB for this new project. Hopefully, I shall have it finished in a few weeks and will film it for my You Tube channel.
+Kind regards,
+Louis]]></description>
+		<content:encoded><![CDATA[<p>Hi Julian,<br />
+Thanks for your kind comments.<br />
+With regards your questions:<br />
+1. Yes you can use the internal 4.096V reference for calibration.<br />
+2. The new small PCB used in Mk2 was designed by one of my viewers who for some reason designed his print layout to use the 900K / 100K divider of the Caddock Resistor Networks. Originally I used the 9M / 1M option. You can use either but the latter option gives you a higher input impedance which is better. To use the 9M / 1M option on the new Mk2 PCB (from OSH Park) you will need to raise the Caddock Resistor Networks off the PCB slightly and then use wires connecting the 9M / 1M sections to the PCB.<br />
+I am currently working on a new project which will be a Function Generator with some new design features. I am currently designing a PCB for this new project. Hopefully, I shall have it finished in a few weeks and will film it for my You Tube channel.<br />
+Kind regards,<br />
+Louis</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Julian Bowen</title>
+		<link>http://www.scullcom.uk/millivolt-meter-mk2/#comment-161</link>
+		<dc:creator><![CDATA[Julian Bowen]]></dc:creator>
+		<pubDate>Wed, 02 May 2018 09:57:22 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=407#comment-161</guid>
+		<description><![CDATA[Hi,
+
+First of all can I just say &quot;don&#039;t stop making these projects videos&quot;.
+I&#039;m returning to hobby electronics after a 25 or so year break and things have changed a lot, so my learning curve is very steep at the moment and your videos are, in my opinion, some of the best on you tube.
+
+I have been following the millivolt meter project and I have a couple of questions I hope you can answer for me.
+1. The mk2 version uses an external 5v reference for calibration, can the internal 4.096v reference be used instead?  i.e a switched connection between the output of the ic and the +ve input on the board. 
+2. The mk2 version uses the same caddock resistor network as used in the earlier versions, but the divider has been reduced from 9M / 1M to 900k / 100k is there an advantage?]]></description>
+		<content:encoded><![CDATA[<p>Hi,</p>
+<p>First of all can I just say &#8220;don&#8217;t stop making these projects videos&#8221;.<br />
+I&#8217;m returning to hobby electronics after a 25 or so year break and things have changed a lot, so my learning curve is very steep at the moment and your videos are, in my opinion, some of the best on you tube.</p>
+<p>I have been following the millivolt meter project and I have a couple of questions I hope you can answer for me.<br />
+1. The mk2 version uses an external 5v reference for calibration, can the internal 4.096v reference be used instead?  i.e a switched connection between the output of the ic and the +ve input on the board.<br />
+2. The mk2 version uses the same caddock resistor network as used in the earlier versions, but the divider has been reduced from 9M / 1M to 900k / 100k is there an advantage?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: yk</title>
+		<link>http://www.scullcom.uk/millivolt-meter-mk2/#comment-63</link>
+		<dc:creator><![CDATA[yk]]></dc:creator>
+		<pubDate>Sun, 12 Nov 2017 18:21:51 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=407#comment-63</guid>
+		<description><![CDATA[is there a bi-polar input version ?
+could a voltage referance and op-amp be added tosupply 2.5 v bias?]]></description>
+		<content:encoded><![CDATA[<p>is there a bi-polar input version ?<br />
+could a voltage referance and op-amp be added tosupply 2.5 v bias?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Lindsay</title>
+		<link>http://www.scullcom.uk/millivolt-meter-mk2/#comment-57</link>
+		<dc:creator><![CDATA[Lindsay]]></dc:creator>
+		<pubDate>Mon, 11 Sep 2017 22:40:22 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=407#comment-57</guid>
+		<description><![CDATA[Full disclosure: It takes me 1.5 hours to watch &quot;60 Minutes&quot;. 
+But isn&#039;t what your are describing called a multi-meter?  and what about a  capacitance meter that can test leakage and ESR?
+Also now we are making this I want to add the following features please:
+Continuity, Conductance, Inductence, Temperature, Diode and Transistor.
+
+And less important but still would be liked: 
+Decibel, Duty cycle and Frequency.
+
+Now I don&#039;t know David Smith, but I&#039;m willing to go out on a limb and say both he and I are willing to pay up to $82.98 USD for such a device. Louis how long will it take you to design this and share with us? in the mean time I&#039;m going to go door knocking to find additional buyers]]></description>
+		<content:encoded><![CDATA[<p>Full disclosure: It takes me 1.5 hours to watch &#8220;60 Minutes&#8221;.<br />
+But isn&#8217;t what your are describing called a multi-meter?  and what about a  capacitance meter that can test leakage and ESR?<br />
+Also now we are making this I want to add the following features please:<br />
+Continuity, Conductance, Inductence, Temperature, Diode and Transistor.</p>
+<p>And less important but still would be liked:<br />
+Decibel, Duty cycle and Frequency.</p>
+<p>Now I don&#8217;t know David Smith, but I&#8217;m willing to go out on a limb and say both he and I are willing to pay up to $82.98 USD for such a device. Louis how long will it take you to design this and share with us? in the mean time I&#8217;m going to go door knocking to find additional buyers</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: David Smith</title>
+		<link>http://www.scullcom.uk/millivolt-meter-mk2/#comment-22</link>
+		<dc:creator><![CDATA[David Smith]]></dc:creator>
+		<pubDate>Sat, 11 Feb 2017 20:36:06 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=407#comment-22</guid>
+		<description><![CDATA[I really like this project, it is very informative! I have a thought, I am new to electronics and I am wanting to combine a volt, ohm and amp meter into one, how would I go about doing that?]]></description>
+		<content:encoded><![CDATA[<p>I really like this project, it is very informative! I have a thought, I am new to electronics and I am wanting to combine a volt, ohm and amp meter into one, how would I go about doing that?</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

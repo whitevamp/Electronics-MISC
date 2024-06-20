@@ -1,0 +1,10 @@
+LTC2400 :: 7.05 - 12.19 :: digikey
+lm7805  :: 0.62 - 1.68  :: digikey
+adr4540 :: 3.34425 - 8.01000  :: digikey
+caddock 1776 c681 :: 16.36  :: digikey
+op777 ::  1.52 - 3.11  :: digikey
+lcd 16x2 :: 4.50 - 70.00
+arduino nano :: 50.00 :: digikey
+misc cap's, resistors, diods :: 20.00 :: digikey :: and may have on hand..
+
+103.40 - 181.35

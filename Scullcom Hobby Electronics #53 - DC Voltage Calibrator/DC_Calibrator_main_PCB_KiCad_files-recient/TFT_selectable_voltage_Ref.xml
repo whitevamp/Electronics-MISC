@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files\TFT_selectable_voltage_Ref.sch</source>
+    <date>4/25/2021 4:06:46 PM</date>
+    <tool>Eeschema (5.1.9)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date>22 nov 2017</date>
+        <source>TFT_selectable_voltage_Ref.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C3">
+      <value>220uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D8.0mm_P5.00mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BBB9</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>100uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D8.0mm_P2.50mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BC5E</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>100uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D8.0mm_P2.50mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BCB5</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>22uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D5.0mm_P2.00mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BCF2</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D8.0mm_P2.50mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BD41</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>1uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D5.0mm_P2.00mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BD8C</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>1N4007</value>
+      <footprint>Diodes_THT:D_T-1_P10.16mm_Horizontal</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BE26</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>LM7805_TO220</value>
+      <footprint>Power_Integrations:TO-220</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="LM7805_TO220" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BEE5</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>LM7815_TO220</value>
+      <footprint>Power_Integrations:TO-220</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="LM7812_TO220" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BF84</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>LM7915_TO220</value>
+      <footprint>Power_Integrations:TO-220</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="LM7912_TO220" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A15BFE1</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>10K</value>
+      <footprint>Potentiometers:Potentiometer_Trimmer_Bourns_3296W</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="POT_TRIM" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1656E4</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>22uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D5.0mm_P2.00mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A165F80</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A16D894</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A16DBEE</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A16DC4D</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A16E0E0</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A16E153</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>18 Volt DC In</value>
+      <footprint>Connectors:BARREL_JACK</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Jack-DC" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A16EEAB</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A172A7A</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>B Vref.</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x02" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A17391B</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>DAC B Out</value>
+      <footprint>Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x02" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A173B88</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>DC Reference Output</value>
+      <footprint>Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x02" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A173F68</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1752DF</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>100uF</value>
+      <footprint>Capacitors_THT:CP_Radial_D8.0mm_P2.50mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A18AB23</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A18B1C2</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>Option Power</value>
+      <footprint>Connectors_JST:JST_XH_B04B-XH-A_04x2.50mm_Straight</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x04_Female" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A190475</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>INA105</value>
+      <footprint>Housings_DIP:DIP-8_W7.62mm_Socket_LongPads</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="INA105-RESCUE-TFT_selectable_voltage_Ref" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A17F56D</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>MAX6341</value>
+      <footprint>Housings_DIP:DIP-8_W7.62mm_Socket_LongPads</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="MAX6341" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A17FB31</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>TC962</value>
+      <footprint>Housings_DIP:DIP-8_W7.62mm_Socket_LongPads</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="TC962" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1806F6</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>MCP4922EP</value>
+      <footprint>Housings_DIP:DIP-14_W7.62mm_Socket_LongPads</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="MCP4922EP" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A180EBF</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>DG303B</value>
+      <footprint>Housings_DIP:DIP-14_W7.62mm_Socket_LongPads</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="DG303B" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A181FF9</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>DG303B</value>
+      <footprint>Housings_DIP:DIP-14_W7.62mm_Socket_LongPads</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="DG303B" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A186DF6</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>INA105</value>
+      <footprint>Housings_DIP:DIP-8_W7.62mm_Socket_LongPads</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="INA105-RESCUE-TFT_selectable_voltage_Ref" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A186EE7</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1ACD54</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>100nF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A1ACE35</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>To Display/Nano</value>
+      <footprint>Connectors_JST:JST_XH_B10B-XH-A_10x2.50mm_Straight</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x10_Male" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A342196</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>2.2uF</value>
+      <footprint>Capacitors_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A345E02</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Battery</value>
+      <footprint>Connectors_JST:JST_XH_B03B-XH-A_03x2.50mm_Straight</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x03_Male" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A370F29</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>1N5338B</value>
+      <footprint>Diodes_THT:D_DO-201AD_P15.24mm_Horizontal</footprint>
+      <libsource lib="Device" part="D_Zener" description="Zener diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A3727F0</tstamp>
+    </comp>
+    <comp ref="JP1">
+      <value>Jumper</value>
+      <footprint>Wire_Connections_Bridges:WireConnection_0.80mmDrill</footprint>
+      <libsource lib="Device" part="Jumper" description="Jumper, normally closed"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A352E5D</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>MCP1501_10</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="MCP1501_SOIC-8" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A43E2AF</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>220pF</value>
+      <footprint>Capacitors_THT:C_Rect_L4.6mm_W2.0mm_P2.50mm_MKS02_FKP02</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A43FB4C</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>On/Off Switch</value>
+      <footprint>Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight</footprint>
+      <libsource lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x02_Male" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A445744</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener">
+      <description>Zener diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Jumper">
+      <description>Jumper, normally closed</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*</fp>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*2Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x02">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x02_Male">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x03_Male">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x04_Female">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Female</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="Conn_01x10_Male">
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x10_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="DG303B">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DG303B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="NotConnected"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="input"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="V-" type="power_in"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="passive"/>
+        <pin num="11" name="~" type="passive"/>
+        <pin num="12" name="~" type="passive"/>
+        <pin num="13" name="~" type="passive"/>
+        <pin num="14" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="INA105-RESCUE-TFT_selectable_voltage_Ref">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">INA105-RESCUE-TFT_selectable_voltage_Ref</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Ref" type="input"/>
+        <pin num="2" name="-IN" type="input"/>
+        <pin num="3" name="+IN" type="input"/>
+        <pin num="4" name="-V" type="power_in"/>
+        <pin num="5" name="Sence" type="input"/>
+        <pin num="6" name="OUT" type="output"/>
+        <pin num="7" name="+V" type="power_in"/>
+        <pin num="8" name="NC" type="NotConnected"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="Jack-DC">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Jack-DC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="LM7805_TO220">
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7805_TO220</field>
+        <field name="Footprint">TO_SOT_Packages_THT:TO-220_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="LM7812_TO220">
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7812_TO220</field>
+        <field name="Footprint">TO_SOT_Packages_THT:TO-220_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VI" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="LM7912_TO220">
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM7912_TO220</field>
+        <field name="Footprint">TO_SOT_Packages_THT:TO-220_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VI" type="power_in"/>
+        <pin num="3" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="MAX6341">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX6341</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I.C." type="NotConnected"/>
+        <pin num="2" name="IN" type="power_in"/>
+        <pin num="3" name="NR" type="passive"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="Trim" type="input"/>
+        <pin num="6" name="OUT" type="power_out"/>
+        <pin num="7" name="I.C." type="NotConnected"/>
+        <pin num="8" name="I.C." type="NotConnected"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="MCP1501_SOIC-8">
+      <footprints>
+        <fp>TSOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP1501_SOIC-8</field>
+        <field name="Footprint">Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Vdd" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="~SHDN" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="GND" type="power_out"/>
+        <pin num="7" name="OUT" type="output"/>
+        <pin num="8" name="Feedback" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="MCP4922EP">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP4922EP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="NC" type="NotConnected"/>
+        <pin num="3" name="~CS" type="input"/>
+        <pin num="4" name="SCK" type="input"/>
+        <pin num="5" name="SDI" type="input"/>
+        <pin num="6" name="NC" type="NotConnected"/>
+        <pin num="7" name="NC" type="NotConnected"/>
+        <pin num="8" name="~LDAC" type="input"/>
+        <pin num="9" name="~SHDN" type="input"/>
+        <pin num="10" name="VoutB" type="output"/>
+        <pin num="11" name="VrefB" type="input"/>
+        <pin num="12" name="VSS" type="power_in"/>
+        <pin num="13" name="VrefA" type="input"/>
+        <pin num="14" name="VoutA" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="POT_TRIM">
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT_TRIM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TFT_selectable_voltage_Ref-rescue" part="TC962">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TC962</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Zener_Cathode" type="input"/>
+        <pin num="2" name="C+" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="C-" type="input"/>
+        <pin num="5" name="Vout" type="power_out"/>
+        <pin num="6" name="Freq_x2" type="passive"/>
+        <pin num="7" name="Cosc" type="input"/>
+        <pin num="8" name="Vdd" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="TFT_selectable_voltage_Ref-rescue">
+      <uri>C:\Users\whitevamp\Downloads\Scullcom Hobby Electronics #53 - DC Voltage Calibrator\DC_Calibrator_main_PCB_KiCad_files/TFT_selectable_voltage_Ref-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+15V">
+      <node ref="C6" pin="1"/>
+      <node ref="U4" pin="3"/>
+      <node ref="J8" pin="3"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="U1" pin="7"/>
+      <node ref="D2" pin="1"/>
+      <node ref="U2" pin="14"/>
+      <node ref="U6" pin="14"/>
+      <node ref="U3" pin="8"/>
+      <node ref="U5" pin="7"/>
+      <node ref="C8" pin="1"/>
+      <node ref="U10" pin="2"/>
+    </net>
+    <net code="2" name="Net-(JP1-Pad1)">
+      <node ref="JP1" pin="1"/>
+      <node ref="U5" pin="1"/>
+      <node ref="U5" pin="3"/>
+    </net>
+    <net code="3" name="+5V">
+      <node ref="C15" pin="1"/>
+      <node ref="U8" pin="3"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C16" pin="1"/>
+      <node ref="J8" pin="2"/>
+      <node ref="J7" pin="10"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U9" pin="1"/>
+      <node ref="U11" pin="3"/>
+      <node ref="U11" pin="1"/>
+    </net>
+    <net code="4" name="GND">
+      <node ref="U11" pin="6"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="J2" pin="3"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C20" pin="2"/>
+      <node ref="U11" pin="5"/>
+      <node ref="U11" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U11" pin="4"/>
+      <node ref="U6" pin="13"/>
+      <node ref="U9" pin="12"/>
+      <node ref="U6" pin="7"/>
+      <node ref="U6" pin="5"/>
+      <node ref="U2" pin="7"/>
+      <node ref="C18" pin="2"/>
+      <node ref="U3" pin="3"/>
+      <node ref="U10" pin="4"/>
+      <node ref="C13" pin="1"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="J8" pin="4"/>
+      <node ref="C12" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="J1" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="J5" pin="2"/>
+      <node ref="J4" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="U8" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="U7" pin="1"/>
+      <node ref="U4" pin="2"/>
+      <node ref="C17" pin="1"/>
+      <node ref="C11" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="J7" pin="9"/>
+    </net>
+    <net code="5" name="Net-(J7-Pad6)">
+      <node ref="J7" pin="6"/>
+      <node ref="U9" pin="3"/>
+    </net>
+    <net code="6" name="Net-(J7-Pad7)">
+      <node ref="J7" pin="7"/>
+      <node ref="U9" pin="4"/>
+    </net>
+    <net code="7" name="Net-(J7-Pad8)">
+      <node ref="U9" pin="5"/>
+      <node ref="J7" pin="8"/>
+    </net>
+    <net code="8" name="Net-(U1-Pad5)">
+      <node ref="U1" pin="6"/>
+      <node ref="U1" pin="5"/>
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="9" name="A2">
+      <node ref="J7" pin="3"/>
+      <node ref="U6" pin="9"/>
+    </net>
+    <net code="10" name="+4.096V">
+      <node ref="RV1" pin="3"/>
+      <node ref="C18" pin="1"/>
+      <node ref="U2" pin="10"/>
+      <node ref="U10" pin="6"/>
+    </net>
+    <net code="11" name="A0">
+      <node ref="U9" pin="8"/>
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="12" name="Net-(D1-Pad2)">
+      <node ref="J1" pin="1"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="13" name="Net-(J1-Pad3)">
+      <node ref="J2" pin="2"/>
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="14" name="Net-(D1-Pad1)">
+      <node ref="J6" pin="2"/>
+      <node ref="D1" pin="1"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="15" name="+1.024V">
+      <node ref="C20" pin="1"/>
+      <node ref="U11" pin="8"/>
+      <node ref="U11" pin="7"/>
+      <node ref="U2" pin="13"/>
+    </net>
+    <net code="16" name="Net-(D2-Pad2)">
+      <node ref="U8" pin="1"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="17" name="Net-(JP1-Pad2)">
+      <node ref="JP1" pin="2"/>
+      <node ref="U9" pin="14"/>
+    </net>
+    <net code="18" name="Net-(C3-Pad1)">
+      <node ref="C5" pin="1"/>
+      <node ref="J6" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="19" name="Net-(J4-Pad2)">
+      <node ref="U9" pin="10"/>
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="20" name="Net-(C7-Pad2)">
+      <node ref="C9" pin="1"/>
+      <node ref="C7" pin="2"/>
+      <node ref="U7" pin="2"/>
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="21" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="22" name="Net-(C14-Pad1)">
+      <node ref="U10" pin="3"/>
+      <node ref="C14" pin="1"/>
+    </net>
+    <net code="23" name="Net-(RV1-Pad2)">
+      <node ref="RV1" pin="2"/>
+      <node ref="U10" pin="5"/>
+    </net>
+    <net code="24" name="Net-(C2-Pad2)">
+      <node ref="U3" pin="4"/>
+      <node ref="C2" pin="2"/>
+    </net>
+    <net code="25" name="Net-(U2-Pad1)">
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="26" name="Net-(U1-Pad1)">
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="1"/>
+      <node ref="U5" pin="5"/>
+      <node ref="U2" pin="2"/>
+      <node ref="U5" pin="6"/>
+      <node ref="U6" pin="2"/>
+    </net>
+    <net code="27" name="Net-(U5-Pad2)">
+      <node ref="U6" pin="4"/>
+      <node ref="U6" pin="3"/>
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="28" name="A1">
+      <node ref="J7" pin="2"/>
+      <node ref="U6" pin="6"/>
+    </net>
+    <net code="29" name="Vref">
+      <node ref="J3" pin="2"/>
+      <node ref="U2" pin="11"/>
+      <node ref="U2" pin="12"/>
+      <node ref="U9" pin="13"/>
+    </net>
+    <net code="30" name="Net-(U2-Pad3)">
+      <node ref="U2" pin="3"/>
+      <node ref="U2" pin="4"/>
+      <node ref="U6" pin="10"/>
+    </net>
+    <net code="31" name="Net-(U9-Pad7)">
+      <node ref="U9" pin="7"/>
+    </net>
+    <net code="32" name="Net-(U9-Pad2)">
+      <node ref="U9" pin="2"/>
+    </net>
+    <net code="33" name="Net-(U9-Pad6)">
+      <node ref="U9" pin="6"/>
+    </net>
+    <net code="34" name="Net-(U9-Pad9)">
+      <node ref="U9" pin="9"/>
+    </net>
+    <net code="35" name="Net-(U6-Pad1)">
+      <node ref="U6" pin="1"/>
+    </net>
+    <net code="36" name="Net-(J5-Pad1)">
+      <node ref="U6" pin="12"/>
+      <node ref="U6" pin="11"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="37" name="A3">
+      <node ref="J7" pin="4"/>
+      <node ref="U2" pin="6"/>
+    </net>
+    <net code="38" name="A4">
+      <node ref="J7" pin="5"/>
+      <node ref="U2" pin="9"/>
+    </net>
+    <net code="39" name="Net-(J3-Pad1)">
+      <node ref="J3" pin="1"/>
+      <node ref="U9" pin="11"/>
+    </net>
+    <net code="40" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="41" name="-15V">
+      <node ref="C11" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="U7" pin="3"/>
+      <node ref="U5" pin="4"/>
+      <node ref="C12" pin="1"/>
+      <node ref="J8" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="U2" pin="8"/>
+      <node ref="U6" pin="8"/>
+      <node ref="C13" pin="2"/>
+    </net>
+    <net code="42" name="Net-(U10-Pad7)">
+      <node ref="U10" pin="7"/>
+    </net>
+    <net code="43" name="Net-(U10-Pad8)">
+      <node ref="U10" pin="8"/>
+    </net>
+    <net code="44" name="Net-(U3-Pad1)">
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="45" name="Net-(U10-Pad1)">
+      <node ref="U10" pin="1"/>
+    </net>
+    <net code="46" name="Net-(U3-Pad6)">
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="47" name="Net-(U3-Pad7)">
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="48" name="Net-(U5-Pad8)">
+      <node ref="U5" pin="8"/>
+    </net>
+  </nets>
+</export>

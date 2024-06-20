@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Pulse Generator &#8211; Scullcom</title>
+	<atom:link href="http://www.scullcom.uk/category/projects/pulse-generator/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Sun, 09 Sep 2018 18:26:37 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>Design &#038; Build a Pulse Generator &#8211; Part 1</title>
+		<link>http://www.scullcom.uk/design-build-a-pulse-generator-part-1/</link>
+		<comments>http://www.scullcom.uk/design-build-a-pulse-generator-part-1/#comments</comments>
+		<pubDate>Wed, 29 Jun 2016 16:47:52 +0000</pubDate>
+		<dc:creator><![CDATA[Louis Scully]]></dc:creator>
+				<category><![CDATA[Projects]]></category>
+		<category><![CDATA[Pulse Generator]]></category>
+
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=378</guid>
+		<description><![CDATA[In this project we will design and build a pulse generator using a LTC6992 from Linear Technology. In this first part we will test the functions of this IC to change both frequency and duty cycle (pulse width). Other parts to this project will build on this basic design with additional features and modifications/improvements. The [&#8230;]]]></description>
+				<content:encoded><![CDATA[<p>In this project we will design and build a pulse generator using a LTC6992 from Linear Technology. In this first part we will test the functions of this IC to change both frequency and duty cycle (pulse width). Other parts to this project will build on this basic design with additional features and modifications/improvements.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/nh8k1J0bObA?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>The LTC6992 is a Voltage-Controlled Pulse Width Modulator with selectable frequency ranges. There are 4 variants of this IC which differ in their minimum/maximum duty cycle control. The version we will be using is the LTC6992-2 (duty cycle range from 5% to 95%).</p>
+<p><img class="size-large wp-image-384 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992.jpg" alt="LTC6992" width="648" height="442" srcset="http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992.jpg 935w, http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992-300x205.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992-768x524.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>The voltage on pin 3 is held constant at 1 volt by the internal voltage reference. The amount of current from the SET pin (pin 3) determines the frequency of the master oscillator by varying the resistor at pin 3. The current swing should be between the ranges of 1.25μA and 20μA, this means that the Rset resistor value at pin 3 can range from 800KΩ maximum to 50KΩ minimum.</p>
+<p><img class="size-large wp-image-380 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992_block_diagram-1024x651.jpg" alt="LTC6992_block_diagram" width="648" height="412" srcset="http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992_block_diagram-1024x651.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992_block_diagram-300x191.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992_block_diagram-768x488.jpg 768w, http://www.scullcom.uk/wp-content/uploads/2016/06/LTC6992_block_diagram.jpg 1199w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>Above is a more detailed view of the LTC6992. The programmable divider is control by the first 3 bits from the internal 4 Bit ADC, with the most significant bit controlling the output pulse polarity.</p>
+<p><img class="size-large wp-image-381 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_block_diagram.jpg" alt="Pulse_Gen_block_diagram" width="648" height="628" srcset="http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_block_diagram.jpg 721w, http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_block_diagram-300x291.jpg 300w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p>The frequency of the oscillator is set by a variable resistor from pin 3 of LTC6992 to ground. It is important that the connecting leads are a short as possible otherwise you will get jitter and instability at the higher frequency ranges.</p>
+<p>The pulse width (duty cycle) is set by applying a voltage to pin 1 of the LTC6992. The voltage range should be from 0 to 1 volt so we use a LM4140CCM-1.0 to provide a precision 1.024V which is then fed to a 100K pot, the centre of which then feeds pin 1 of the IC.</p>
+<p>The voltage to control the frequency ranges and output pulse polarity is provided by a MCP4725 (12 Bit DAC).</p>
+<p>The I2C bus of the Arduino Nano (A4, A5) are used to control both the MCP4725 (12 Bit DAC) and the 20&#215;4 LCD (via a I2C Adapter).</p>
+<p>The frequency range selector switch provides a voltage to A0 of the Arduino which is then used in software to select the required data for the MCP4725.</p>
+<p>A simple switch from A2 of the Arduino to ground controls the output polarity of the signal. A2 in this case is used a simple digital input and its internal pull-up resistor is selected in software.</p>
+<p><img class="wp-image-379 alignnone" src="http://www.scullcom.uk/wp-content/uploads/2016/06/Duty_Cycle_graph.jpg" alt="Duty_Cycle_graph" width="641" height="632" srcset="http://www.scullcom.uk/wp-content/uploads/2016/06/Duty_Cycle_graph.jpg 868w, http://www.scullcom.uk/wp-content/uploads/2016/06/Duty_Cycle_graph-300x296.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/06/Duty_Cycle_graph-768x756.jpg 768w, http://www.scullcom.uk/wp-content/uploads/2016/06/Duty_Cycle_graph-60x60.jpg 60w" sizes="(max-width: 641px) 100vw, 641px" /></p>
+<p>The above graph shows the relationship between voltage on pin 1 of the LTC6992 and output pulse duty cycle. It shows the swing for the LTC6992-2 (5% to 95%).</p>
+<p>Below are links to the Schematic, PCB, PCB layout and Arduino software.</p>
+<p><a href="http://www.scullcom.com/Pulse_Gen_Schematic_Part1.pdf" target="_blank">http://www.scullcom.com/Pulse_Gen_Schematic_Part1.pdf</a></p>
+<p><a href="http://www.scullcom.com/Pulse_Generator_PCB.pdf" target="_blank">http://www.scullcom.com/Pulse_Generator_PCB.pdf</a></p>
+<p><a href="http://www.scullcom.com/Pulse_Gen_Layout.pdf" target="_blank">http://www.scullcom.com/Pulse_Gen_Layout.pdf</a></p>
+<p><a href="http://www.scullcom.com/Pulse_Generator_ver1.ino" target="_blank">http://www.scullcom.com/Pulse_Generator_ver1.ino</a></p>
+<p>Note the Arduino software uses LiquidCrystal_I2C.h and Adafruit_MCP4725.h libraries which you need to be installed. Links to library downloads below:</p>
+<p><a href="https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads/LiquidCrystal_V1.2.1.zip" target="_blank">https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads/LiquidCrystal_V1.2.1.zip</a></p>
+<p><a href="https://github.com/adafruit/Adafruit_MCP4725/archive/master.zip" target="_blank">https://github.com/adafruit/Adafruit_MCP4725/archive/master.zip</a></p>
+<p><img class="size-large wp-image-382 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_display.jpg" alt="Pulse_Gen_display" width="389" height="379" srcset="http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_display.jpg 389w, http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_display-300x292.jpg 300w" sizes="(max-width: 389px) 100vw, 389px" /></p>
+<p style="text-align: center;"><strong>Display shows frequency range and duty cycle level</strong></p>
+<p><img class="size-large wp-image-383 aligncenter" src="http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_test.jpg" alt="Pulse_Gen_test" width="648" height="588" srcset="http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_test.jpg 703w, http://www.scullcom.uk/wp-content/uploads/2016/06/Pulse_Gen_test-300x272.jpg 300w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p style="text-align: center;"><strong>Sample of waveform output</strong></p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.scullcom.uk/design-build-a-pulse-generator-part-1/feed/</wfw:commentRss>
+		<slash:comments>6</slash:comments>
+		</item>
+	</channel>
+</rss>

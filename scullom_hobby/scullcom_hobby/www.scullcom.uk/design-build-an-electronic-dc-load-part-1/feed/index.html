@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>Comments on: Design &#038; Build an Electronic DC Load</title>
+	<atom:link href="http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/</link>
+	<description>Hobby Electonics</description>
+	<lastBuildDate>Tue, 02 Jul 2019 22:02:27 +0000</lastBuildDate>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.9.3</generator>
+	<item>
+		<title>By: james king</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-415</link>
+		<dc:creator><![CDATA[james king]]></dc:creator>
+		<pubDate>Tue, 02 Jul 2019 22:02:27 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-415</guid>
+		<description><![CDATA[I have done some analysis of the behaviour and measurement caperbilities of the load, and have some observations. Naturally some of these observations depend somewhat on the adjustments for current null and current sensitivity etc but some are calibration independant.
+Test conditions: I modified the program so that it displayed the raw values read from the ADC for the current and voltage
+I set the voltage adc channel to 18 bit resolution
+I set the current adc to 18 bit resoluation and 8x gain
+Observations
+1. voltage measurement can be made quite accurate. 
+I shorted the voltage sense + and - together and adjusted the voltage null until the adc outputed 0
+I inputed 57 volts and noted the adc output in my case 728001
+I then ploted voltages in 10, 5, 1 and 100mv decrements from 57V down to 0 and found the adc to be very linear. I ended up modifying the ActualVoltage calculation to 57.0*voltage/728001. In other words the actual voltage is the voltage read from the adc scaled by the adc output for my 57.0V reference. The result is only around 1mV out over the entire range I could measure 57V-0V. this is very good.
+The current side of things is not so good.
+2. at low input voltages only small currents can be draw. I suspect this is because of the protection diode on the current input. For example if I want to draw 1A I need about 1V input. inputing only 0.5V means even if I request 1A current draw the device does not draw this much current. Bellow about 320mV no current can be draw regardless of the current draw requested. This makes the device less useful for say nimh battery testing.
+3. the current devices measurment is non linear and has multiple issues at around 35mA draw down to 15mA and worse bellow that.
+from 2.2A (the most I can draw from my dc supply) down to about 35mA I can get a good fit to the data using a linear function. (2nd order poly is slightly better). Bellow around 35mA the current reading from the dac becomes very non linear and I need to use a completely different 2nd order poly to get anything like accurate results. Bellow about 15mA there is not enough resultion in the dac and all current draws below this valve result in the same output from the current adc. The actual current draw setting produces ok results down to about 5mA. I therefore altered the ActualCurrent calculation to use one curve for adc readings above 1000 (which equate to about 35mA draw) and a different curve bellow that. Accuracy is now good. BUT this does not fix the problem that the protection diode does not allow high current draw at low voltages.
+Conclusion
+the adc is linear - its the same adc used for voltage and current measurement. BUT so little voltage gets to the adc when measuring current its forced to use internal amplification and this is noisy and not so linear. The result is compromised low current measurement.
+The protection diode makes certain combinations of current draw and voltage input impossible.
+The dac that controls the current draw is not bad even though its less than 16 bit.
+If the voltage adc is not set to 18 bit the results are still linear and predictable but the sub 10mV readings are not so good (lack of resolution). I know the 18 bit setting is using interpolation BUT the dac iss et to 1x gain and so is not running too noisily and 18 bit mode works better than 16 bit in this case
+the current dac even if left at x4 and 16 bit mode does not have enough input voltage to handle reading low currents accurately. Setting 18bit and x8 does not help much because its already getting a lots of noise and issues from the gain and this messes up the 18 bit interpolation to.
+I strongly suspect that too get good sub 35mA current readings the ouput of the sense resistor will need amplification but a good opamp rather than just being buffered. However this would limit the high current range... So ideally there needs to be a switching mechanism and one op amp gain for currents down to say 50mA and another for sub 50mA currents...]]></description>
+		<content:encoded><![CDATA[<p>I have done some analysis of the behaviour and measurement caperbilities of the load, and have some observations. Naturally some of these observations depend somewhat on the adjustments for current null and current sensitivity etc but some are calibration independant.<br />
+Test conditions: I modified the program so that it displayed the raw values read from the ADC for the current and voltage<br />
+I set the voltage adc channel to 18 bit resolution<br />
+I set the current adc to 18 bit resoluation and 8x gain<br />
+Observations<br />
+1. voltage measurement can be made quite accurate.<br />
+I shorted the voltage sense + and &#8211; together and adjusted the voltage null until the adc outputed 0<br />
+I inputed 57 volts and noted the adc output in my case 728001<br />
+I then ploted voltages in 10, 5, 1 and 100mv decrements from 57V down to 0 and found the adc to be very linear. I ended up modifying the ActualVoltage calculation to 57.0*voltage/728001. In other words the actual voltage is the voltage read from the adc scaled by the adc output for my 57.0V reference. The result is only around 1mV out over the entire range I could measure 57V-0V. this is very good.<br />
+The current side of things is not so good.<br />
+2. at low input voltages only small currents can be draw. I suspect this is because of the protection diode on the current input. For example if I want to draw 1A I need about 1V input. inputing only 0.5V means even if I request 1A current draw the device does not draw this much current. Bellow about 320mV no current can be draw regardless of the current draw requested. This makes the device less useful for say nimh battery testing.<br />
+3. the current devices measurment is non linear and has multiple issues at around 35mA draw down to 15mA and worse bellow that.<br />
+from 2.2A (the most I can draw from my dc supply) down to about 35mA I can get a good fit to the data using a linear function. (2nd order poly is slightly better). Bellow around 35mA the current reading from the dac becomes very non linear and I need to use a completely different 2nd order poly to get anything like accurate results. Bellow about 15mA there is not enough resultion in the dac and all current draws below this valve result in the same output from the current adc. The actual current draw setting produces ok results down to about 5mA. I therefore altered the ActualCurrent calculation to use one curve for adc readings above 1000 (which equate to about 35mA draw) and a different curve bellow that. Accuracy is now good. BUT this does not fix the problem that the protection diode does not allow high current draw at low voltages.<br />
+Conclusion<br />
+the adc is linear &#8211; its the same adc used for voltage and current measurement. BUT so little voltage gets to the adc when measuring current its forced to use internal amplification and this is noisy and not so linear. The result is compromised low current measurement.<br />
+The protection diode makes certain combinations of current draw and voltage input impossible.<br />
+The dac that controls the current draw is not bad even though its less than 16 bit.<br />
+If the voltage adc is not set to 18 bit the results are still linear and predictable but the sub 10mV readings are not so good (lack of resolution). I know the 18 bit setting is using interpolation BUT the dac iss et to 1x gain and so is not running too noisily and 18 bit mode works better than 16 bit in this case<br />
+the current dac even if left at x4 and 16 bit mode does not have enough input voltage to handle reading low currents accurately. Setting 18bit and x8 does not help much because its already getting a lots of noise and issues from the gain and this messes up the 18 bit interpolation to.<br />
+I strongly suspect that too get good sub 35mA current readings the ouput of the sense resistor will need amplification but a good opamp rather than just being buffered. However this would limit the high current range&#8230; So ideally there needs to be a switching mechanism and one op amp gain for currents down to say 50mA and another for sub 50mA currents&#8230;</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Patrick Ward</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-412</link>
+		<dc:creator><![CDATA[Patrick Ward]]></dc:creator>
+		<pubDate>Sat, 29 Jun 2019 10:51:40 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-412</guid>
+		<description><![CDATA[Hi, great series, thank you for the wonderful design and enhancement journey, you are a great teacher indeed. 
+Do you still have any PCB&#039;s for sale? 
+Patrick]]></description>
+		<content:encoded><![CDATA[<p>Hi, great series, thank you for the wonderful design and enhancement journey, you are a great teacher indeed.<br />
+Do you still have any PCB&#8217;s for sale?<br />
+Patrick</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Stephen Nixey</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-402</link>
+		<dc:creator><![CDATA[Stephen Nixey]]></dc:creator>
+		<pubDate>Sun, 09 Jun 2019 13:19:22 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-402</guid>
+		<description><![CDATA[eBay - as no one was selling - I have had a few made and have them for sale on eBay for a while with a few left.
+
+https://www.ebay.co.uk/itm/283458246652
+
+I hope this helps]]></description>
+		<content:encoded><![CDATA[<p>eBay &#8211; as no one was selling &#8211; I have had a few made and have them for sale on eBay for a while with a few left.</p>
+<p><a href="https://www.ebay.co.uk/itm/283458246652" rel="nofollow">https://www.ebay.co.uk/itm/283458246652</a></p>
+<p>I hope this helps</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Domenico</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-395</link>
+		<dc:creator><![CDATA[Domenico]]></dc:creator>
+		<pubDate>Tue, 04 Jun 2019 21:04:45 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-395</guid>
+		<description><![CDATA[GOOD JOB
+
+HOW CAN I BUY PCB?]]></description>
+		<content:encoded><![CDATA[<p>GOOD JOB</p>
+<p>HOW CAN I BUY PCB?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Domenico</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-394</link>
+		<dc:creator><![CDATA[Domenico]]></dc:creator>
+		<pubDate>Tue, 04 Jun 2019 21:02:36 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-394</guid>
+		<description><![CDATA[BEL LAVORO
+
+COME POSSO AQUISTARE I PCB ?]]></description>
+		<content:encoded><![CDATA[<p>BEL LAVORO</p>
+<p>COME POSSO AQUISTARE I PCB ?</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: Erik</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-382</link>
+		<dc:creator><![CDATA[Erik]]></dc:creator>
+		<pubDate>Mon, 13 May 2019 18:46:30 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-382</guid>
+		<description><![CDATA[Hello,
+
+I&#039;m having the same problem here with the 4 ampere limit. My DC-load has a gigantic heatsink and I installed 8 driver mosfets good for 8 ampere (there may even be space for more). If someone could make the new software (I can&#039;t do programming...) I&#039;d like to help out testing.
+
+Greetings,
+Erik]]></description>
+		<content:encoded><![CDATA[<p>Hello,</p>
+<p>I&#8217;m having the same problem here with the 4 ampere limit. My DC-load has a gigantic heatsink and I installed 8 driver mosfets good for 8 ampere (there may even be space for more). If someone could make the new software (I can&#8217;t do programming&#8230;) I&#8217;d like to help out testing.</p>
+<p>Greetings,<br />
+Erik</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: fmmech_24</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-375</link>
+		<dc:creator><![CDATA[fmmech_24]]></dc:creator>
+		<pubDate>Wed, 08 May 2019 13:42:29 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-375</guid>
+		<description><![CDATA[&lt;a href=&quot;https://ibb.co/rsrfhjf&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;]]></description>
+		<content:encoded><![CDATA[<p><a href="https://ibb.co/rsrfhjf" rel="nofollow"></a></p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ThomasS</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-366</link>
+		<dc:creator><![CDATA[ThomasS]]></dc:creator>
+		<pubDate>Fri, 12 Apr 2019 20:05:53 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-366</guid>
+		<description><![CDATA[And you will have to reduce the input voltage at pin 1 of the DAC with an additional voltage divider at the output of the OpAmp....
+
+I meant pin 1 of the ADC of course. Sorry for the confusion.
+Thomas]]></description>
+		<content:encoded><![CDATA[<p>And you will have to reduce the input voltage at pin 1 of the DAC with an additional voltage divider at the output of the OpAmp&#8230;.</p>
+<p>I meant pin 1 of the ADC of course. Sorry for the confusion.<br />
+Thomas</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ThomasS</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-365</link>
+		<dc:creator><![CDATA[ThomasS]]></dc:creator>
+		<pubDate>Fri, 12 Apr 2019 19:57:21 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-365</guid>
+		<description><![CDATA[I have thought a little more and here is my conclusion:
+
+First of all, be aware that the design was done for a maximum of 5 amps initially.
+
+A calibration factor in the software will not help at all. You will have to reduce the gain factor of the ADC in the software. And you will have to reduce the input voltage at pin 1 of the DAC with an additional voltage divider at the output of the OpAmp.  Watch video #3 for more information. 
+
+The current measurement is based on the voltage drop over R17. Each ampere of load will lead to a voltage drop of 1/10 of a volt at this resistor. 
+
+The MPC3426 is a 16bit analog to digital converter. This means it has a resolution of 2^16 steps which is 65536 steps (-32768 to +32767).  It also has an internal voltage reference of +-2.048 volts. Thus, one step is 2*2.048/65536=0.0000625volts per step. Only the positive voltage range of the ADC reference is used, since pin 2 of the ADC is set to ground. 
+
+The gain factor, which is a multiplier of the input voltage, is set to 4. 
+
+With a load of 5 amps, we get a voltage drop of 0.5volts at R17. The ADC will “read” 0,5*4=2volts. Very close to the maximum of the 2.048volts internal reference. With 0.512 volt at pin 1 of the ADC, the maximum steps of 32767 is reached. Ergo, an increase of the voltage at pin 1 to anything over 0.512 volts will not lead to a higher number of steps. There is a“reading cutoff“ at this voltage, which is the equivalent of 5.12 amps. 
+
+To overcome this, just reduce the gain from 4 to 2. In this case, the maximum load reading increases to 10.24 amps. 
+
+In addition, the maximum input voltage at pin 2 shall not exceed vDD volts.
+Since vDD in our case is +5V, you will have to add an additional voltage divider to reduce the voltage by the factor of 2 (two resistors with the same value – say between 1k to 10K). 
+Having done this, you increased the max current reading capability of the load to about 10 amps. 
+
+You will now get the correct reading, however, the resolution or accuracy of your „“ampere-meter“ is reduced. I guess this should not be an issue though. Just be aware of it. 
+
+Finally, set the “setCurrentCalibrationFactor” in the software to 10000/4096 to adjust on the DAC control side for this range and also adjust the voltage divider R6, R14 for the required range (voltage on J9 to go from 0 to 1V max which is the equivalent ot 1V voltage drop at R1,aka 10amps). Now you should have balanced setting – control – reading.
+
+And confirm my conclusion by thinking this trough by yourself. I am still leaning.I usually learn by making mistakes and I have not physically tested this.
+Thomas]]></description>
+		<content:encoded><![CDATA[<p>I have thought a little more and here is my conclusion:</p>
+<p>First of all, be aware that the design was done for a maximum of 5 amps initially.</p>
+<p>A calibration factor in the software will not help at all. You will have to reduce the gain factor of the ADC in the software. And you will have to reduce the input voltage at pin 1 of the DAC with an additional voltage divider at the output of the OpAmp.  Watch video #3 for more information. </p>
+<p>The current measurement is based on the voltage drop over R17. Each ampere of load will lead to a voltage drop of 1/10 of a volt at this resistor. </p>
+<p>The MPC3426 is a 16bit analog to digital converter. This means it has a resolution of 2^16 steps which is 65536 steps (-32768 to +32767).  It also has an internal voltage reference of +-2.048 volts. Thus, one step is 2*2.048/65536=0.0000625volts per step. Only the positive voltage range of the ADC reference is used, since pin 2 of the ADC is set to ground. </p>
+<p>The gain factor, which is a multiplier of the input voltage, is set to 4. </p>
+<p>With a load of 5 amps, we get a voltage drop of 0.5volts at R17. The ADC will “read” 0,5*4=2volts. Very close to the maximum of the 2.048volts internal reference. With 0.512 volt at pin 1 of the ADC, the maximum steps of 32767 is reached. Ergo, an increase of the voltage at pin 1 to anything over 0.512 volts will not lead to a higher number of steps. There is a“reading cutoff“ at this voltage, which is the equivalent of 5.12 amps. </p>
+<p>To overcome this, just reduce the gain from 4 to 2. In this case, the maximum load reading increases to 10.24 amps. </p>
+<p>In addition, the maximum input voltage at pin 2 shall not exceed vDD volts.<br />
+Since vDD in our case is +5V, you will have to add an additional voltage divider to reduce the voltage by the factor of 2 (two resistors with the same value – say between 1k to 10K).<br />
+Having done this, you increased the max current reading capability of the load to about 10 amps. </p>
+<p>You will now get the correct reading, however, the resolution or accuracy of your „“ampere-meter“ is reduced. I guess this should not be an issue though. Just be aware of it. </p>
+<p>Finally, set the “setCurrentCalibrationFactor” in the software to 10000/4096 to adjust on the DAC control side for this range and also adjust the voltage divider R6, R14 for the required range (voltage on J9 to go from 0 to 1V max which is the equivalent ot 1V voltage drop at R1,aka 10amps). Now you should have balanced setting – control – reading.</p>
+<p>And confirm my conclusion by thinking this trough by yourself. I am still leaning.I usually learn by making mistakes and I have not physically tested this.<br />
+Thomas</p>
+]]></content:encoded>
+	</item>
+	<item>
+		<title>By: ThomasS</title>
+		<link>http://www.scullcom.uk/design-build-an-electronic-dc-load-part-1/#comment-364</link>
+		<dc:creator><![CDATA[ThomasS]]></dc:creator>
+		<pubDate>Fri, 12 Apr 2019 12:05:50 +0000</pubDate>
+		<guid isPermaLink="false">http://www.scullcom.uk/?p=410#comment-364</guid>
+		<description><![CDATA[Good day 
+
+you can introduce factors in the code to adjust both, the voltage per step for the DAC (output to drive the MosFet) and for the ADC (input which is the reading) to adjust to the desired limits of operation. This comes at the cost of accuracy. 
+You other option is to reduce the gain of the ADC to 2 (from top of my head, I believe it is set 4 in the code). This was explained by Scully in one of the early videos- when he change from a voltage devider to utilizing the gain of the ADC. He designed the DC Load for a max load of 5 Amps.
+Hope this helps. Pls check the max allowed input voltage of the ADC according to the data sheet. I do not have access to it right now. But I think it should be fine so that no hardware change on the read side is needed. Isn‘t it fun to learn this way?
+Good day Thomas]]></description>
+		<content:encoded><![CDATA[<p>Good day </p>
+<p>you can introduce factors in the code to adjust both, the voltage per step for the DAC (output to drive the MosFet) and for the ADC (input which is the reading) to adjust to the desired limits of operation. This comes at the cost of accuracy.<br />
+You other option is to reduce the gain of the ADC to 2 (from top of my head, I believe it is set 4 in the code). This was explained by Scully in one of the early videos- when he change from a voltage devider to utilizing the gain of the ADC. He designed the DC Load for a max load of 5 Amps.<br />
+Hope this helps. Pls check the max allowed input voltage of the ADC according to the data sheet. I do not have access to it right now. But I think it should be fine so that no hardware change on the read side is needed. Isn‘t it fun to learn this way?<br />
+Good day Thomas</p>
+]]></content:encoded>
+	</item>
+</channel>
+</rss>

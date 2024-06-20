@@ -1,0 +1,608 @@
+<!doctype html>
+<!--[if !IE]>
+<html class="no-js non-ie" lang="en-GB"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="no-js ie7" lang="en-GB"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en-GB"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js ie9" lang="en-GB"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en-GB"> <!--<![endif]-->
+
+<!-- Mirrored from www.scullcom.uk/design-build-a-stair-step-waveform-generator/?replytocom=231 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jul 2019 03:18:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Design &#038; Build a Stair-Step Waveform Generator &#8211; Scullcom</title>
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Scullcom &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Scullcom &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Scullcom &raquo; Design &#038; Build a Stair-Step Waveform Generator Comments Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.scullcom.uk\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='apss-font-awesome-css'  href='../wp-content/plugins/accesspress-social-share/css/font-awesome/font-awesome.min8f76.css?ver=4.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='apss-font-opensans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans&amp;ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='apss-frontend-css-css'  href='../wp-content/plugins/accesspress-social-share/css/frontend8f76.css?ver=4.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ye_dynamic-css'  href='../wp-content/plugins/youtube-embed/css/main.min6959.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-bootstrap-css'  href='../wp-content/themes/sparkling/assets/css/bootstrap.min6959.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-icons-css'  href='../wp-content/themes/sparkling/assets/css/font-awesome.min6959.css?ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&amp;ver=4.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-style-css'  href='../wp-content/themes/sparkling/style6959.css?ver=4.9.3' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/vendor/modernizr.min6959.js?ver=4.9.3'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/vendor/bootstrap.min6959.js?ver=4.9.3'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/functions.min6959.js?ver=4.9.3'></script>
+<link rel='https://api.w.org/' href='../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Design &#038; Build a Low Current Reference Source' href='../design-build-a-low-current-reference-source/index.html' />
+<link rel='next' title='Design &#038; Build a Pulse Generator &#8211; Part 1' href='../design-build-a-pulse-generator-part-1/index.html' />
+<meta name="generator" content="WordPress 4.9.3" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='../indexd06c.html?p=334' />
+<meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embeda2fb.json?url=http%3A%2F%2Fwww.scullcom.uk%2Fdesign-build-a-stair-step-waveform-generator%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed606f?url=http%3A%2F%2Fwww.scullcom.uk%2Fdesign-build-a-stair-step-waveform-generator%2F&amp;format=xml" />
+<link rel="apple-touch-icon" sizes="57x57" href="../wp-content/uploads/fbrfg/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../wp-content/uploads/fbrfg/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../wp-content/uploads/fbrfg/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../wp-content/uploads/fbrfg/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../wp-content/uploads/fbrfg/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../wp-content/uploads/fbrfg/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../wp-content/uploads/fbrfg/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../wp-content/uploads/fbrfg/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../wp-content/uploads/fbrfg/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../wp-content/uploads/fbrfg/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="../wp-content/uploads/fbrfg/manifest.json">
+<link rel="mask-icon" href="../wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/wp-content/uploads/fbrfg/mstile-144x144.png">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"><style type="text/css"></style><link rel="pingback" href="../xmlrpc.php">		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+</head>
+
+<body class="post-template-default single single-post postid-334 single-format-video group-blog">
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="site-navigation-inner col-sm-12">
+						<div class="navbar-header">
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+														<div id="logo">
+																																<a href="../index.html"><img src="../wp-content/uploads/2016/03/logo_grey2.png"  height="76" width="300" alt="Scullcom"/></a>
+																																</div><!-- end of #logo -->
+						</div>
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-32"><a href="../index.html">Home</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-36 dropdown"><a href="../category/projects/index.html">Projects </a><span class="caret sparkling-dropdown"></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-208" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-208"><a href="../category/projects/index.html">All Projects</a></li>
+	<li id="menu-item-201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-201"><a href="../category/projects/5-volt-precision-reference/index.html">5 Volt Precision Reference</a></li>
+	<li id="menu-item-468" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-468"><a href="../category/projects/constant-current-source-box/index.html">Constant Current Source Box</a></li>
+	<li id="menu-item-416" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-416"><a href="../category/projects/dc-load/index.html">DC Load</a></li>
+	<li id="menu-item-469" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-469"><a href="../category/projects/dc-voltage-calibrator/index.html">DC Voltage Calibrator</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-203"><a href="../category/projects/diy-pcb-exposure-unit/index.html">DIY PCB Exposure Unit</a></li>
+	<li id="menu-item-199" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-199"><a href="../category/projects/frequency-reference/index.html">Frequency Reference</a></li>
+	<li id="menu-item-200" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-200"><a href="../category/projects/function-generator/index.html">Function Generator</a></li>
+	<li id="menu-item-502" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-502"><a href="../category/projects/function-generator-mk2/index.html">Function Generator Mk2</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-204"><a href="../category/projects/gps-system/index.html">GPS System</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-205"><a href="../category/projects/led-floodlight/index.html">LED Floodlight</a></li>
+	<li id="menu-item-470" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-470"><a href="../category/projects/low-current-reference/index.html">Low Current Reference</a></li>
+	<li id="menu-item-202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-202"><a href="../category/projects/milliohm-meter/index.html">Milliohm Meter</a></li>
+	<li id="menu-item-198" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198"><a href="../category/projects/millivolt-meter/index.html">Millivolt Meter</a></li>
+	<li id="menu-item-207" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-207"><a href="../category/projects/precision-voltage-reference-box/index.html">Precision Voltage Reference Box</a></li>
+	<li id="menu-item-355" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-355"><a href="../category/projects/stair-step-waveform-generator/index.html">Stair-Step Waveform Generator</a></li>
+	<li id="menu-item-389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-389"><a href="../category/projects/pulse-generator/index.html">Pulse Generator</a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38"><a href="../category/reviews/index.html">Reviews</a></li>
+<li id="menu-item-37" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-37"><a href="../category/teardowns/index.html">Teardowns</a></li>
+<li id="menu-item-132" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-132"><a href="../category/tutorials/index.html">Tutorials</a></li>
+<li id="menu-item-210" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-210 dropdown"><a href="../category/basics/index.html">Basics </a><span class="caret sparkling-dropdown"></span>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-218" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-218"><a href="../category/basics/resistor/index.html">Resistor</a></li>
+	<li id="menu-item-219" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-219"><a href="../category/basics/capacitor/index.html">Capacitor</a></li>
+	<li id="menu-item-221" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-221"><a href="../category/basics/inductor/index.html">Inductor</a></li>
+	<li id="menu-item-220" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-220"><a href="../category/basics/diode/index.html">Diode</a></li>
+	<li id="menu-item-245" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245"><a href="../category/basics/opto/index.html">Opto</a></li>
+	<li id="menu-item-222" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-222"><a href="../category/basics/transistor/index.html">Transistor</a></li>
+	<li id="menu-item-223" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-223"><a href="../category/basics/op-amp/index.html">OP Amp</a></li>
+	<li id="menu-item-224" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-224"><a href="../category/basics/logic-gates/index.html">Logic Gates</a></li>
+	<li id="menu-item-243" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-243"><a href="../category/basics/filters/index.html">Filters</a></li>
+	<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="../category/basics/sensors/index.html">Sensors</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-244"><a href="../category/basics/fuses/index.html">Fuses</a></li>
+	<li id="menu-item-242" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-242"><a href="../category/basics/batteries/index.html">Batteries</a></li>
+	<li id="menu-item-247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-247"><a href="../category/basics/transformer/index.html">Transformer</a></li>
+	<li id="menu-item-241" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-241"><a href="../category/basics/antenna/index.html">Antenna</a></li>
+</ul>
+</li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="../about/index.html">About</a></li>
+</ul></div>					</div>
+				</div>
+			</div>
+		</nav><!-- .site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="top-section">
+								</div>
+
+		<div class="container main-content-area">
+						<div class="row side-pull-left">
+				<div class="main-content-inner col-sm-12 col-md-8">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<article id="post-334" class="post-334 post type-post status-publish format-video has-post-thumbnail hentry category-projects category-stair-step-waveform-generator post_format-post-format-video">
+	<img width="750" height="410" src="../wp-content/uploads/2016/05/stair-step1-750x410.png" class="single-featured wp-post-image" alt="" />	<div class="post-inner-content">
+		<header class="entry-header page-header">
+
+			<h1 class="entry-title ">Design &#038; Build a Stair-Step Waveform Generator</h1>
+
+			<div class="entry-meta">
+				<span class="posted-on"><i class="fa fa-calendar"></i> <a href="index.html" rel="bookmark"><time class="entry-date published" datetime="2016-05-26T22:02:25+00:00">26th May 2016</time><time class="updated" datetime="2016-05-27T12:28:25+00:00">27th May 2016</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="../author/louis/index.html">Louis Scully</a></span></span>
+								<span class="cat-links"><i class="fa fa-folder-open-o"></i>
+				 <a href="../category/projects/index.html" rel="category tag">Projects</a>, <a href="../category/projects/stair-step-waveform-generator/index.html" rel="category tag">Stair-Step Waveform Generator</a>				</span>
+								
+			</div><!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<p>In this project we will design and build a Stair-Step Waveform Generator which gives a 5 volt peak-to-peak output with steps of 1 volt. Both a fixed oscillator and variable oscillator options will be included. A rotary switch will also give access to additional step waveforms.</p>
+<p><iframe width="648" height="365" src="https://www.youtube.com/embed/Cg7lI0CShrI?feature=oembed" frameborder="0" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>A 74HC4017 Johnson Counter is used to drive a diode and resistor divider network to provide a stair-step waveform, giving an amplitude of 3 volt peak-to-peak. This signal is then coupled via a isolating capacitor to a buffer stage and amplifier which is set to give a final output waveform of 5 volt peak-to-peak. Each step is 1 volt.</p>
+<p>The image below shows the clock input to the 74HC4017 and the first three output signal Q0, Q1 and Q2. All pulses are 5 volt in amplitude.</p>
+<p><img class="alignnone size-full wp-image-336" src="../wp-content/uploads/2016/05/Image1.jpg" alt="Image1" width="704" height="412" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image1.jpg 704w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image1-300x176.jpg 300w" sizes="(max-width: 704px) 100vw, 704px" /></p>
+<p>As the outputs from the 74HC4017 are feed via isolation diodes the amplitude of the pulses feed to the resistor divider network is about 4.4 volt (due to 0.6 volt diode voltage drop). The common earth return resistor in the divider network is fixed at 1.2K (in the final circuit this is replaced with a 1K in series with a 1K preset so as to provide some setup adjustment). Each of the other resistors in the network are calculated to provide a pulse output across the 1.2K which increment in steps of 0.6 volt to give a final stair-step waveform of 3 volt peak-to-peak.</p>
+<p><img class="alignnone size-full wp-image-337" src="../wp-content/uploads/2016/05/Image_resistors.jpg" alt="Image_resistors" width="747" height="455" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image_resistors.jpg 747w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image_resistors-300x183.jpg 300w" sizes="(max-width: 747px) 100vw, 747px" /></p>
+<p>The resistor values where calculated to be 7.6K, 3.2K, 1.73K, 1K and 560Ω and available resistor of 0.1% tolerance of 7.68K, 3.24K, 1.74K, 1K and 562Ω were used. If you do not have these values the I have found that standard values of 7.5K, 3.3K, 1.8K, 1K and 560Ω (all 1%) work well.</p>
+<p><img class="alignnone size-full wp-image-338" src="../wp-content/uploads/2016/05/ImageResistorValues.jpg" alt="ImageResistorValues" width="746" height="692" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/ImageResistorValues.jpg 746w, http://www.scullcom.uk/wp-content/uploads/2016/05/ImageResistorValues-300x278.jpg 300w" sizes="(max-width: 746px) 100vw, 746px" /></p>
+<p>In the original circuit Q9 (pin11) was connected directly to ground. This was later changed (in Version 2) by adding a 10K resistor to ground.</p>
+<p>Below are links to version 2 of the schematic and PCB artwork:</p>
+<p><a href="http://www.scullcom.com/Stair_Step_Gen_ver2_Schematic.pdf">http://www.scullcom.com/Stair_Step_Gen_ver2_Schematic.pdf</a></p>
+<p><a href="http://www.scullcom.com/Stair_Step_Gen_ver2_PCB.pdf">http://www.scullcom.com/Stair_Step_Gen_ver2_PCB.pdf</a></p>
+<p>The output stage buffer and amplifier uses a NE5532P Dual OP Amp which is powered from a +6 volt and -6 volt split supply which is generated using a TLE2426 &#8220;Rail Splitter&#8221; IC which produces a virtual earth splitting the 12 volt supply.</p>
+<p>The Johnson Counter IC (74HC4017) can be supplied with a clock pulse from a fixed oscillator circuit using a 1MHz Crystal Oscillator module and a 74HC390 divider IC which gives either a 10KHz or 100KHz clock signal or a variable oscillator. The type of oscillator is selected by links of the PCB (which could be replaced with switches if required).</p>
+<p>The variable oscillator uses a Linear Technology LTC1799 which is a precision oscillator in a small SOT-23 (5 pin) package. The frequency of the oscillator is simply set by an external resistor which in this project uses a variable preset (1MΩ preset in series with a 100KΩ resistor). The output of this oscillator can also be divided by 1, 10 and 100 by use of pin 4 of the IC; no connection results in ÷10, pin 4 to ground results in ÷1 and pin 4 to V+ (5v) results in ÷100.</p>
+<p>Below you see the LTC1799 soldered on to the PCB print side.</p>
+<p><img class="size-full wp-image-343 aligncenter" src="../wp-content/uploads/2016/05/Image3.jpg" alt="Image3" width="656" height="427" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image3.jpg 656w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image3-300x195.jpg 300w" sizes="(max-width: 656px) 100vw, 656px" /></p>
+<p>Below you see details of the links on the PCB to set both the type of oscillator to use and the frequency:</p>
+<p><img class="size-large wp-image-344 aligncenter" src="../wp-content/uploads/2016/05/Image10-1024x463.jpg" alt="Image10" width="648" height="293" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image10-1024x463.jpg 1024w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image10-300x136.jpg 300w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image10-768x348.jpg 768w" sizes="(max-width: 648px) 100vw, 648px" /></p>
+<p><strong>Parts List</strong></p>
+<p>C1, C3, C4, C6, C7, C10, C11 &#8211; 100nF<br />
+C2 &#8211; 2200uF<br />
+C5 &#8211; 470uF<br />
+C8, C9 &#8211; 10uF<br />
+D1, D2, D3, D4, D5, D6, D7, D8, D9 &#8211; 1N4148 (small switching diode)<br />
+JP1, JP2 – 2 pin SIL option link with link plug<br />
+JP3, JP4, JP5, JP6, JP7, JP8, JP9, JP11 &#8211; Wire Links<br />
+JP10 – 3 pin SIL option link with link plug<br />
+P1 to P6 – PCB terminal pins<br />
+R1 &#8211; 10K<br />
+R2, R10 &#8211; 100K<br />
+R3, R9, R11, R12 &#8211; 1K<br />
+R4 &#8211; 7.68K (± 0.1%) (RS stock No. 701-7673) or 7.5K (±1%)<br />
+R5 &#8211; 3.24K (± 0.1%) (RS stock No. 701-7550) or 3.3K (±1%)<br />
+R6 &#8211; 1.74K (± 0.1%) (RS stock No. 754-8758) or 1.8K (±1%)<br />
+R7 &#8211; 1K (± 0.1%) (RS stock No. 701-7383) or 1K 1K (±1%)<br />
+R8 &#8211; 562Ω (± 0.1%) (RS stock No. 701-7305) or 560Ω (±1%)<br />
+RV2 &#8211; 1M Potentiometer or Preset<br />
+RV3 &#8211; 1K Preset<br />
+RV4 &#8211; 10K Preset<br />
+S1 &#8211; Rotary Switch, 6 Way, Through Hole (RS Components Ltd stock No. 665-196)<br />
+SW2 &#8211; Single Pole ON-OFF-ON switch or 3 pin SIL option link with link plug<br />
+U1 &#8211; LTC1799 Linear Technology precision oscillator in SOT-23 (5 pin) package<br />
+U2 &#8211; LM7812 12 volt regulator<br />
+U3 &#8211; LM7805 5 volt regulator<br />
+U4 &#8211; 74HC4017 Johnson decade counter with 10 decoded outputs<br />
+U5 &#8211; TLE2426 Texas Instruments, Supply Rail Splitter, &#8220;virtual ground&#8221; in TO-92 package<br />
+U6 &#8211; NE5532P Texas Instruments, Dual Op Amp<br />
+U7 &#8211; 74LS390 Texas Instruments 4-stage, Decade, Decade Counter/Divider<br />
+XTL1 &#8211; 5V 1MHz Crystal Oscillator Modules Through Hole (DIL-14 format) available on eBay from seller ha5ia for £2.98. Link below:<br />
+http://www.ebay.co.uk/itm/181176576561?_trksid=p2057872.m2749.l2649&#038;ssPageName=STRK%3AMEBIDX%3AIT</p>
+<p>1 x 8 pin DIL socket<br />
+2 x 16 pin DIL socket<br />
+1 x 15v or 18v DC power adapter</p>
+<p><strong>Additional Features</strong></p>
+<p>This project also provide step waveforms of 1, 2, 3 or 4 steps (as shown below) by use of a rotary switch to connect the master reset on the Johnson Counter IC with different outputs.</p>
+<p><img class="alignnone size-full wp-image-339" src="../wp-content/uploads/2016/05/Image5.jpg" alt="Image5" width="532" height="308" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image5.jpg 532w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image5-300x174.jpg 300w" sizes="(max-width: 532px) 100vw, 532px" /> <img class="alignnone size-large wp-image-340" src="../wp-content/uploads/2016/05/Image6.jpg" alt="Image6" width="544" height="321" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image6.jpg 544w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image6-300x177.jpg 300w" sizes="(max-width: 544px) 100vw, 544px" /> <img class="alignnone size-large wp-image-341" src="../wp-content/uploads/2016/05/Image7.jpg" alt="Image7" width="538" height="306" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image7.jpg 538w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image7-300x171.jpg 300w" sizes="(max-width: 538px) 100vw, 538px" /> <img class="alignnone size-large wp-image-342" src="../wp-content/uploads/2016/05/Image8.jpg" alt="Image8" width="535" height="305" srcset="http://www.scullcom.uk/wp-content/uploads/2016/05/Image8.jpg 535w, http://www.scullcom.uk/wp-content/uploads/2016/05/Image8-300x171.jpg 300w" sizes="(max-width: 535px) 100vw, 535px" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class='apss-social-share apss-theme-3 clearfix' >
+
+
+				<div class='apss-facebook apss-single-icon'>
+					<a rel='nofollow'  title="Share on Facebook" target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-facebook'></i>
+							<span class='apss-social-text'>Share on Facebook</span>
+							<span class='apss-share'>Share</span>
+						</div>
+													<div class='count apss-count' data-url='http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/' data-social-network='facebook' data-social-detail="http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/_facebook">0</div>
+											</a>
+				</div>
+								<div class='apss-twitter apss-single-icon'>
+					<a rel='nofollow'  href="https://twitter.com/intent/tweet?text=Design%20%26%20Build%20a%20Stair-Step%20Waveform%20Generator&amp;url=http%3A%2F%2Fwww.scullcom.uk%2Fdesign-build-a-stair-step-waveform-generator%2F&amp;"  title="Share on Twitter" target='_blank'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-twitter'></i>
+							<span class='apss-social-text'>Share on Twitter</span><span class='apss-share'>Tweet</span>
+						</div>
+													<div class='count apss-count' data-url='http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/' data-social-network='twitter' data-social-detail="http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/_twitter">0</div>
+											</a>
+				</div>
+								<div class='apss-google-plus apss-single-icon'>
+					<a rel='nofollow'  title="Share on Google Plus" target='_blank' href='https://plus.google.com/share?url=http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-google-plus'></i>
+							<span class='apss-social-text'>Share on Google Plus</span>
+							<span class='apss-share'>Share</span>
+						</div>
+											</a>
+				</div>
+				
+				<div class='apss-pinterest apss-single-icon'>
+					<a rel='nofollow' title="Share on Pinterest" href='javascript:pinIt();'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa fa-pinterest'></i>
+							<span class='apss-social-text'>Share on Pinterest</span>
+							<span class='apss-share'>Share</span>
+						</div>
+													<div class='count apss-count' data-url='http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/' data-social-network='pinterest' data-social-detail="_pinterest.html">0</div>
+						
+					</a>
+				</div>
+								<div class='apss-email apss-single-icon'>
+					<a rel='nofollow' class='share-email-popup' title="Share it on Email" target='_blank' href='mailto:?subject=Please visit this link http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/&amp;body=Hi!, I found this information for you: "Design%20%26%20Build%20a%20Stair-Step%20Waveform%20Generator". Here is the website link: http://www.scullcom.uk/design-build-a-stair-step-waveform-generator/. Thank you.'>
+						<div class='apss-icon-block clearfix'>
+							<i class='fa  fa-envelope'></i>
+							<span class='apss-social-text'>Send email</span>
+							<span class='apss-share'>Mail</span>
+						</div>
+					</a>
+				</div>
+
+				</div>					</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+			
+		</footer><!-- .entry-meta -->
+	</div>
+
+	
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			4 thoughts to &ldquo;Design &#038; Build a Stair-Step Waveform Generator&rdquo;		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-66" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-66" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/47d65501b7c15d1cfe1b695a35cce993?s=60&amp;d=mm&amp;r=g' srcset='http://1.gravatar.com/avatar/47d65501b7c15d1cfe1b695a35cce993?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Flemming Loua Christiansen</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-66">
+							<time datetime="2018-01-21T15:06:57+00:00">
+								21st January 2018 at 3:06 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Nice project, well explained but one thing I am missing -what is the usual implementation for a staircase generator? what can it be used for?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index1b7b.html?replytocom=66#respond' onclick='return addComment.moveForm( "div-comment-66", "66", "respond", "334" )' aria-label='Reply to Flemming Loua Christiansen'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-351" class="comment odd alt depth-2">
+			<article id="div-comment-351" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/2bf9b3084e3bfc0ebf7a68181e2a5b93?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/2bf9b3084e3bfc0ebf7a68181e2a5b93?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Nilson Olimpio</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-351">
+							<time datetime="2019-03-18T02:13:00+00:00">
+								18th March 2019 at 2:13 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Can be used in curve tracer to plot diodes, bjt, fet, mosfet curve on scopes.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index83b4.html?replytocom=351#respond' onclick='return addComment.moveForm( "div-comment-351", "351", "respond", "334" )' aria-label='Reply to Nilson Olimpio'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-218" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-218" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/b309d3927b1c12801e4e2a2d1e738494?s=60&amp;d=mm&amp;r=g' srcset='http://2.gravatar.com/avatar/b309d3927b1c12801e4e2a2d1e738494?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn">Michael Savage</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-218">
+							<time datetime="2018-07-14T14:48:31+00:00">
+								14th July 2018 at 2:48 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Love your projects and  your YouTube Videos!!! I&#8217;m a big fan, keep up the great work.<br />
+I wish you would design a Mark2 version of the Stair-Step Generator which uses the<br />
+Arduino Nano and IC controls instead of the large selector switch. I want to mount<br />
+your project into a case that I can stack onto my workbench with your other<br />
+projects, one on top of each other.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index013a.html?replytocom=218#respond' onclick='return addComment.moveForm( "div-comment-218", "218", "respond", "334" )' aria-label='Reply to Michael Savage'>Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-231" class="comment byuser comment-author-louis bypostauthor odd alt depth-2">
+			<article id="div-comment-231" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=60&amp;d=mm&amp;r=g' srcset='http://0.gravatar.com/avatar/f84fff0a34931457067cd9feb872bdbd?s=120&#038;d=mm&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' />						<b class="fn"><a href='../index.html' rel='external nofollow' class='url'>Louis Scully</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="index.html#comment-231">
+							<time datetime="2018-07-28T11:11:54+00:00">
+								28th July 2018 at 11:11 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Michael,<br />
+Thanks for your comments.<br />
+At the moment I am busy on some other projects when I have some spare time.<br />
+I take note of your request for a Mark2 version of the Stair-Step Generator and may have a look at that when I have more time.<br />
+Regards,<br />
+Louis</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='index1f32.html?replytocom=231#respond' onclick='return addComment.moveForm( "div-comment-231", "231", "respond", "334" )' aria-label='Reply to Louis Scully'>Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply to <a href="#comment-231">Louis Scully</a> <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond">Cancel reply</a></small></h3>			<form action="http://www.scullcom.uk/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1"></div></div><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='334' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='231' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c0f7a1719c" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="227"/></p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="../design-build-a-low-current-reference-source/index.html" rel="prev"><i class="fa fa-chevron-left"></i> <span class="post-title">Design &#038; Build a Low Current Reference Source</span></a></div><div class="nav-next"><a href="../design-build-a-pulse-generator-part-1/index.html" rel="next"><span class="post-title">Design &#038; Build a Pulse Generator &#8211; Part 1 <i class="fa fa-chevron-right"></i></span></a></div></div>
+	</nav>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+</div><!-- close .main-content-inner -->
+<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+	<div class="well">
+							<aside id="youtubesubscribebuttonwidget-4" class="widget widget_youtubesubscribebuttonwidget">								<div class="g-ytsubscribe" data-channelid="UCDqryeq1kMDSEQwltWqASrA" data-layout="full" data-theme="default"></div>
+<div id="youtubebuttcredit"></div>
+<script type='text/javascript'>document.getElementById("youtubebuttcredit").style.display="none";window.___gcfg = {lang: 'en'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = '../../apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>			</aside>		<aside id="search-2" class="widget widget_search">
+<form role="search" method="get" class="form-search" action="http://www.scullcom.uk/">
+  <div class="input-group">
+	  <label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" class="form-control search-query" placeholder="Search&hellip;" value="" name="s" title="Search for:" />
+	<span class="input-group-btn">
+	  <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+	</span>
+  </div>
+</form>
+</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-12"><a href="../category/projects/5-volt-precision-reference/index.html" >5 Volt Precision Reference</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="../category/basics/index.html" >Basics</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="../category/projects/constant-current-source-box/index.html" >Constant Current Source Box</a>
+</li>
+	<li class="cat-item cat-item-36"><a href="../category/projects/dc-load/index.html" >DC Load</a>
+</li>
+	<li class="cat-item cat-item-40"><a href="../category/projects/dc-voltage-calibrator/index.html" >DC Voltage Calibrator</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="../category/projects/diy-pcb-exposure-unit/index.html" >DIY PCB Exposure Unit</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="../category/projects/frequency-reference/index.html" >Frequency Reference</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="../category/projects/function-generator/index.html" >Function Generator</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="../category/projects/function-generator-mk2/index.html" >Function Generator Mk2</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="../category/projects/gps-system/index.html" >GPS System</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="../category/projects/led-floodlight/index.html" >LED Floodlight</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="../category/projects/low-current-reference/index.html" >Low Current Reference</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="../category/projects/milliohm-meter/index.html" >Milliohm Meter</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="../category/projects/millivolt-meter/index.html" >Millivolt Meter</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="../category/basics/op-amp/index.html" >OP Amp</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="../category/projects/precision-voltage-reference-box/index.html" >Precision Voltage Reference Box</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="../category/projects/index.html" >Projects</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="../category/projects/pulse-generator/index.html" >Pulse Generator</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="../category/basics/resistor/index.html" >Resistor</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="../category/reviews/index.html" >Reviews</a>
+</li>
+	<li class="cat-item cat-item-34"><a href="../category/projects/stair-step-waveform-generator/index.html" >Stair-Step Waveform Generator</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="../category/teardowns/index.html" >Teardowns</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="../category/tutorials/index.html" >Tutorials</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="../category/uncategorised/index.html" >Uncategorised</a>
+</li>
+	<li class="cat-item cat-item-39"><a href="../category/projects/zx80/index.html" >ZX80</a>
+</li>
+		</ul>
+</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='../2018/08/index.html'>August 2018</a></li>
+	<li><a href='../2017/12/index.html'>December 2017</a></li>
+	<li><a href='../2017/06/index.html'>June 2017</a></li>
+	<li><a href='../2016/12/index.html'>December 2016</a></li>
+	<li><a href='../2016/11/index.html'>November 2016</a></li>
+	<li><a href='../2016/09/index.html'>September 2016</a></li>
+	<li><a href='../2016/06/index.html'>June 2016</a></li>
+	<li><a href='../2016/05/index.html'>May 2016</a></li>
+	<li><a href='../2016/03/index.html'>March 2016</a></li>
+	<li><a href='../2016/02/index.html'>February 2016</a></li>
+	<li><a href='../2016/01/index.html'>January 2016</a></li>
+	<li><a href='../2015/12/index.html'>December 2015</a></li>
+	<li><a href='../2015/10/index.html'>October 2015</a></li>
+	<li><a href='../2015/09/index.html'>September 2015</a></li>
+	<li><a href='../2015/08/index.html'>August 2015</a></li>
+	<li><a href='../2015/07/index.html'>July 2015</a></li>
+	<li><a href='../2015/05/index.html'>May 2015</a></li>
+	<li><a href='../2015/04/index.html'>April 2015</a></li>
+	<li><a href='../2015/03/index.html'>March 2015</a></li>
+	<li><a href='../2015/02/index.html'>February 2015</a></li>
+		</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">james king</span> on <a href="../design-build-an-electronic-dc-load-part-1/index.html#comment-415">Design &#038; Build an Electronic DC Load</a></li><li class="recentcomments"><span class="comment-author-link">Cory Benjamin</span> on <a href="../function-generator-mk2/index.html#comment-414">Function Generator Mk2</a></li><li class="recentcomments"><span class="comment-author-link">Mark</span> on <a href="../dc-voltage-calibrator/index.html#comment-413">DC Voltage Calibrator</a></li><li class="recentcomments"><span class="comment-author-link">Patrick Ward</span> on <a href="../design-build-an-electronic-dc-load-part-1/index.html#comment-412">Design &#038; Build an Electronic DC Load</a></li><li class="recentcomments"><span class="comment-author-link">Lewis Bryant</span> on <a href="../dc-voltage-calibrator/index.html#comment-409">DC Voltage Calibrator</a></li></ul></aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">Meta</h3>			<div class="textwidget"><ul>
+<li>
+<a href="../wp-login.html">Log In</a>
+</li>
+<li>
+<a href="../indexd784.html?feed=rss2">Posts RSS</a>
+</li>
+<li>
+<a href="../indexa6da.html?feed=comments-rss2">Posts RSS</a>
+</li>
+</ul></div>
+		</aside>	</div>
+</div><!-- #secondary -->
+		</div><!-- close .row -->
+	</div><!-- close .container -->
+</div><!-- close .site-content -->
+
+	<div id="footer-area">
+		<div class="container footer-inner">
+			<div class="row">
+				
+				</div>
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info container">
+				<div class="row">
+										<nav role="navigation" class="col-md-6">
+											</nav>
+					<div class="copyright col-md-6">
+						Scullcom.uk all lefts reversed 						Theme by <a href="http://colorlib.com/" target="_blank">Colorlib</a> Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>					</div>
+				</div>
+			</div><!-- .site-info -->
+			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
+		</footer><!-- #colophon -->
+	</div>
+</div><!-- #page -->
+
+		  <script type="text/javascript">
+			jQuery( document ).ready( function( $ ){
+			  if ( $( window ).width() >= 767 ){
+				$( '.navbar-nav > li.menu-item > a' ).click( function(){
+					if( $( this ).attr('target') !== '_blank' ){
+						window.location = $( this ).attr( 'href' );
+					}
+				});
+			  }
+			});
+		  </script>
+			<script type="text/javascript">
+      var anr_onloadCallback = function() {
+	  				var anr_captcha_1;
+				anr_captcha_1 = grecaptcha.render('anr_captcha_field_1', {
+				  'sitekey' : '6LdMaxoTAAAAAO_z9VYWyJZuLeFIcjMuhm3P9UYy',
+				  'theme' : 'light',
+				  'size' : 'normal'
+				});
+		      };
+    </script>
+	<script src="../../www.google.com/recaptcha/api97a4.js?onload=anr_onloadCallback&amp;render=explicit"
+        async defer>
+    </script>
+
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var frontend_ajax_object = {"ajax_url":"http:\/\/www.scullcom.uk\/wp-admin\/admin-ajax.php","ajax_nonce":"0d3408070d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/accesspress-social-share/js/frontend8f76.js?ver=4.3.5'></script>
+<script type='text/javascript' src='../wp-content/themes/sparkling/assets/js/skip-link-focus-fix.mined4c.js?ver=20140222'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min6959.js?ver=4.9.3'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min6959.js?ver=4.9.3'></script>
+<script async="async" type='text/javascript' src='../wp-content/plugins/akismet/_inc/form05da.js?ver=4.0.2'></script>
+
+</body>
+
+<!-- Mirrored from www.scullcom.uk/design-build-a-stair-step-waveform-generator/?replytocom=231 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jul 2019 03:18:59 GMT -->
+</html>
